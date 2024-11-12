@@ -1,0 +1,15 @@
+about:
+  enable : true
+  title : About Us
+  about_item :
+    - icon : ti-rocket
+      title : Learning Community
+      content : We share knowledge, experience and passion for technology. Here everyone teaches and learns.
+
+    - icon : ti-github
+      title : Open Source is Our DNA
+      content : We believe in free software and hardware. Sharing is how we innovate.
+
+    - icon : ti-pulse
+      title : Creative Hackers
+      content : We transform technology into ingenious solutions. From scrap to machines, from ideas to reality.

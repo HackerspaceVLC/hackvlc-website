@@ -1,0 +1,105 @@
+<!-- layouts/shortcodes/gallery.html -->
+<div class="shortcode-gallery">
+    {{ range .Params }}
+    {{ $image := $.Page.Resources.GetMatch . }}
+    {{ with $image }}
+    {{ $thumb := .Resize "500x" }}
+    {{ $medium := .Resize "800x" }}
+    <figure class="shortcode-gallery-item">
+        <!-- Added data-pswp-src for PhotoSwipe -->
+        <a href="{{ $medium.RelPermalink }}" class="shortcode-gallery-link">
+            <img
+                    class="shortcode-gallery-img"
+                    src="{{ $thumb.RelPermalink }}"
+                    alt="Gallery image"
+                    loading="lazy"
+            >
+            <div class="shortcode-gallery-overlay">
+                <span class="shortcode-gallery-zoom">+</span>
+            </div>
+        </a>
+    </figure>
+    {{ end }}
+    {{ end }}
+</div>
+
+<!-- Add close button and navigation -->
+<div class="shortcode-lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="lightbox-prev">&#10094;</a>
+    <a class="lightbox-next">&#10095;</a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const gallery = document.querySelector('.shortcode-gallery');
+        const lightbox = document.querySelector('.shortcode-lightbox');
+        const lightboxImg = document.querySelector('.lightbox-content');
+        let currentIndex = 0;
+        let images = [];
+
+        if (gallery) {
+            images = Array.from(gallery.getElementsByTagName('a')).map(a => a.href);
+
+            gallery.addEventListener('click', function (e) {
+                const link = e.target.closest('a');
+                if (link) {
+                    e.preventDefault();
+                    currentIndex = images.indexOf(link.href);
+                    showLightbox(link.href);
+                }
+            });
+        }
+
+        function showLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+// Close lightbox
+        document.querySelector('.lightbox-close').addEventListener('click', function () {
+            lightbox.style.display = 'none';
+        });
+
+// Close on click outside
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+// Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
+
+// Previous image
+        document.querySelector('.lightbox-prev').addEventListener('click', function () {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentIndex];
+        });
+
+// Next image
+        document.querySelector('.lightbox-next').addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % images.length;
+            lightboxImg.src = images[currentIndex];
+        });
+
+// Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    lightboxImg.src = images[currentIndex];
+                }
+                if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    lightboxImg.src = images[currentIndex];
+                }
+            }
+        });
+    });
+</script>

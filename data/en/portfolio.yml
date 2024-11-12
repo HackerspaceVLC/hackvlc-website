@@ -1,0 +1,54 @@
+#################################### portfolio ###############################
+portfolio:
+  enable : true
+  title : Our Work
+  see_all_projects_link: proyectos
+  portfolio_item :
+    # portfolio item loop
+    - name : Quadruped robot
+      image : images/portfolio/cuadrúpedo.jpg
+      image_webp : images/portfolio/cuadrúpedo.webp
+      categories : ["robotics", "electronics"]
+      content : Quadruped robot made with Arduino.
+      link : "proyectos/cuadrupedo"
+      
+    # portfolio item loop
+    - name : Member cards
+      image : images/portfolio/tarjetas-de-socio.webp
+      image_webp : images/portfolio/tarjetas-de-socio.webp
+      categories : ["CS", "electronics"]
+      content : Member card system.
+      link : "proyectos/tarjetas-de-socio"
+      
+    - name: Hackapet
+      image: images/portfolio/hackapet.jpg
+      image_webp: images/portfolio/hackapet.webp
+      categories: [ "CS" ]
+      content: Non profit software for Animal Shelters
+      link: "https://hackapet.com"
+
+    # portfolio item loop
+    - name: 1st Videogame
+      image: images/portfolio/1-videojuego.webp
+      image_webp: images/portfolio/1-videojuego.webp
+      categories: [ "electronics", "CS" ]
+      content: First ever videogame recreated with an Arduino UNO and VGA interface
+      link: "proyectos/1-videojuego"
+
+
+    # portfolio item loop
+    - name : Plotter
+      image : images/portfolio/plotter.jpg
+      image_webp : images/portfolio/plotter.webp
+      categories : ["robotics", "electronics"]
+      content : Plotter made with recycled components.
+      link : "proyectos/plotter"
+      
+    # portfolio item loop
+    - name : Radios
+      image : images/portfolio/radios.jpg
+      image_webp : images/portfolio/radios.webp
+      categories : ["radio", "electronics"]
+      content : Old radios restored.
+      link : "proyectos/radios"
+      

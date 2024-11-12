@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+{{"<!-- Start List Section -->" | safeHTML}}
+<section id="{{ .Section }}" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{"<!-- section title -->" | safeHTML}}
+        <div class="title text-center wow fadeInDown">
+          <h2>
+            {{ with .Params.listTitle }}
+            {{ . | safeHTML }}
+            {{ else }}
+            {{ with .Title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}
+            <span class="color">
+                {{ with .Title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}
+              </span>
+            {{ end }}
+          </h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+      {{"<!-- /section title -->" | safeHTML}}
+
+      <div class="col-12 mb-5">
+        {{ .Content }}
+      </div>
+
+      {{ $pages := where .Site.RegularPages "Section" .Section }}
+      {{ $paginator := .Paginate $pages }}
+
+      {{ range $paginator.Pages }}
+      {{ if .Params.customRender }}
+      {{ .Render .Params.customRender }}
+      {{ else }}
+      <article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+        <div class="post-block">
+          <div class="media-wrapper">
+            {{ with .Params.image }}
+            <img src="{{ . | absURL }}" alt="post-image" class="img-fluid">
+            {{ end }}
+          </div>
+
+          <div class="content">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            {{ with .Params.category }}
+            <span class="badge badge-primary mb-2">{{ . }}</span>
+            {{ end }}
+            <p>{{ .Summary }}</p>
+            <a class="btn btn-transparent" href="{{ .Permalink }}">Read more</a>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+      {{ end }}
+
+      <div class="col-12">
+        {{ template "_internal/pagination.html" . }}
+      </div>
+    </div>
+  </div>
+</section>
+{{"<!-- /list section -->" | safeHTML}}
+
+{{ end }}

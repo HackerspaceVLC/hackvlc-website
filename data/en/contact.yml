@@ -1,0 +1,26 @@
+contact:
+  enable : true
+  title : Let's Talk
+  subtitle : Come Meet Us
+  content : Open doors every Tuesday 6:00 PM. Can't make it? Write to us and we'll find the time. If you're passionate about technology, there's a community waiting for you.
+
+  contact_list:
+    - icon : ti-map-alt
+      info : "Hackerspace Valencia
+             📍 C/ Francisco Martínez, 19 Bajo
+             46020 Valencia (Benimaclet)"
+
+    - icon : ti-email
+      info : "hackerspacevlc@gmail.com"
+
+    - icon : ti-time
+      info : "Meetups: Tuesdays 6:00 PM"
+
+  contact_form:
+    enable : false
+    form_action : "TO-DO"
+    name : "Your name"
+    email : "Your email"
+    subject : "Subject"
+    message : "Message"
+    submit : "Send"

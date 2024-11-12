@@ -1,0 +1,193 @@
+################################# Default configuration ###################
+baseURL = "https://hackvlc.es/"
+title = "Hackerspace Valencia"
+theme = "meghna-hugo"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "15"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = []
+# default language
+defaultContentLanguage = "es"
+# Enable URL canonicalization
+canonifyURLs = true
+
+############################# Sitemap Configuration ######################
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[outputs]
+home = ["HTML", "RSS", "JSON", "SITEMAP"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+[outputFormats]
+[outputFormats.SITEMAP]
+mediaType = "application/xml"
+baseName = "sitemap"
+isPlainText = true
+rel = "sitemap"
+
+############################# Plugins ##########################
+# css plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap"
+
+# js plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+[[params.plugins.js]]
+link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/lazy-load/lozad.min.js"
+[[params.plugins.js]]
+link = "plugins/google-map/map.js"
+
+################### Spanish Navigation ########################
+[[Languages.es.menu.main]]
+name = "sobre nosotros"
+url = "#about"
+weight = 1
+
+[[Languages.es.menu.main]]
+name = "actividades"
+url = "#activities"
+weight = 2
+
+[[Languages.es.menu.main]]
+name = "proyectos"
+url = "#portfolio"
+weight = 3
+
+[[Languages.es.menu.main]]
+name = "cuota"
+url = "#pricing"
+weight = 5
+
+[[Languages.es.menu.main]]
+name = "talleres"
+url = "#workshops"
+weight = 6
+
+[[Languages.es.menu.main]]
+name = "contacto"
+url = "#contact"
+weight = 7
+
+################### English Navigation ########################
+[[Languages.en.menu.main]]
+name = "about"
+url = "#about"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "activities"
+url = "#activities"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "portfolio"
+url = "#portfolio"
+weight = 3
+
+[[Languages.en.menu.main]]
+name = "fee"
+url = "#pricing"
+weight = 5
+
+[[Languages.en.menu.main]]
+name = "workshops"
+url = "#workshops"
+weight = 6
+
+[[Languages.en.menu.main]]
+name = "contact"
+url = "#contact"
+weight = 7
+
+############################# Default Parameters ##########################
+[params]
+logo = "images/logo.png"
+# Meta data
+description = "Web del Hackerspace de Valencia"
+# Google Analytics
+google_analytics_id = "" # Your ID
+# post share
+post_share = true
+copyright = "© 2024 [Hackerspace VLC](https://hackvlc.es) · Everything we do is GPL-3.0 · Made with ❤️ in Valencia · Theme: [Themefisher](https://themefisher.com)"
+
+customCSS = ["css/custom.css"]
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+socio = "socios"
+
+# preloader
+[params.preloader]
+enable = false
+preloader = "images/logo.png"
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
+
+# google map
+[params.map]
+enable = false
+gmap_api = ""
+map_latitude = "39.48828"
+map_longitude = "-0.35839"
+map_marker = "images/marker.png"
+
+############################# social icons #########################
+[[params.social]]
+icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+link = "https://x.com/hackvlc"
+
+[[params.social]]
+icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.youtube.com/@asociacionhackerspacevalen2049"
+
+[[params.social]]
+icon = "fab fa-meetup" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.meetup.com/es-ES/hackerspace-valencia/"
+
+################################ Spanish Language ########################
+[Languages.es]
+languageName = "Es"
+languageCode = "es-es"
+contentDir = "content/spanish"
+weight = 1
+[Languages.es.sitemap]
+priority = 0.9
+
+################################ English Language ########################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 2
+[Languages.en.sitemap]
+priority = 0.8

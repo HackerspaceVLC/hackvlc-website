@@ -1,0 +1,10 @@
+cta:
+  enable: true
+  bg_image: "images/backgrounds/bg-electronics.jpg"
+  bg_image_webp: "images/backgrounds/bg-electronics.webp"
+  title: "Why Join Hackerspace?"
+  content: "Join a vibrant community where you'll have access to tools, workspace and, most importantly, passionate people like you. Your membership keeps this innovation space alive."
+  button:
+    enable : true
+    label : "Start your maker journey!"
+    link : pages/alta

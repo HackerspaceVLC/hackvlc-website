@@ -1,0 +1,27 @@
+service:
+  enable: true
+  title: Our Activities
+  service_item:
+    - name: Global Network
+      icon: ti-world
+      content: Connect with hackerspaces worldwide from Valencia.
+
+    - name: Maker Space
+      icon: ti-home
+      content: Fully equipped space in Benimaclet. Your tech workshop with all the tools you need.
+
+    - name: Workshops
+      icon: ti-blackboard
+      content: Hands-on workshops on Arduino, 3D Printing, IoT, KiCad and more. Learn by doing.
+
+    - name: Active Community
+      icon: ti-rocket
+      content: Share knowledge and learn from other passionate makers.
+
+    - name: Tech Development
+      icon: ti-github
+      content: Creating software and hardware proyectos with social impact.
+
+    - name: Repair Café
+      icon: ti-loop
+      content: Give technology a new life. We repair and reuse for a sustainable future.

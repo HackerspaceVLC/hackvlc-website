@@ -1,0 +1,51 @@
+portfolio:
+  enable : true
+  title : Nuestros Proyectos
+  see_all_projects_link: proyectos
+  portfolio_item :
+    # portfolio item loop
+    - name : Robot cuadrúpedo
+      image : images/portfolio/cuadrúpedo.jpg
+      image_webp : images/portfolio/cuadrúpedo.webp
+      categories : ["robótica", "electrónica"]
+      content : Robot cuadrúpedo hecho con Arduino.
+      link : "proyectos/cuadrupedo"
+
+    # portfolio item loop
+    - name : Tarjetas de socio
+      image : images/portfolio/tarjetas-de-socio.webp
+      image_webp : images/portfolio/tarjetas-de-socio.webp
+      categories : ["informática", "electrónica"]
+      content : Sistema de tarjetas de socio.
+      link : "proyectos/tarjetas-de-socio"
+
+    - name: Hackapet
+      image: images/portfolio/hackapet.jpg
+      image_webp: images/portfolio/hackapet.webp
+      categories: ["informática"]
+      content: Software sin fines de lucro para refugios de animales
+      link: "https://hackapet.com"
+
+    # portfolio item loop
+    - name: Primer Videojuego
+      image: images/portfolio/1-videojuego.webp
+      image_webp: images/portfolio/1-videojuego.webp
+      categories: ["electrónica", "informática"]
+      content: Primer videojuego recreado con Arduino UNO e interfaz VGA
+      link: "proyectos/1-videojuego"
+
+    # portfolio item loop
+    - name : Plotter
+      image : images/portfolio/plotter.jpg
+      image_webp : images/portfolio/plotter.webp
+      categories : ["robótica", "electrónica"]
+      content : Plotter fabricado con componentes reciclados.
+      link : "proyectos/plotter"
+
+    # portfolio item loop
+    - name : Radios
+      image : images/portfolio/radios.jpg
+      image_webp : images/portfolio/radios.webp
+      categories : ["radio", "electrónica"]
+      content : Radios antiguos restaurados.
+      link : "proyectos/radios"
