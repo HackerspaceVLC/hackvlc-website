@@ -1,0 +1,25 @@
+################################# funfacts ##################################
+funfacts:
+  enable : false
+  bg_image : "images/backgrounds/bg-electronics.jpg"
+  bg_image_webp : "images/backgrounds/bg-electronics.webp"
+  counter_item:
+    # counter item loop
+    - title : "Community tarjetas-de-socio"
+      icon : "ti-face-smile" # themify icon pack : https://themify.me/themify-icons
+      count : "23"
+    
+    # counter item loop
+    - title : "Finished proyectos"
+      icon : "ti-archive" # themify icon pack : https://themify.me/themify-icons
+      count : "123"
+    
+    # counter item loop
+    - title : "Positive feedback"
+      icon : "ti-thumb-up" # themify icon pack : https://themify.me/themify-icons
+      count : "157"
+    
+    # counter item loop
+    - title : "Burned devices"
+      icon : "ti-save" # themify icon pack : https://themify.me/themify-icons
+      count : "724"

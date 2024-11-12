@@ -1,0 +1,22 @@
+feature:
+  enable : true
+  image : images/about/about-feature.jpg
+  image_webp : images/about/about-feature.webp
+  title : A unique space for curious minds
+  content : "Welcome to your innovation hub in Valencia. Where curiosity meets technology."
+  feature_item :
+    - title : Global Community
+      icon : ti-world
+      content : Connect with the worldwide hackerspace network with Mediterranean flavor.
+
+    - title : Open Source
+      icon : ti-github
+      content : Free code and hardware are our pillars. We innovate by sharing.
+
+    - title : Democratic Technology
+      icon : ti-panel
+      content : Breaking boundaries by creating accessible solutions for everyone.
+
+    - title : All Welcome
+      icon : ti-user
+      content : Curiosity and willingness to learn? That's all you need.

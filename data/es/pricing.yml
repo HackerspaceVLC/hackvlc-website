@@ -1,0 +1,32 @@
+##################################### pricing ##############################
+pricing:
+  enable : true
+  title : Ventajas de ser soci@
+  pricing_table:
+    # pricing table loop
+    - name : Cuota Reducida
+      explanation: Estudiantes, desemplead@s y jubilad@s
+      price : 10€
+      unit : mes
+      activities:
+        - 🛠️ Acceso total al taller y a herramientas
+        - 👥 Comunidad maker activa
+        - 💬 Grupos de comunicación
+        - 💡 Talleres y eventos
+      button:
+        label : "¡Únete!"
+        link : pages/alta
+
+    # pricing table loop
+    - name : Cuota General
+      explanation: Soci@s general
+      price : 25€
+      unit : mes
+      activities:
+        - 🛠️ Acceso total al taller y a herramientas
+        - 👥 Comunidad maker activa
+        - 💬 Grupos de comunicación
+        - 💡 Talleres y eventos
+      button:
+        label : "¡Únete!"
+        link : pages/alta

@@ -1,0 +1,34 @@
+################################# Service #################################
+service:
+  enable: true
+  title: Nuestras Actividades
+  service_item:
+    # service item loop
+    - name: Red Global
+      icon: ti-world
+      content: Conéctate con hackerspaces de todo el mundo desde Valencia.
+
+    # service item loop
+    - name: Espacio Maker
+      icon: ti-home
+      content: Local equipado en Benimaclet. Tu taller tecnológico con todas las herramientas que necesitas.
+
+    # service item loop
+    - name: Workshops
+      icon: ti-blackboard
+      content: Talleres prácticos de Arduino, Impresión 3D, IoT, KiCad y más. Aprende haciendo.
+
+    # service item loop
+    - name: Comunidad Activa
+      icon: ti-rocket
+      content: Comparte conocimientos y aprende de otros makers apasionados.
+
+    # service item loop
+    - name: Desarrollo Tech
+      icon: ti-github
+      content: Creamos proyectos de software y hardware con impacto social.
+
+    # service item loop
+    - name: Repair Café
+      icon: ti-loop
+      content: Dale nueva vida a la tecnología. Reparamos y reutilizamos por un futuro sostenible.

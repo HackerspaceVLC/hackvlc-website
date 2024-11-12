@@ -1,0 +1,16 @@
+############################### About ###################################
+about:
+  enable : true
+  title : Sobre nosotros
+  about_item :
+    - icon : ti-rocket # Icono de innovación y crecimiento
+      title : Comunidad de Aprendizaje
+      content : Compartimos conocimiento, experiencia y pasión por la tecnología. Aquí todos enseñamos y todos aprendemos.
+
+    - icon : ti-github # Icono más tech-oriented
+      title : Open Source es Nuestro ADN
+      content : Creemos en el software y hardware libre. Compartir es nuestra forma de innovar.
+
+    - icon : ti-pulse # Icono que representa creatividad y actividad
+      title : Hackers Creativos
+      content : Transformamos tecnología en soluciones ingeniosas. De chatarra a máquinas, de ideas a realidad.

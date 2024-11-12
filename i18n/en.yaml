@@ -1,0 +1,38 @@
+- id: blogTitle
+  translation: Blog
+- id: readMore
+  translation: Read More
+- id: viewAllPost
+  translation: View All Posts
+- id: share
+  translation: Share
+- id: aboutAuthor
+  translation: About the Author
+- id: authorsPosts
+  translation: Author's Posts
+- id: all
+  translation: All Categories
+- id: about
+  translation: About Us
+- id: activities
+  translation: Activities
+- id: portfolio
+  translation: Portfolio
+- id: team
+  translation: Team
+- id: pricing
+  translation: Pricing
+- id: blog
+  translation: Blog
+- id: contact
+  translation: Contact
+- id: themefisher
+  translation: Themefisher
+- id: tarjetas-de-socio
+  translation: Member(s)
+- id: aboutSocio
+  translation: About the Member
+- id: sociosPosts
+  translation: Member's Posts
+- id: see_all_projects
+  translation: See All Projects

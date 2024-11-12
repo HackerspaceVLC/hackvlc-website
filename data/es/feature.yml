@@ -1,0 +1,27 @@
+############################# feature ###################################
+feature:
+  enable : true
+  image : images/about/about-feature.jpg
+  image_webp : images/about/about-feature.webp
+  title : Un espacio único para mentes inquietas
+  content : "Bienvenido a tu hub de innovación en Valencia. Un lugar donde la curiosidad se encuentra con la tecnología."
+  feature_item :
+    # feature item loop
+    - title : Comunidad Global
+      icon : ti-world
+      content : Conecta con la red mundial de hackerspaces con sabor mediterráneo.
+
+      # feature item loop
+    - title : Open Source
+      icon : ti-github
+      content : El código y hardware libre son nuestros pilares. Innovamos compartiendo.
+
+      # feature item loop
+    - title : Tecnología Democrática
+      icon : ti-panel
+      content : Superamos límites creando soluciones accesibles para todos.
+
+      # feature item loop
+    - title : Todos Bienvenidos
+      icon : ti-user
+      content : ¿Curiosidad y ganas de aprender? Es todo lo que necesitas.

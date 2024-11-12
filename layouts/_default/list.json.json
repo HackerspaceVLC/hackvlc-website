@@ -1,0 +1,7 @@
+{
+    "{{.Title}}" : {
+        "title": "{{ .Title }}",
+        "permalink": "{{ .Permalink }}",
+        "content": "{{ .Content | plainify | jsonify }}"
+    }
+}

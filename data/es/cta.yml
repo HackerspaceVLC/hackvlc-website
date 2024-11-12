@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable : true
+  bg_image : "images/backgrounds/bg-electronics.jpg"
+  bg_image_webp : "images/backgrounds/bg-electronics.webp"
+  title : "¿Por qué unirte al Hackerspace?"
+  content : "Únete a una comunidad vibrante donde tendrás acceso a herramientas, espacio de trabajo y, lo más importante, personas apasionadas como tú. Tu membresía mantiene vivo este espacio de innovación."
+  button:
+    enable : true
+    label : "¡Comienza tu aventura maker!"
+    link : pages/alta
