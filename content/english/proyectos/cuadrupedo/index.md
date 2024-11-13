@@ -1,7 +1,7 @@
 ---
 title: "Quadruped robot"
 date: 2024-03-10
-image: images/portfolio/cuadrúpedo.webp
+image: images/portfolio/cuadrupedo.webp
 socios: ["José Gil"]
 summary: "4 legged robot, controlled via infrarred."
 description: "Completed project, in documentation phase"

@@ -558,21 +558,20 @@ a:hover {
 /*=================================================================
   About us section
 ==================================================================*/
+/* About Section Styles */
 .about .block {
   background: #242930;
-  padding: 30px;
+  padding: 30px 20px;
   border-bottom: 2px solid transparent;
   transition: .5s all;
-  margin-bottom: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about .block:hover {
   border-bottom: 2px solid #57cbcc;
-}
-
-.about .block:hover .icon-box {
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
 }
 
 .about .block .icon-box {
@@ -580,29 +579,36 @@ a:hover {
   width: 160px;
   height: 92.38px;
   background-color: transparent;
-  margin: 46.19px auto 60px;
+  margin: 0 auto 100px; /* Increased bottom margin to separate from content */
   padding: 20px 0;
   border-left: 2px solid rgba(236, 239, 241, 0.07);
   border-right: 2px solid rgba(236, 239, 241, 0.07);
-  font-size: 50px;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
-  transition-duration: 0.3s;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.about .block .icon-box:after,
-.about .block .icon-box:before {
+.about .block .icon-box i {
+  font-size: 48px;
+  color: #57cbcc;
+  z-index: 2;
+  position: relative;
+}
+
+.about .block:hover .icon-box {
+  transform: translateY(-10px);
+}
+
+.about .block .icon-box:before,
+.about .block .icon-box:after {
   content: "";
   position: absolute;
   z-index: 1;
   width: 113.14px;
   height: 113.14px;
-  background-color: inherit;
+  background-color: #242930; /* Match block background */
   left: 20.4315px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
   transform: scaleY(0.5774) rotate(-45deg);
 }
 
@@ -618,8 +624,49 @@ a:hover {
   border-left: 2px solid rgba(236, 239, 241, 0.07);
 }
 
-.about .block .icon-box h3 {
+.about .block .content {
+  margin-top: -30px; /* Pull content up a bit */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.about .block .content h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
   color: #afbac4;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.about .block .content p {
+  margin: 0;
+  color: #737f8a;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about .block {
+    min-height: 350px;
+  }
+
+  .about .block .icon-box {
+    margin-bottom: 80px;
+  }
+
+  .about .block .content {
+    margin-top: -23px;
+  }
 }
 
 /*=================================================================
@@ -957,17 +1004,147 @@ a:hover {
 /*=================================================================
   Services section
 ==================================================================*/
-.service-block {
-  padding: 60px 20px;
-  border-left: 1px solid rgba(236, 239, 241, 0.07);
-  border-top: 1px solid rgba(236, 239, 241, 0.07);
-  margin-bottom: 40px;
-  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
+/* Activities Section Styles */
+#activities .service-block {
+  background: #242930;
+  width: 100%;
+  aspect-ratio: 1; /* Makes boxes square */
+  padding: 40px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(87, 203, 204, 0.05);
 }
 
-.service-block .service-icon {
-  margin-bottom: 10px;
-  font-size: 50px;
+#activities .service-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(87, 203, 204, 0.2);
+}
+
+/* Bottom accent line */
+#activities .service-block::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: #57cbcc;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#activities .service-block:hover::after {
+  transform: scaleX(1);
+}
+
+#activities .service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(87, 203, 204, 0.05);
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#activities .service-icon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, rgba(87, 203, 204, 0.1));
+  z-index: 0;
+}
+
+#activities .service-block:hover .service-icon {
+  background: rgba(87, 203, 204, 0.1);
+  transform: scale(1.05);
+}
+
+#activities .service-icon i {
+  font-size: 30px;
+  color: #57cbcc;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+#activities .service-block:hover .service-icon i {
+  transform: scale(1.1);
+}
+
+#activities .service-block h3 {
+  font-size: 24px;
+  margin: 0 0 15px 0;
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+#activities .service-block p {
+  margin: 0;
+  color: #c8c8c8;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Grid spacing */
+#activities .row {
+  margin: -15px;
+}
+
+#activities .col-lg-4,
+#activities .col-md-6 {
+  padding: 15px;
+}
+
+/* Content wrapper to maintain proper text length */
+#activities .content-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #activities .service-block {
+    padding: 30px 20px;
+  }
+
+  #activities .service-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  #activities .service-icon i {
+    font-size: 25px;
+  }
+
+  #activities .service-block h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  #activities .service-block p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  #activities .content-wrapper {
+    max-width: 95%;
+  }
 }
 
 /*=================================================================

@@ -6,7 +6,7 @@ portfolio:
     # portfolio item loop
     - name : Robot cuadrúpedo
       image : images/portfolio/cuadrúpedo.jpg
-      image_webp : images/portfolio/cuadrúpedo.webp
+      image_webp : images/portfolio/cuadrupedo.webp
       categories : ["robótica", "electrónica"]
       content : Robot cuadrúpedo hecho con Arduino.
       link : "proyectos/cuadrupedo"
