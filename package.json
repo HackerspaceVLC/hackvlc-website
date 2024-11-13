@@ -1,0 +1,20 @@
+{
+  "name": "hackvlc-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tinacms": "^2.4.0"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.6.11",
+    "@types/node": "^22.9.0"
+  }
+}
