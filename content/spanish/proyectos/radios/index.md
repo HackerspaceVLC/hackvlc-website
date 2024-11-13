@@ -6,6 +6,7 @@ socios: ["Pachón", "Hackerspace Valencia"]
 summary: "Reparación de radios antiguos"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

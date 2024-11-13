@@ -6,6 +6,7 @@ socios: ["José Gil"]
 summary: "Arcade machine with Raspberry Pi 3B+"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

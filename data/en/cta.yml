@@ -1,5 +1,5 @@
 cta:
-  enable: true
+  enable: false
   bg_image: "images/backgrounds/bg-electronics.jpg"
   bg_image_webp: "images/backgrounds/bg-electronics.webp"
   title: "Why Join Hackerspace?"

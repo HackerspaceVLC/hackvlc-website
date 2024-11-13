@@ -179,6 +179,7 @@ link = "https://www.meetup.com/es-ES/hackerspace-valencia/"
 languageName = "Es"
 languageCode = "es-es"
 contentDir = "content/spanish"
+see_all_projects_link = "proyectos/"
 weight = 1
 [Languages.es.sitemap]
 priority = 0.9
@@ -188,6 +189,7 @@ priority = 0.9
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
+see_all_projects_link = "proyectos/"
 weight = 2
 [Languages.en.sitemap]
 priority = 0.8

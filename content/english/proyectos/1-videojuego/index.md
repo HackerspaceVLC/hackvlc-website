@@ -6,6 +6,7 @@ socios: ["José Gil"]
 summary: "Recreation of the first ever videogame with Arduino UNO via VGA"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

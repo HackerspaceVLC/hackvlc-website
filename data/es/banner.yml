@@ -6,7 +6,7 @@ banner:
   image_webp : "images/banner.webp"
   icon : ""
   title: "HACKERSPACE VALENCIA"
-  content: "Tu espacio 🛠maker en Valencia | Martes 18h | ¡Aprende, hackea y crea con nosotros!️"
+  content: "Tu espacio 🛠maker🛠️ en Valencia | Martes 18h | ¡Aprende, hackea y crea con nosotros!️"
   button:
     enable : true
     label : "¡Únete a la comunidad!"
