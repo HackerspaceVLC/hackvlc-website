@@ -3,9 +3,10 @@ title: "Tarjetas de socio"
 date: 2024-03-09
 image: images/portfolio/tarjetas-de-socio.webp
 socios: ["José Gil", "Ignacio Delgado"]
-summary: "Tarjetas que permiten a los socios identificarse al entrar para activar automatizaciones y demás."
+summary: "Tarjetas para automatizaciones y más."
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

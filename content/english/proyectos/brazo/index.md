@@ -6,6 +6,7 @@ socios: ["José Gil"]
 summary: "Small assembly of already made project, robotic arm"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

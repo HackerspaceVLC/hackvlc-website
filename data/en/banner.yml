@@ -4,7 +4,7 @@ banner:
   bg_image : "images/workshop/local-4.webp"
   image_webp : "images/banner.webp"
   title : "HACKERSPACE VALENCIA"
-  content : " Your 🛠️maker space in Valencia | Tuesdays 6PM | Learn, hack and create with us!"
+  content : " Your 🛠️maker🛠️ space in Valencia | Tuesdays 6PM | Learn, hack and create with us!"
   button:
     enable : true
     label : "Learn More"

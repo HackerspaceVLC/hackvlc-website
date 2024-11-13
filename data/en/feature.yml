@@ -1,5 +1,5 @@
 feature:
-  enable : true
+  enable : false
   image : images/about/about-feature.jpg
   image_webp : images/about/about-feature.webp
   title : A unique space for curious minds

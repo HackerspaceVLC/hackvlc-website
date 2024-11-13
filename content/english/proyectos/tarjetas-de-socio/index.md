@@ -3,9 +3,10 @@ title: "Membership Cards"
 date: 2024-03-09
 image: images/portfolio/tarjetas-de-socio.webp
 socios: ["José Gil", "Ignacio Delgado"]
-summary: "Cards that allow members to identify themselves on entry to trigger automations and so on."
+summary: "Id cards for automations and identification."
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

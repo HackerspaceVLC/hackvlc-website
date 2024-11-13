@@ -6,6 +6,7 @@ socios: ["José Gil"]
 summary: "4 legged robot, controlled via infrarred."
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress
