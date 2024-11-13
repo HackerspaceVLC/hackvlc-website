@@ -1,7 +1,7 @@
 ---
 title: "Robot cuadrúpedo"
 date: 2024-03-10
-image: images/portfolio/cuadrúpedo.webp
+image: images/portfolio/cuadrupedo.webp
 socios: ["José Gil"]
 summary: "Robot de 4 patas, controlado por infrarrojos"
 description: "Completed project, in documentation phase"
