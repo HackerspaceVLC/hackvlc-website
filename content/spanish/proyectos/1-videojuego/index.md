@@ -119,7 +119,6 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 
 * Código QR para acceso a información adicional
 * Etiquetado como "1º Videojuego"
-* Documentación técnica disponible
 * Proyecto open source y replicable
 
 ## Impacto y Resultados
