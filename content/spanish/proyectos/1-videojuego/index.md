@@ -127,11 +127,3 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 * Proyecto educativo funcional y atractivo
 * Ejemplo de integración de tecnologías maker
 * Preservación de la historia de los videojuegos
-
-{{\< gallery
-"images/1-videojuego-1.webp"
-"images/1-videojuego-2.webp"
-"images/1-videojuego-3.webp"
-"images/1-videojuego-4.webp"
-
-> }}
