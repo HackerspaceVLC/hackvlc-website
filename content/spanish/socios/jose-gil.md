@@ -1,6 +1,8 @@
 ---
 title: "José Gil"
 image: ""
+aliases:
+  - /socios/josé-gil/
 summary: "El Genio del Mal"
 email: ""
 ---
