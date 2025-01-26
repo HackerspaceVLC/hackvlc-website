@@ -4,7 +4,7 @@ date: 2024-01-01
 image: images/workshop/davinci.webp
 socios: ["Arturo"]
 description: "Learn video editing with DaVinci Resolve 18.6. From basic concepts to creating content for YouTube."
-tags: ["Video", "In person"]
+tags: ["Video"]
 ---
 
 Master video editing with DaVinci Resolve in this beginner-friendly workshop!

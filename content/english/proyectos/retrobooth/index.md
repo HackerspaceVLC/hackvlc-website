@@ -1,11 +1,12 @@
 ---
 title: "Retrobooth"
-date: 2024-03-09
+date: 2025-01-25
 image: images/portfolio/retrobooth.webp
 members: ["José Gil", "Javier Donate", "Ignacio Delgado"]
 summary: "Retro Photo Booth"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # RetroBooth Documentation

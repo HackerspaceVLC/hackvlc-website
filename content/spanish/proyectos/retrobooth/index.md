@@ -1,11 +1,12 @@
 ---
 title: "Retrobooth"
-date: 2024-03-09
+date: 2025-01-25
 image: images/portfolio/retrobooth.webp
 socios: ["José Gil", "Javier Donate", "Ignacio Delgado"]
 summary: "Fotomatón Retro"
 description: "Completed project, in documentation phase"
-tags: ["project", "upcoming"]
+tags: ["project"]
+featured: true
 ---
 
 # Documentación RetroBooth

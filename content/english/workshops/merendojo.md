@@ -4,7 +4,7 @@ date: 2024-11-03
 image: images/workshop/devscola/devscola.webp
 socios: ["Devscola", "Hackerspace Valencia"]
 description: "Combine programming with snack time in this unique social event where you'll learn coding in a relaxed and fun environment."
-tags: ["Software", "In person"]
+tags: ["Software"]
 ---
 
 # What is Merendojo?

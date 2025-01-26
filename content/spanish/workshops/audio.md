@@ -4,7 +4,7 @@ date: 2024-01-01
 image: images/workshop/audio.webp
 socios: ["Arturo"]
 description: "Taller práctico para aprender los fundamentos de la síntesis de audio. Perfecto para principiantes interesados en música electrónica y diseño sonoro."
-tags: ["Audio", "Presencial"]
+tags: ["Audio"]
 ---
 
 Descubre el fascinante mundo de la síntesis de audio a través de nuestro taller para principiantes.

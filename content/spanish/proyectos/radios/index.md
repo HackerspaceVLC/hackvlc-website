@@ -3,7 +3,7 @@ title: "Radios"
 date: 2024-03-09
 image: images/portfolio/radios.webp
 socios: ["Pachón", "Hackerspace Valencia"]
-summary: "Reparación de radios antiguos"
+summary: "Reparación de radios antiguas"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
 featured: true

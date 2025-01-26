@@ -4,7 +4,7 @@ date: 2024-03-09T11:00:00+01:00
 image: images/workshop/ai1/thumbnail.webp
 socios: ["Ignacio Delgado", "Enrique Domínguez"]
 description : "TODO"
-tags : ["Inteligencia Artificial", "Presencial", "Online"]
+tags : ["Inteligencia Artificial"]
 ---
 
 <u> [Click aquí](https://www.youtube.com/watch?v=7SLHjoDxL8c)</u>  para ver la charla 1 en YouTube

@@ -4,7 +4,7 @@ date: 2024-03-09T11:002:00+01:00
 image: images/workshop/kicad/kicad.webp
 socios: ["Ángel Andrés"]
 description: "Hands-on workshop to learn PCB design using KiCad, from basic schematic capture to PCB layout. Perfect for beginners interested in electronics and digital fabrication."
-tags: ["Electronics", "In person"]
+tags: ["Electronics"]
 ---
 
 Master the art of PCB design through our beginner-friendly workshop series.
