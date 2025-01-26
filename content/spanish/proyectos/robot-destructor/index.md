@@ -6,6 +6,7 @@ socios: ["José Gil"]
 summary: "¡Destrucción Mundial!"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

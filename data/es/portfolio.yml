@@ -35,12 +35,12 @@ portfolio:
       link: "proyectos/1-videojuego"
 
     # portfolio item loop
-    - name : Plotter
-      image : images/portfolio/plotter.jpg
-      image_webp : images/portfolio/plotter.webp
-      categories : ["robótica", "electrónica"]
-      content : Plotter fabricado con componentes reciclados.
-      link : "proyectos/plotter"
+    - name : Retrobooth
+      image : images/portfolio/retrobooth.webp
+      image_webp : images/portfolio/retrobooth.webp
+      categories : ["informática", "electrónica"]
+      content : Un fotomatón retro con selección de filtros mediante NFC
+      link : "proyectos/retrobooth"
 
     # portfolio item loop
     - name : Radios

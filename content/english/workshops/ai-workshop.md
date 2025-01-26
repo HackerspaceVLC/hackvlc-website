@@ -4,7 +4,7 @@ date: 2024-03-09T11:00:00+01:00
 image: images/workshop/ai1/thumbnail.webp
 socios: ["Ignacio Delgado", "Enrique Domínguez"]
 description : "TODO"
-tags : ["Artificial Intelligence", "In person", "Online"]
+tags : ["Artificial Intelligence"]
 ---
 
 ##  <u> [Click here to watch Talk 1 on YouTube](https://www.youtube.com/watch?v=7SLHjoDxL8c)</u>

@@ -6,6 +6,7 @@ socios: ["Hackerspace Valencia"]
 summary: "Community project for Animal shelters"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
+featured: true
 ---
 
 # Documentation in Progress

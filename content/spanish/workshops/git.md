@@ -4,7 +4,7 @@ date: 2024-01-01
 image: images/workshop/git.webp
 socios: ["Ignacio Delgado", "Lua Marchante"]
 description: "Aprende los fundamentos del control de versiones con Git. Perfecto para principiantes interesados en el desarrollo colaborativo y la gestión de código."
-tags: ["Software", "Presencial"]
+tags: ["Software"]
 ---
 
 Domina los fundamentos del control de versiones Git en este taller práctico.

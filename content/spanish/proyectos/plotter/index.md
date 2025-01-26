@@ -6,7 +6,7 @@ socios: ["Hackerspace Valencia"]
 summary: "Lectores de CD de PC reciclados transformados en un plotter"
 description: "Completed project, in documentation phase"
 tags: ["project", "upcoming"]
-featured: true
+featured: false
 ---
 
 # Documentation in Progress
