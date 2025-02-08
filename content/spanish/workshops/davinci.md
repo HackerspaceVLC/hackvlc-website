@@ -2,7 +2,7 @@
 title: "Introducción a Davinci Resolve"
 date: 2024-01-01
 image: images/workshop/davinci.webp
-socios: ["Arturo"]
+socios: ["Enrique Dominguez"]
 description: "¡Domina la edición de video con DaVinci Resolve en este taller para principiantes!"
 tags: ["Video"]
 ---
