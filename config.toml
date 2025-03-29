@@ -22,10 +22,10 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [outputs]
-home = ["HTML", "RSS", "JSON", "SITEMAP"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
+home = ["HTML", "JSON", "SITEMAP"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 [outputFormats]
 [outputFormats.SITEMAP]
@@ -134,7 +134,7 @@ description = "Web del Hackerspace de Valencia"
 google_analytics_id = "" # Your ID
 # post share
 post_share = true
-copyright = "© 2024 [Hackerspace VLC](https://hackvlc.es) · Everything we do is GPL-3.0 · Made with ❤️ in Valencia · Theme: [Themefisher](https://themefisher.com)"
+copyright = "© 2025 [Hackerspace VLC](https://hackvlc.es) · [Everything we do is GPL-3.0](https://github.com/HackerspaceVLC) · Made with ❤️ in Valencia · Theme: [Themefisher](https://themefisher.com)"
 
 customCSS = ["css/custom.css"]
 
