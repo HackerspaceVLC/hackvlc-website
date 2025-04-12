@@ -163,24 +163,36 @@ meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
 
 ################################ Spanish Language ########################
 [Languages.es]
-languageName = "Es"
+languageName = "Español"
 languageCode = "es-es"
 contentDir = "content/spanish"
 see_all_projects_link = "proyectos/"
 weight = 1
 [Languages.es.params]
 description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
+email = "info@hackvlc.es"
+location = "C/ Serpis 35, Bajo 5, 46022 Valencia"
+primaryButtonText = "Sobre Nosotros"
+primaryButtonURL = "/#about"
+secondaryButtonText = "Ver Proyectos"
+secondaryButtonURL = "/proyectos/"
 [Languages.es.sitemap]
 priority = 0.9
 
 ################################ English Language ########################
 [Languages.en]
-languageName = "En"
+languageName = "English"
 languageCode = "en-us"
 contentDir = "content/english"
 see_all_projects_link = "proyectos/"
 weight = 2
 [Languages.en.params]
 description = "Maker community and tech learning space in Valencia"
+email = "info@hackvlc.es"
+location = "C/ Serpis 35, Bajo 5, 46022 Valencia"
+primaryButtonText = "About Us"
+primaryButtonURL = "/#about"
+secondaryButtonText = "View Projects"
+secondaryButtonURL = "/proyectos/"
 [Languages.en.sitemap]
 priority = 0.8
