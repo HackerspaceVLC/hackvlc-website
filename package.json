@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tinacms dev -c \"hugo server -D\"",
-    "build": "tinacms build && hugo"
+    "dev": "hugo serve",
+    "build": "hugo"
   },
   "keywords": [],
   "author": "",
