@@ -1,6 +1,5 @@
 ---
 title: "Ángel Andrés"
-image: ""
 email: "yirkoon00@gmail.com"
 social:
   - icon : "ti-linkedin" # themify icon pack : https://themify.me/themify-icons

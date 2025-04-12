@@ -1,6 +1,5 @@
 ---
 title: "José Gil"
-image: ""
 aliases:
   - "/socios/josé-gil/"
   - "/socios/josegil/"
