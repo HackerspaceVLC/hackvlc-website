@@ -8,16 +8,27 @@
 
       <div class="project-grid mt-5">
         {{ range .Pages }}
-        <div class="project-card-container">
-          <div class="card">
-            {{ if .Params.thumbnail }}
-            <img src="{{ .Params.thumbnail }}" class="card-img-top" alt="{{ .Title }}">
+        <div class="project-card has-animation">
+          {{ if .Params.image }}
+            <img src="{{ .Params.image | absURL }}" class="card-img-top" alt="{{ .Title }}">
+          {{ else if .Params.thumbnail }}
+            <img src="{{ .Params.thumbnail | absURL }}" class="card-img-top" alt="{{ .Title }}">
+          {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+            {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+            <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
+          {{ else if fileExists (printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base .File.Dir)) }}
+            {{ $pattern := printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base .File.Dir) }}
+            {{ $image := resources.GetMatch $pattern }}
+            {{ if $image }}
+              <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
             {{ end }}
-            <div class="card-body">
-              <h5 class="card-title">{{ .Title }}</h5>
-              <p class="card-text">{{ .Summary }}</p>
-              <a href="{{ .Permalink }}" class="btn btn-primary">Ver proyecto</a>
-            </div>
+          {{ end }}
+          <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            <p class="card-text">{{ .Summary }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-primary">
+              {{ if eq .Language.LanguageCode "es" }}Ver proyecto{{ else }}View project{{ end }}
+            </a>
           </div>
         </div>
         {{ end }}

@@ -24,22 +24,25 @@
 }
 
 [data-theme="dark"] {
-    --bg-color: #1A202C;
-    --bg-secondary: #2D3748;
-    --text-color: #F7FAFC; /* Improved contrast for accessibility */
-    --text-secondary: #E2E8F0; /* Improved contrast for accessibility */
-    --primary-color: #A5D142; /* Slightly brighter green for better contrast */
-    --primary-hover: #B6D355;
-    --accent-color: #FFB347; /* Brighter orange for better contrast */
-    --accent-hover: #FFCB80;
+    --bg-color: #121820;
+    --bg-secondary: #1E2A3B;
+    --text-color: #FFFFFF; /* Maximum contrast for main text */
+    --text-secondary: #E2E8F0; /* Improved contrast for secondary text */
+    --primary-color: #B7E24B; /* Much brighter green for better contrast */
+    --primary-hover: #C9F063;
+    --accent-color: #FFB84D; /* Brighter orange for better contrast */
+    --accent-hover: #FFCA80;
     --border-color: #4A5568;
-    --card-bg: #2D3748;
+    --card-bg: #1E293B;
     --card-shadow: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -2px rgba(0,0,0,0.2);
-    --header-bg: #1A202C;
-    --header-text: #F7FAFC;
-    --footer-bg: #1A202C;
-    --footer-text: #F7FAFC;
-    --code-bg: #4A5568;
+    --header-bg: #0F172A;
+    --header-text: #FFFFFF;
+    --footer-bg: #0F172A;
+    --footer-text: #FFFFFF;
+    --code-bg: #2D3748;
+    --btn-text: #000000; /* Ensure button text is dark for readability */
+    --link-color: #62DAFB; /* Bright blue for links in dark mode */
+    --link-hover: #A5F3FF;
 }
 
 /* Base styles */
@@ -191,7 +194,7 @@ p {
     border-radius: 20px;
     padding: 0.5rem 1.25rem !important;
     background-color: var(--primary-color);
-    color: white !important;
+    color: var(--btn-text, white) !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-left: 0.5rem;
 }
@@ -327,13 +330,13 @@ p {
 
 /* Links */
 a {
-    color: var(--primary-color);
+    color: var(--link-color, var(--primary-color));
     text-decoration: none;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: var(--primary-hover);
+    color: var(--link-hover, var(--primary-hover));
 }
 
 /* Modern Section Headers */
@@ -509,7 +512,7 @@ section {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--btn-text, white);
 }
 
 .btn-primary:hover {
@@ -520,7 +523,7 @@ section {
 
 .btn-accent {
     background-color: var(--accent-color);
-    color: white;
+    color: var(--btn-text, white);
 }
 
 .btn-accent:hover {
@@ -537,7 +540,7 @@ section {
 
 .btn-outline:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--btn-text, white);
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(0,0,0,0.1);
 }
