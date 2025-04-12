@@ -1,9 +1,9 @@
 ################################# Default configuration ###################
 baseURL = "https://hackvlc.es/"
 title = "Hackerspace Valencia"
-theme = "meghna-hugo"
+theme = "hackvlc"  # Changed from meghna-hugo to our new hackvlc theme
 # post pagination
-paginate = "6"
+pagination.pagerSize = "6"
 # post excerpt
 summaryLength = "15"
 # disqus short name
@@ -41,10 +41,6 @@ link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
 link = "plugins/themify-icons/themify-icons.css"
 [[params.plugins.css]]
-link = "plugins/magnific-popup/magnific-popup.css"
-[[params.plugins.css]]
-link = "plugins/slick/slick.css"
-[[params.plugins.css]]
 link = "https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap"
 
 # js plugins
@@ -53,15 +49,7 @@ link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
-link = "plugins/slick/slick.min.js"
-[[params.plugins.js]]
-link = "plugins/shuffle/shuffle.min.js"
-[[params.plugins.js]]
-link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
-[[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
-[[params.plugins.js]]
-link = "plugins/google-map/map.js"
 
 ################### Spanish Navigation ########################
 [[Languages.es.menu.main]]
@@ -134,8 +122,21 @@ description = "Web del Hackerspace de Valencia"
 google_analytics_id = "" # Your ID
 # post share
 post_share = true
-copyright = "© 2024 [Hackerspace VLC](https://hackvlc.es) · Everything we do is GPL-3.0 · Made with ❤️ in Valencia · Theme: [Themefisher](https://themefisher.com)"
+copyright = "© 2024 [Hackerspace VLC](https://hackvlc.es) · Everything we do is GPL-3.0 · Made with ❤️ in Valencia"
 
+# Theme-specific parameters
+primaryColor = "#00BFB3"  # Teal
+accentColor = "#FF6347"   # Coral/Orange
+# darkMode = true  # Uncomment to enable dark mode by default
+
+# Hero section
+heroImage = "/images/hero-image.png"
+primaryButtonText = "Sobre Nosotros"
+primaryButtonURL = "#about"
+secondaryButtonText = "Ver Proyectos"
+secondaryButtonURL = "#portfolio"
+
+# Custom CSS files
 customCSS = ["css/custom.css"]
 
 [taxonomies]
@@ -153,26 +154,12 @@ preloader = "images/logo.png"
 enable = false
 expire_days = 2
 
-# google map
-[params.map]
-enable = false
-gmap_api = ""
-map_latitude = "39.48828"
-map_longitude = "-0.35839"
-map_marker = "images/marker.png"
-
-############################# social icons #########################
-[[params.social]]
-icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-link = "https://x.com/hackvlc"
-
-[[params.social]]
-icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
-link = "https://www.youtube.com/@asociacionhackerspacevalen2049"
-
-[[params.social]]
-icon = "fab fa-meetup" # themify icon pack : https://themify.me/themify-icons
-link = "https://www.meetup.com/es-ES/hackerspace-valencia/"
+# Social media links
+[params.social]
+github = "https://github.com/hackvlc"
+twitter = "https://x.com/hackvlc"
+youtube = "https://www.youtube.com/@asociacionhackerspacevalen2049"
+meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
 
 ################################ Spanish Language ########################
 [Languages.es]
@@ -181,6 +168,8 @@ languageCode = "es-es"
 contentDir = "content/spanish"
 see_all_projects_link = "proyectos/"
 weight = 1
+[Languages.es.params]
+description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
 [Languages.es.sitemap]
 priority = 0.9
 
@@ -191,5 +180,7 @@ languageCode = "en-us"
 contentDir = "content/english"
 see_all_projects_link = "proyectos/"
 weight = 2
+[Languages.en.params]
+description = "Maker community and tech learning space in Valencia"
 [Languages.en.sitemap]
 priority = 0.8

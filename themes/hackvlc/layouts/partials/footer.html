@@ -1,0 +1,65 @@
+<footer class="footer-modern py-5">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="footer-brand mb-4">
+          {{ if .Site.Params.logo }}
+          <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" height="50" class="mb-3">
+          {{ else }}
+          <h3 class="text-white mb-3">HACKERSPACE VLC</h3>
+          {{ end }}
+          <p class="text-light opacity-75 mb-3">
+            {{ if eq .Language.LanguageCode "es" }}
+            Comunidad maker y espacio de aprendizaje tecnológico en Valencia
+            {{ else }}
+            Maker community and tech learning space in Valencia
+            {{ end }}
+          </p>
+        </div>
+        <div class="social-links">
+          {{ with .Site.Params.social.github }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <i class="ti-github"></i>
+          </a>
+          {{ end }}
+
+          {{ with .Site.Params.social.twitter }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+            <i class="ti-twitter-alt"></i>
+          </a>
+          {{ end }}
+
+          {{ with .Site.Params.social.youtube }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+            <i class="ti-youtube"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6 mb-4 mb-md-0">
+        <h5 class="footer-title">{{ if eq .Language.LanguageCode "es" }}Explorar{{ else }}Explore{{ end }}</h5>
+        <ul class="footer-links">
+          {{ range first 4 .Site.Menus.main }}
+          <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="col-md-3 col-6 mb-4 mb-md-0">
+        <h5 class="footer-title">{{ if eq .Language.LanguageCode "es" }}Enlaces{{ else }}Links{{ end }}</h5>
+        <ul class="footer-links">
+          {{ range .Site.Menus.footer }}
+          <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright text-center mt-5 pt-4 border-top border-secondary opacity-75">
+        <p>© {{ now.Format "2006" }} Hackerspace Valencia. {{ if eq .Language.LanguageCode "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
+      </div>
+    </div>
+  </div>
+</footer>

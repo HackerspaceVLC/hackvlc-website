@@ -7,10 +7,10 @@ description : "TODO"
 tags : ["Inteligencia Artificial"]
 ---
 
-<u> [Click aquí](https://www.youtube.com/watch?v=7SLHjoDxL8c)</u>  para ver la charla 1 en YouTube
+[Click aquí](https://www.youtube.com/watch?v=7SLHjoDxL8c)  para ver la charla 1 en YouTube
 
 
-<u> [Click aquí](https://gitlab.com/hackerspacevlc1/TalleresIA)</u>  para ver los recursos compartidos
+[Click aquí](https://gitlab.com/hackerspacevlc1/TalleresIA)  para ver los recursos compartidos
 
 
 # Resumen del Taller de Inteligencias Artificiales Generativas en Hackerspace Valencia
