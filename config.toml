@@ -51,9 +51,15 @@ link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
 
+# Añadir leaflet para OpenStreetMap
+[[params.plugins.css]]
+link = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+[[params.plugins.js]]
+link = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+
 ################### Spanish Navigation ########################
 [[Languages.es.menu.main]]
-name = "sobre nosotros"
+name = "nosotros"
 url = "/#about"
 weight = 1
 
@@ -136,6 +142,10 @@ primaryButtonURL = "#about"
 secondaryButtonText = "Ver Proyectos"
 secondaryButtonURL = "#portfolio"
 
+# Map coordinates
+mapLatitude = "39.488339464485364"
+mapLongitude = "-0.35849245006843755"
+
 # Custom CSS files
 customCSS = ["css/custom.css"]
 
@@ -171,7 +181,7 @@ weight = 1
 [Languages.es.params]
 description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
 email = "info@hackvlc.es"
-location = "C/ Serpis 35, Bajo 5, 46022 Valencia"
+location = "C/ Francisco Martínez, 19 Bajo 46020 Valencia"
 primaryButtonText = "Sobre Nosotros"
 primaryButtonURL = "/#about"
 secondaryButtonText = "Ver Proyectos"
@@ -189,7 +199,7 @@ weight = 2
 [Languages.en.params]
 description = "Maker community and tech learning space in Valencia"
 email = "info@hackvlc.es"
-location = "C/ Serpis 35, Bajo 5, 46022 Valencia"
+location = "C/ Francisco Martínez, 19 Bajo 46020 Valencia"
 primaryButtonText = "About Us"
 primaryButtonURL = "/#about"
 secondaryButtonText = "View Projects"

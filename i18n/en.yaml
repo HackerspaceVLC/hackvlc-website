@@ -1,36 +1,121 @@
-- id: blogTitle
-  translation: Blog
-- id: readMore
-  translation: Read More
-- id: viewAllPost
-  translation: View All Posts
-- id: share
-  translation: Share
-- id: aboutAuthor
-  translation: About the Author
-- id: authorsPosts
-  translation: Author's Posts
-- id: all
-  translation: All Categories
-- id: about
-  translation: About Us
-- id: activities
-  translation: Activities
-- id: portfolio
-  translation: Portfolio
-- id: team
-  translation: Team
-- id: pricing
-  translation: Pricing
-- id: blog
-  translation: Blog
-- id: contact
-  translation: Contact
-- id: themefisher
-  translation: Themefisher
-- id: tarjetas-de-socio
-  translation: Member(s)
-- id: aboutSocio
-  translation: About the Member
-- id: sociosPosts
-  translation: Member's Posts
+# General navigation
+blogTitle:
+  other: "Blog"
+readMore:
+  other: "Read More"
+viewAllPost:
+  other: "View All Posts"
+share:
+  other: "Share"
+aboutAuthor:
+  other: "About the Author"
+authorsPosts:
+  other: "Author's Posts"
+all:
+  other: "All Categories"
+
+# Main menu sections
+about:
+  other: "About Us"
+activities:
+  other: "Activities"
+portfolio:
+  other: "Portfolio"
+team:
+  other: "Team"
+pricing:
+  other: "Pricing"
+blog:
+  other: "Blog"
+contact:
+  other: "Contact"
+
+# Members
+tarjetas-de-socio:
+  other: "Member(s)"
+aboutSocio:
+  other: "About the Member"
+sociosPosts:
+  other: "Member's Posts"
+
+# Hero buttons
+aboutButton:
+  other: "About Us"
+projectsButton:
+  other: "View Projects"
+
+# Sections
+aboutUs:
+  other: "About Us"
+ourActivities:
+  other: "Our Activities"
+projects:
+  other: "Projects"
+monthlyFee:
+  other: "Monthly Fee"
+
+# About Items
+learningCommunity:
+  other: "Learning Community"
+learningCommunityDesc:
+  other: "We share knowledge, experience, and passion for technology. Here everyone teaches and everyone learns."
+openSource:
+  other: "Open Source is Our DNA"
+openSourceDesc:
+  other: "We believe in free software and hardware. Sharing is our way of innovating."
+creativeHackers:
+  other: "Creative Hackers"
+creativeHackersDesc:
+  other: "We transform technology into ingenious solutions. From scrap to machines, from ideas to reality."
+
+# Activities Items
+globalNetwork:
+  other: "Global Network"
+globalNetworkDesc:
+  other: "Connect with hackerspaces around the world from Valencia."
+makerSpace:
+  other: "Maker Space"
+makerSpaceDesc:
+  other: "Equipped space in Benimaclet. Your tech workshop with all the tools you need."
+workshops:
+  other: "Workshops"
+workshopsDesc:
+  other: "Practical workshops on Arduino, 3D Printing, IoT, KiCad and more. Learn by doing."
+repairCafe:
+  other: "Repair Café"
+repairCafeDesc:
+  other: "Give technology a new life. We repair and reuse for a sustainable future."
+
+# Projects
+seeMore:
+  other: "See more"
+viewAllProjects:
+  other: "View all projects"
+
+# Pricing
+wantToBecomeMember:
+  other: "Want to become a member?"
+joinMakerCommunity:
+  other: "Join our maker community with a monthly fee of"
+month:
+  other: "month"
+membershipBenefits:
+  other: "With this fee you'll have access to our space, tools and activities, plus being part of a community passionate about technology."
+joinNow:
+  other: "Join now!"
+
+# Contact
+location:
+  other: "Location"
+email:
+  other: "Email"
+
+# Footer
+footerTagline:
+  other: "Maker community and tech learning space in Valencia"
+footerExplore:
+  other: "Explore"
+footerLinks:
+  other: "Links"
+footerContact:
+  other: "Contact"
