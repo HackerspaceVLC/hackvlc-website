@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}" aria-label="Home">
           {{ if .Site.Params.logo }}
-          <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" height="40" class="me-2 img-fluid">
+          <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" height="40" class="me-2 img-fluid">
           {{ else }}
           <span class="brand-text">HACKERSPACE VALENCIA</span>
           {{ end }}

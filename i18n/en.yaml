@@ -117,3 +117,20 @@ footerExplore:
   other: "Explore"
 footerContact:
   other: "Contact"
+
+reducedFee:
+  other: "Reduced Fee"
+reducedFeeExplanation:
+  other: "Students, unemployed and retirees"
+generalFee:
+  other: "General Fee"
+generalFeeExplanation:
+  other: "General members"
+accessToWorkshopTools:
+  other: "Full access to workshop and tools"
+activeMakerCommunity:
+  other: "Active maker community"
+communicationGroups:
+  other: "Communication groups"
+workshopsAndEvents:
+  other: "Workshops and events"

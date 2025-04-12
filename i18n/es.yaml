@@ -117,3 +117,20 @@ footerExplore:
   other: "Explora"
 footerContact:
   other: "Contacto"
+
+reducedFee:
+  other: "Cuota Reducida"
+reducedFeeExplanation:
+  other: "Estudiantes, desemplead@s y jubilad@s"
+generalFee:
+  other: "Cuota General"
+generalFeeExplanation:
+  other: "Soci@s general"
+accessToWorkshopTools:
+  other: "Acceso total al taller y a herramientas"
+activeMakerCommunity:
+  other: "Comunidad maker activa"
+communicationGroups:
+  other: "Grupos de comunicación"
+workshopsAndEvents:
+  other: "Talleres y eventos"

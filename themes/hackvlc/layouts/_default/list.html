@@ -6,28 +6,55 @@
 
       {{ .Content }}
 
-      <div class="project-grid mt-5">
+      <div class="workshops-grid mt-5">
         {{ range .Pages }}
-        <div class="project-card has-animation">
-          {{ if .Params.image }}
-          <img src="{{ .Params.image | absURL }}" class="card-img-top" alt="{{ .Title }}">
-          {{ else if .Params.thumbnail }}
-          <img src="{{ .Params.thumbnail | absURL }}" class="card-img-top" alt="{{ .Title }}">
-          {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
-          {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
-          <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
-          {{ else if and .File (fileExists (printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base ($.File | default dict).Dir | default ""))) }}
-          {{ $pattern := printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base ($.File | default dict).Dir | default "") }}
-          {{ $image := resources.GetMatch $pattern }}
-          {{ if $image }}
-          <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
-          {{ end }}
-          {{ end }}
-          <div class="card-body">
-            <h5 class="card-title">{{ .Title }}</h5>
-            <p class="card-text">{{ .Summary }}</p>
-            <a href="{{ .Permalink }}" class="btn btn-primary">
-              {{ if eq .Language.LanguageCode "es" }}Ver proyecto{{ else }}View project{{ end }}
+        <div class="workshop-card has-animation">
+          <div class="workshop-image">
+            {{ if .Params.image }}
+            <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+            {{ else if .Params.thumbnail }}
+            <img src="{{ .Params.thumbnail | absURL }}" alt="{{ .Title }}">
+            {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+            {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+            <img src="{{ $image.Permalink }}" alt="{{ .Title }}">
+            {{ else }}
+            <div class="workshop-image-placeholder">
+              <img src="{{ "images/workshop-placeholder.jpg" | absURL }}" alt="{{ .Title }}">
+            </div>
+            {{ end }}
+            <div class="workshop-overlay">
+              {{ with .Params.category }}
+              <span class="workshop-category">{{ . }}</span>
+              {{ end }}
+            </div>
+          </div>
+          <div class="workshop-content">
+            <h3 class="workshop-title">{{ .Title }}</h3>
+
+            {{ if or .Params.date .Params.location .Params.instructor }}
+            <div class="workshop-details">
+              {{ with .Params.date }}
+              <div class="workshop-date">
+                <i class="fa-solid fa-calendar-days"></i> {{ . | time.Format "02 Jan 2006" }}
+              </div>
+              {{ end }}
+
+              {{ with .Params.location }}
+              <div class="workshop-location">
+                <i class="fa-solid fa-location-dot"></i> {{ . }}
+              </div>
+              {{ end }}
+
+              {{ with .Params.instructor }}
+              <div class="workshop-instructor">
+                <i class="fa-solid fa-chalkboard-user"></i> {{ . }}
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+
+            <a href="{{ .Permalink }}" class="btn btn-primary workshop-button">
+              {{ i18n "seeMore" | default "Ver más" }}
             </a>
           </div>
         </div>
