@@ -1,50 +1,52 @@
 <header class="header-modern shadow-sm">
   <div class="container">
     <nav class="navbar navbar-expand-lg py-3">
-      <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}">
-        {{ if .Site.Params.logo }}
-        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" height="38" class="me-2">
-        {{ else }}
-        <span class="brand-text">HACKERSPACE VALENCIA</span>
-        {{ end }}
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
-              aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav ms-auto align-items-center">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-          <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          <a class="nav-link" href="{{ .URL }}">
-            {{ .Name }}
-          </a>
-          </li>
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}">
+          {{ if .Site.Params.logo }}
+          <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" height="40" class="me-2 img-fluid">
+          {{ else }}
+          <span class="brand-text">HACKERSPACE VALENCIA</span>
           {{ end }}
+        </a>
 
-          {{ if templates.Exists "partials/theme-toggle.html" }}
-          <li class="nav-item ms-2">
-            {{ partial "theme-toggle.html" . }}
-          </li>
-          {{ end }}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          {{ if .IsTranslated }}
-          <li class="nav-item dropdown ms-2">
-            <a class="nav-link dropdown-toggle lang-switch" href="#" id="navbarDropdownLanguage" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              {{ .Language.LanguageName }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLanguage">
-              {{ range .Translations }}
-              <li><a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-              {{ end }}
-            </ul>
-          </li>
-          {{ end }}
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-center">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+              <a class="nav-link" href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
+            {{ end }}
+
+            {{ if templates.Exists "partials/theme-toggle.html" }}
+            <li class="nav-item ms-2">
+              {{ partial "theme-toggle.html" . }}
+            </li>
+            {{ end }}
+
+            {{ if .IsTranslated }}
+            <li class="nav-item dropdown ms-2">
+              <a class="nav-link dropdown-toggle lang-switch" href="#" id="navbarDropdownLanguage" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                {{ .Language.LanguageName }}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLanguage">
+                {{ range .Translations }}
+                <li><a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
       </div>
     </nav>
   </div>

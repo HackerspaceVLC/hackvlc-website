@@ -1,6 +1,6 @@
 <footer class="footer-modern py-5">
   <div class="container">
-    <div class="row justify-content-between">
+    <div class="row gy-4 justify-content-between">
       <div class="col-lg-4 mb-4 mb-lg-0">
         <div class="footer-brand mb-4">
           {{ if .Site.Params.logo }}
@@ -19,19 +19,31 @@
         <div class="social-links">
           {{ with .Site.Params.social.github }}
           <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-            <i class="ti-github"></i>
+            <i class="fa-brands fa-github"></i>
           </a>
           {{ end }}
 
           {{ with .Site.Params.social.twitter }}
           <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
-            <i class="ti-twitter-alt"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          {{ end }}
+
+          {{ with .Site.Params.social.linkedin }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
           {{ end }}
 
           {{ with .Site.Params.social.youtube }}
           <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
-            <i class="ti-youtube"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          {{ end }}
+
+          {{ with .Site.Params.social.telegram }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
           </a>
           {{ end }}
         </div>
@@ -54,10 +66,28 @@
           {{ end }}
         </ul>
       </div>
+
+      <div class="col-md-2 col-sm-12">
+        <h5 class="footer-title">{{ if eq .Language.LanguageCode "es" }}Contacto{{ else }}Contact{{ end }}</h5>
+        <ul class="footer-links">
+          {{ with .Site.Params.location }}
+          <li>
+            <i class="fa-solid fa-location-dot me-2"></i> {{ . }}
+          </li>
+          {{ end }}
+          {{ with .Site.Params.email }}
+          <li>
+            <a href="mailto:{{ . }}" class="footer-link">
+              <i class="fa-solid fa-envelope me-2"></i> {{ . }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
 
     <div class="footer-bottom">
-      <div class="copyright text-center mt-5 pt-4 border-top border-secondary opacity-75">
+      <div class="copyright text-center mt-5 pt-4 border-top border-secondary-subtle opacity-75">
         <p>© {{ now.Format "2006" }} Hackerspace Valencia. {{ if eq .Language.LanguageCode "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
       </div>
     </div>

@@ -1,32 +1,32 @@
 {{ $project := . }}
 
-<div class="project-container main-container">
+<div class="project-sheet has-animation">
   <div class="corner-top-right"></div>
   <div class="corner-bottom-left"></div>
 
-  <div class="section-header">
-    PROYECTO HECHO EN
+  <div class="project-header">
+    {{ if eq .Language.LanguageCode "es" }}PROYECTO HECHO EN{{ else }}PROJECT MADE AT{{ end }}
   </div>
 
   <div class="project-title">
     {{ $project.Title }}
   </div>
 
-  <div class="row">
+  <div class="row gy-4">
     <div class="col-md-3">
       <div class="qr-container">
         {{ if $project.Params.qr_info }}
         <img src="{{ $project.Params.qr_info }}" alt="QR Info" class="qr-code">
         {{ else }}
-        <div class="qr-placeholder"></div>
+        <div class="qr-placeholder">{{ if eq .Language.LanguageCode "es" }}Sin código QR disponible{{ else }}No QR code available{{ end }}</div>
         {{ end }}
-        <div class="qr-label">MÁS INFO</div>
+        <div class="qr-label">{{ if eq .Language.LanguageCode "es" }}MÁS INFO{{ else }}MORE INFO{{ end }}</div>
       </div>
     </div>
 
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">DESCRIPCIÓN</div>
+        <div class="card-header">{{ if eq .Language.LanguageCode "es" }}DESCRIPCIÓN{{ else }}DESCRIPTION{{ end }}</div>
         <div class="card-body">
           {{ $project.Content }}
         </div>
@@ -38,24 +38,24 @@
         {{ if $project.Params.qr_code }}
         <img src="{{ $project.Params.qr_code }}" alt="QR Code" class="qr-code">
         {{ else }}
-        <div class="qr-placeholder"></div>
+        <div class="qr-placeholder">{{ if eq .Language.LanguageCode "es" }}Sin código QR disponible{{ else }}No QR code available{{ end }}</div>
         {{ end }}
-        <div class="qr-label">CÓDIGO</div>
+        <div class="qr-label">{{ if eq .Language.LanguageCode "es" }}CÓDIGO{{ else }}CODE{{ end }}</div>
       </div>
     </div>
   </div>
 
-  <div class="row mt-4">
+  <div class="row mt-4 gy-4">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">AUTOR/A/ES</div>
+        <div class="card-header">{{ if eq .Language.LanguageCode "es" }}AUTOR/A/ES{{ else }}AUTHOR(S){{ end }}</div>
         <div class="card-body">
           {{ if $project.Params.authors }}
           {{ range $project.Params.authors }}
-          <div>{{ . }}</div>
+          <div class="author-item"><i class="fa-solid fa-user me-2"></i> {{ . }}</div>
           {{ end }}
           {{ else }}
-          <div>{{ $project.Params.author | default "Comunidad HackVLC" }}</div>
+          <div class="author-item"><i class="fa-solid fa-users me-2"></i> {{ $project.Params.author | default "Comunidad HackVLC" }}</div>
           {{ end }}
         </div>
       </div>
@@ -63,7 +63,7 @@
 
     <div class="col-md-6">
       <div class="card">
-        <div class="card-header">TECNOLOGÍAS</div>
+        <div class="card-header">{{ if eq .Language.LanguageCode "es" }}TECNOLOGÍAS{{ else }}TECHNOLOGIES{{ end }}</div>
         <div class="card-body">
           {{ if $project.Params.technologies }}
           <ul class="tech-list">
@@ -72,12 +72,28 @@
             {{ end }}
           </ul>
           {{ else }}
-          <p>No hay tecnologías especificadas</p>
+          <p>{{ if eq .Language.LanguageCode "es" }}No hay tecnologías especificadas{{ else }}No technologies specified{{ end }}</p>
           {{ end }}
         </div>
       </div>
     </div>
   </div>
+
+  {{ if $project.Params.images }}
+  <div class="project-gallery mt-4">
+    <div class="row gy-4">
+      {{ range $index, $image := $project.Params.images }}
+      <div class="col-md-4">
+        <div class="gallery-image">
+          <a href="{{ $image | absURL }}" class="glightbox" data-gallery="project-gallery">
+            <img src="{{ $image | absURL }}" alt="{{ $project.Title }} - Image {{ add $index 1 }}" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
 
   <div class="footer mt-4">
     HACKERSPACE VLC
