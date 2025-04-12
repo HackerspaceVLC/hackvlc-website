@@ -56,6 +56,10 @@ link = "plugins/lazy-load/lozad.min.js"
 link = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 [[params.plugins.js]]
 link = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+# Favicon
+
+[params.favicon]
+icon = "favicon.ico"        # Favicon básico
 
 ################### Spanish Navigation ########################
 [[Languages.es.menu.main]]
@@ -136,7 +140,7 @@ accentColor = "#FF6347"   # Coral/Orange
 # darkMode = true  # Uncomment to enable dark mode by default
 
 # Hero section
-heroImage = "/images/hero-image.png"
+heroImage = "/images/local-4.webp"
 primaryButtonText = "Sobre Nosotros"
 primaryButtonURL = "#about"
 secondaryButtonText = "Ver Proyectos"
@@ -166,7 +170,7 @@ expire_days = 2
 
 # Social media links
 [params.social]
-github = "https://github.com/hackvlc"
+github = "https://github.com/HackerspaceVLC/"
 twitter = "https://x.com/hackvlc"
 youtube = "https://www.youtube.com/@asociacionhackerspacevalen2049"
 meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
@@ -180,7 +184,7 @@ see_all_projects_link = "proyectos/"
 weight = 1
 [Languages.es.params]
 description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
-email = "info@hackvlc.es"
+email = "hackerspacevlc@gmail.com"
 location = "C/ Francisco Martínez, 19 Bajo 46020 Valencia"
 primaryButtonText = "Sobre Nosotros"
 primaryButtonURL = "/#about"
@@ -198,7 +202,7 @@ see_all_projects_link = "proyectos/"
 weight = 2
 [Languages.en.params]
 description = "Maker community and tech learning space in Valencia"
-email = "info@hackvlc.es"
+email = "hackerspacevlc@gmail.com"
 location = "C/ Francisco Martínez, 19 Bajo 46020 Valencia"
 primaryButtonText = "About Us"
 primaryButtonURL = "/#about"
