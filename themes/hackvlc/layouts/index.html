@@ -2,78 +2,73 @@
 
 <section class="hero">
   <div class="container">
-    <div class="main-container">
-      <div class="corner-top-right"></div>
-      <div class="corner-bottom-left"></div>
-
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <h1>{{ .Site.Title }}</h1>
-          <p class="lead">{{ .Site.Params.description }}</p>
-          <div class="hero-buttons">
-            <a href="{{ .Site.Params.primaryButtonURL | default "/sobre-nosotros" }}" class="btn btn-primary">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="has-animation">{{ .Site.Title }}</h1>
+        <p class="lead has-animation">{{ .Site.Params.description }}</p>
+        <div class="hero-buttons has-animation">
+          <a href="{{ .Site.Params.primaryButtonURL | default "/sobre-nosotros" }}" class="btn btn-primary">
             {{ .Site.Params.primaryButtonText | default "Sobre Nosotros" }}
-            </a>
-            <a href="{{ .Site.Params.secondaryButtonURL | default "/proyectos" }}" class="btn btn-accent">
+          </a>
+          <a href="{{ .Site.Params.secondaryButtonURL | default "/proyectos" }}" class="btn btn-accent">
             {{ .Site.Params.secondaryButtonText | default "Ver Proyectos" }}
-            </a>
-          </div>
+          </a>
         </div>
-        <div class="col-lg-4">
-          {{ if .Site.Params.heroImage }}
-          <img src="{{ .Site.Params.heroImage }}" alt="{{ .Site.Title }}" class="img-fluid hero-image">
-          {{ end }}
-        </div>
+      </div>
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        {{ if .Site.Params.heroImage }}
+        <img src="{{ .Site.Params.heroImage }}" alt="{{ .Site.Title }}" class="img-fluid hero-image has-animation">
+        {{ end }}
       </div>
     </div>
   </div>
 </section>
 
 <section class="about-section py-5">
-  <div class="container">
-    <div class="section-header mb-5">
-      Sobre Nosotros
+  <div class="container text-center">
+    <div class="section-header has-animation">
+      {{ if eq .Language.LanguageCode "es" }}Sobre Nosotros{{ else }}About Us{{ end }}
     </div>
 
-    <div class="row">
+    <div class="row g-4">
       <div class="col-md-4">
-        <div class="card">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="hexagon mx-auto mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
               </svg>
             </div>
-            <h4>Comunidad de Aprendizaje</h4>
-            <p>Compartimos conocimiento, experiencia y pasión por la tecnología. Aquí todos enseñamos y todos aprendemos.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Comunidad de Aprendizaje{{ else }}Learning Community{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Compartimos conocimiento, experiencia y pasión por la tecnología. Aquí todos enseñamos y todos aprendemos.{{ else }}We share knowledge, experience, and passion for technology. Here everyone teaches and everyone learns.{{ end }}</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="hexagon mx-auto mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </div>
-            <h4>Open Source es Nuestro ADN</h4>
-            <p>Creemos en el software y hardware libre. Compartir es nuestra forma de innovar.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Open Source es Nuestro ADN{{ else }}Open Source is Our DNA{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Creemos en el software y hardware libre. Compartir es nuestra forma de innovar.{{ else }}We believe in free software and hardware. Sharing is our way of innovating.{{ end }}</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="hexagon mx-auto mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
             </div>
-            <h4>Hackers Creativos</h4>
-            <p>Transformamos tecnología en soluciones ingeniosas. De chatarra a máquinas, de ideas a realidad.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Hackers Creativos{{ else }}Creative Hackers{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Transformamos tecnología en soluciones ingeniosas. De chatarra a máquinas, de ideas a realidad.{{ else }}We transform technology into ingenious solutions. From scrap to machines, from ideas to reality.{{ end }}</p>
           </div>
         </div>
       </div>
@@ -82,14 +77,14 @@
 </section>
 
 <section class="activities-section py-5">
-  <div class="container">
-    <div class="section-header mb-5">
-      Nuestras Actividades
+  <div class="container text-center">
+    <div class="section-header has-animation">
+      {{ if eq .Language.LanguageCode "es" }}Nuestras Actividades{{ else }}Our Activities{{ end }}
     </div>
 
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="activity-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -98,14 +93,14 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
             </div>
-            <h4>Red Global</h4>
-            <p>Conéctate con hackerspaces de todo el mundo desde Valencia.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Red Global{{ else }}Global Network{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Conéctate con hackerspaces de todo el mundo desde Valencia.{{ else }}Connect with hackerspaces around the world from Valencia.{{ end }}</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
+      <div class="col-lg-3 col-md-6">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="activity-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -113,14 +108,14 @@
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
               </svg>
             </div>
-            <h4>Espacio Maker</h4>
-            <p>Local equipado en Benimaclet. Tu taller tecnológico con todas las herramientas que necesitas.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Espacio Maker{{ else }}Maker Space{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Local equipado en Benimaclet. Tu taller tecnológico con todas las herramientas que necesitas.{{ else }}Equipped space in Benimaclet. Your tech workshop with all the tools you need.{{ end }}</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
+      <div class="col-lg-3 col-md-6">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="activity-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -129,44 +124,14 @@
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <h4>Workshops</h4>
-            <p>Talleres prácticos de Arduino, Impresión 3D, IoT, KiCad y más. Aprende haciendo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body text-center">
-            <div class="activity-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
-              </svg>
-            </div>
-            <h4>Comunidad Activa</h4>
-            <p>Comparte conocimientos y aprende de otros makers apasionados.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Workshops{{ else }}Workshops{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Talleres prácticos de Arduino, Impresión 3D, IoT, KiCad y más. Aprende haciendo.{{ else }}Practical workshops on Arduino, 3D Printing, IoT, KiCad and more. Learn by doing.{{ end }}</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body text-center">
-            <div class="activity-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-            </div>
-            <h4>Desarrollo Tech</h4>
-            <p>Creamos proyectos de software y hardware con impacto social.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
+      <div class="col-lg-3 col-md-6">
+        <div class="card has-animation">
           <div class="card-body text-center">
             <div class="activity-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -175,8 +140,8 @@
                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
               </svg>
             </div>
-            <h4>Repair Café</h4>
-            <p>Dale nueva vida a la tecnología. Reparamos y reutilizamos por un futuro sostenible.</p>
+            <h4>{{ if eq .Language.LanguageCode "es" }}Repair Café{{ else }}Repair Café{{ end }}</h4>
+            <p>{{ if eq .Language.LanguageCode "es" }}Dale nueva vida a la tecnología. Reparamos y reutilizamos por un futuro sostenible.{{ else }}Give technology a new life. We repair and reuse for a sustainable future.{{ end }}</p>
           </div>
         </div>
       </div>
@@ -186,32 +151,30 @@
 
 {{ if .Site.Data.projects }}
 <section class="projects-section py-5">
-  <div class="container">
-    <div class="section-header mb-5">
-      Portfolio
+  <div class="container text-center">
+    <div class="section-header has-animation">
+      {{ if eq .Language.LanguageCode "es" }}Proyectos{{ else }}Projects{{ end }}
     </div>
 
-    <div class="row">
+    <div class="project-grid">
       {{ range first 6 .Site.Data.projects }}
-      <div class="col-md-4 mb-4">
-        <div class="card project-card">
-          {{ if .image }}
-          <img src="{{ .image }}" class="card-img-top" alt="{{ .title }}">
+      <div class="project-card has-animation">
+        {{ if .image }}
+        <img src="{{ .image }}" class="card-img-top" alt="{{ .title }}">
+        {{ end }}
+        <div class="card-body">
+          <h5 class="card-title">{{ .title }}</h5>
+          <p class="card-text">{{ .description }}</p>
+          {{ if .link }}
+          <a href="{{ .link }}" class="btn btn-primary">{{ if eq $.Language.LanguageCode "es" }}Ver más{{ else }}See more{{ end }}</a>
           {{ end }}
-          <div class="card-body">
-            <h5 class="card-title">{{ .title }}</h5>
-            <p class="card-text">{{ .description }}</p>
-            {{ if .link }}
-            <a href="{{ .link }}" class="btn btn-primary">Ver más</a>
-            {{ end }}
-          </div>
         </div>
       </div>
       {{ end }}
     </div>
 
-    <div class="text-center mt-4">
-      <a href="/proyectos" class="btn btn-accent">Ver todos los proyectos</a>
+    <div class="text-center mt-5">
+      <a href="/proyectos" class="btn btn-accent">{{ if eq .Language.LanguageCode "es" }}Ver todos los proyectos{{ else }}View all projects{{ end }}</a>
     </div>
   </div>
 </section>
