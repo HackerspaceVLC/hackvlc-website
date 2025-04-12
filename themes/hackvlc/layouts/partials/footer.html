@@ -4,16 +4,12 @@
       <div class="col-lg-4 mb-4 mb-lg-0">
         <div class="footer-brand mb-4">
           {{ if .Site.Params.logo }}
-          <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" height="50" class="mb-3">
+          <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" height="30" class="mb-3">
           {{ else }}
           <h3 class="text-white mb-3">HACKERSPACE VLC</h3>
           {{ end }}
           <p class="text-light opacity-75 mb-3">
-            {{ if eq .Language.LanguageCode "es" }}
-            Comunidad maker y espacio de aprendizaje tecnológico en Valencia
-            {{ else }}
-            Maker community and tech learning space in Valencia
-            {{ end }}
+            {{ i18n "footerTagline" }}
           </p>
         </div>
         <div class="social-links">
@@ -46,29 +42,26 @@
             <i class="fa-brands fa-telegram"></i>
           </a>
           {{ end }}
+
+          {{ with .Site.Params.social.meetup }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="social-link" aria-label="Meetup">
+            <i class="fa-brands fa-meetup"></i>
+          </a>
+          {{ end }}
         </div>
       </div>
 
       <div class="col-md-3 col-6 mb-4 mb-md-0">
-        <h5 class="footer-title">{{ if eq .Language.LanguageCode "es" }}Explorar{{ else }}Explore{{ end }}</h5>
+        <h5 class="footer-title">{{ i18n "footerExplore" }}</h5>
         <ul class="footer-links">
           {{ range first 4 .Site.Menus.main }}
-          <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-
-      <div class="col-md-3 col-6 mb-4 mb-md-0">
-        <h5 class="footer-title">{{ if eq .Language.LanguageCode "es" }}Enlaces{{ else }}Links{{ end }}</h5>
-        <ul class="footer-links">
-          {{ range .Site.Menus.footer }}
-          <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+          <li><a href="{{ .URL | relLangURL }}" class="footer-link">{{ .Name }}</a></li>
           {{ end }}
         </ul>
       </div>
 
       <div class="col-md-2 col-sm-12">
-        <h5 class="footer-title">{{ if eq .Language.LanguageCode "es" }}Contacto{{ else }}Contact{{ end }}</h5>
+        <h5 class="footer-title">{{ i18n "footerContact" }}</h5>
         <ul class="footer-links">
           {{ with .Site.Params.location }}
           <li>
@@ -88,7 +81,7 @@
 
     <div class="footer-bottom">
       <div class="copyright text-center mt-5 pt-4 border-top border-secondary-subtle opacity-75">
-        <p>© {{ now.Format "2006" }} Hackerspace Valencia. {{ if eq .Language.LanguageCode "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
+        <p>{{ replace .Site.Copyright "{year}" now.Year | markdownify }}</p>
       </div>
     </div>
   </div>
