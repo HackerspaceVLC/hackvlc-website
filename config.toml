@@ -54,63 +54,63 @@ link = "plugins/lazy-load/lozad.min.js"
 ################### Spanish Navigation ########################
 [[Languages.es.menu.main]]
 name = "sobre nosotros"
-url = "#about"
+url = "/#about"
 weight = 1
 
 [[Languages.es.menu.main]]
 name = "actividades"
-url = "#activities"
+url = "/#activities"
 weight = 2
 
 [[Languages.es.menu.main]]
 name = "proyectos"
-url = "#portfolio"
+url = "/proyectos/"
 weight = 3
 
 [[Languages.es.menu.main]]
 name = "cuota"
-url = "#pricing"
+url = "/#pricing"
 weight = 5
 
 [[Languages.es.menu.main]]
 name = "talleres"
-url = "#workshops"
+url = "/workshops/"
 weight = 6
 
 [[Languages.es.menu.main]]
 name = "contacto"
-url = "#contact"
+url = "/#contact"
 weight = 7
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "about"
-url = "#about"
+url = "/#about"
 weight = 1
 
 [[Languages.en.menu.main]]
 name = "activities"
-url = "#activities"
+url = "/#activities"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "portfolio"
-url = "#portfolio"
+name = "projects"
+url = "/proyectos/"
 weight = 3
 
 [[Languages.en.menu.main]]
 name = "fee"
-url = "#pricing"
+url = "/#pricing"
 weight = 5
 
 [[Languages.en.menu.main]]
 name = "workshops"
-url = "#workshops"
+url = "/workshops/"
 weight = 6
 
 [[Languages.en.menu.main]]
 name = "contact"
-url = "#contact"
+url = "/#contact"
 weight = 7
 
 ############################# Default Parameters ##########################

@@ -163,20 +163,59 @@ function initProjectCards() {
 }
 
 // Smooth scroll to sections when clicking on navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
+        // Parse the URL and fragment
+        const href = this.getAttribute('href');
+        const url = new URL(href, window.location.origin);
         
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            e.preventDefault();
-            window.scrollTo({
-                top: targetElement.offsetTop - 100,
-                behavior: 'smooth'
-            });
+        // Only handle same-page links
+        if (url.pathname === window.location.pathname || url.pathname === '/' || url.pathname === '') {
+            const targetId = url.hash;
+            
+            if (!targetId || targetId === '#') return;
+            
+            const targetElement = document.getElementById(targetId.substring(1));
+            
+            if (targetElement) {
+                e.preventDefault();
+                
+                // Get header height for offset
+                const header = document.querySelector('.header-modern');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const scrollPadding = 20; // Extra padding
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight - scrollPadding,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without triggering a scroll
+                if (history && history.pushState) {
+                    history.pushState(null, null, targetId);
+                }
+            }
         }
     });
+});
+
+// Handle initial hash in URL
+window.addEventListener('load', function() {
+    if (window.location.hash) {
+        const targetId = window.location.hash;
+        const targetElement = document.getElementById(targetId.substring(1));
+        
+        if (targetElement) {
+            setTimeout(() => {
+                const header = document.querySelector('.header-modern');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const scrollPadding = 20;
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight - scrollPadding,
+                    behavior: 'smooth'
+                });
+            }, 300); // Small delay to ensure page is fully loaded
+        }
+    }
 });

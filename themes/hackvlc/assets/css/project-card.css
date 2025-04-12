@@ -306,6 +306,9 @@
     box-shadow: var(--card-shadow);
     height: 100%;
     position: relative;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-card::after {
@@ -334,10 +337,11 @@
     height: 220px;
     object-fit: cover;
     transition: all 0.5s ease;
+    width: 100%;
 }
 
 .project-card:hover .card-img-top {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .project-card .card-body {
