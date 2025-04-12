@@ -7,9 +7,9 @@ description : "TODO"
 tags : ["Artificial Intelligence"]
 ---
 
-##  <u> [Click here to watch Talk 1 on YouTube](https://www.youtube.com/watch?v=7SLHjoDxL8c)</u>
+[Click here](https://www.youtube.com/watch?v=7SLHjoDxL8c)  to watch Talk 1 on YouTube
 
-## <u> [Click here to view shared resources](https://gitlab.com/hackerspacevlc1/TalleresIA)</u>
+[Click here](https://gitlab.com/hackerspacevlc1/TalleresIA) to view shared resources
 
 # Summary of the Generative Artificial Intelligences Workshop at Hackerspace Valencia
 

@@ -1,6 +1,6 @@
 ---
 title: "Aprende a diseñar tus PCBs con KiCad"
-date: 2024-03-09T11:002:00+01:00
+date: 2024-03-09
 image: images/workshop/kicad/kicad.webp
 socios: ["Ángel Andrés"]
 description: "Taller práctico para aprender diseño de PCB con KiCad, desde captura de esquemáticos hasta diseño de placas. Perfecto para principiantes interesados en electrónica y fabricación digital."

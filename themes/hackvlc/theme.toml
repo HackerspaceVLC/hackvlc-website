@@ -1,0 +1,18 @@
+name = "HackVLC"
+license = "AGPL"
+licenselink = "https://github.com/HackerspaceVLC/hackvlc-website/blob/main/LICENSE"
+description = "A theme for Hackerspace Valencia with light and dark mode"
+homepage = "https://github.com/HackerspaceVLC/hackvlc-website"
+tags = ["responsive", "light", "dark", "multilingual", "hackerspace", "technology"]
+features = ["responsive", "multilingual", "light/dark theme toggle", "bootstrap", "seo"]
+min_version = "0.80.0"
+
+[author]
+  name = "Hackerspace Valencia"
+  homepage = "https://hackvlc.es"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h1 class="text-center mb-5">{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+
+      {{ .Content }}
+
+      <div class="project-grid mt-5">
+        {{ range .Pages }}
+        <div class="project-card-container">
+          <div class="card">
+            {{ if .Params.thumbnail }}
+            <img src="{{ .Params.thumbnail }}" class="card-img-top" alt="{{ .Title }}">
+            {{ end }}
+            <div class="card-body">
+              <h5 class="card-title">{{ .Title }}</h5>
+              <p class="card-text">{{ .Summary }}</p>
+              <a href="{{ .Permalink }}" class="btn btn-primary">Ver proyecto</a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

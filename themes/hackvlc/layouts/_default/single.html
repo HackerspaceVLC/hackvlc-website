@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="container py-5">
+  {{ if eq .Type "projects" }}
+  {{ partial "project-card.html" . }}
+  {{ else }}
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <article class="main-container">
+        <div class="corner-top-right"></div>
+        <div class="corner-bottom-left"></div>
+
+        <h1 class="mb-4">{{ .Title }}</h1>
+
+        {{ if .Params.date }}
+        <div class="post-date mb-4">
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
+        {{ end }}
+
+        <div class="content">
+          {{ .Content }}
+        </div>
+
+        {{ if .Params.tags }}
+        <div class="tags mt-4">
+          {{ range .Params.tags }}
+          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,85 @@
+{{ $project := . }}
+
+<div class="project-container main-container">
+  <div class="corner-top-right"></div>
+  <div class="corner-bottom-left"></div>
+
+  <div class="section-header">
+    PROYECTO HECHO EN
+  </div>
+
+  <div class="project-title">
+    {{ $project.Title }}
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="qr-container">
+        {{ if $project.Params.qr_info }}
+        <img src="{{ $project.Params.qr_info }}" alt="QR Info" class="qr-code">
+        {{ else }}
+        <div class="qr-placeholder"></div>
+        {{ end }}
+        <div class="qr-label">MÁS INFO</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">DESCRIPCIÓN</div>
+        <div class="card-body">
+          {{ $project.Content }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="qr-container">
+        {{ if $project.Params.qr_code }}
+        <img src="{{ $project.Params.qr_code }}" alt="QR Code" class="qr-code">
+        {{ else }}
+        <div class="qr-placeholder"></div>
+        {{ end }}
+        <div class="qr-label">CÓDIGO</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">AUTOR/A/ES</div>
+        <div class="card-body">
+          {{ if $project.Params.authors }}
+          {{ range $project.Params.authors }}
+          <div>{{ . }}</div>
+          {{ end }}
+          {{ else }}
+          <div>{{ $project.Params.author | default "Comunidad HackVLC" }}</div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">TECNOLOGÍAS</div>
+        <div class="card-body">
+          {{ if $project.Params.technologies }}
+          <ul class="tech-list">
+            {{ range $project.Params.technologies }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+          {{ else }}
+          <p>No hay tecnologías especificadas</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer mt-4">
+    HACKERSPACE VLC
+  </div>
+</div>
