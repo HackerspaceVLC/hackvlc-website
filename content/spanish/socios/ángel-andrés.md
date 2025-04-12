@@ -1,7 +1,6 @@
 ---
 title: "Ángel Andrés"
 summary: "Un profesional de la tecnología especializado en hardware e innovación."
-image: ""
 email: "yirkoon00@gmail.com"
 social:
   - icon : "ti-linkedin"

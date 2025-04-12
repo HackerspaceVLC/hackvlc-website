@@ -1,6 +1,5 @@
 ---
 title: "Hackerspace"
-image: "images/logo-orange.png"
 email: "hackerspacevlc@gmail.coms"
  
 ---

@@ -10,18 +10,18 @@
         {{ range .Pages }}
         <div class="project-card has-animation">
           {{ if .Params.image }}
-            <img src="{{ .Params.image | absURL }}" class="card-img-top" alt="{{ .Title }}">
+          <img src="{{ .Params.image | absURL }}" class="card-img-top" alt="{{ .Title }}">
           {{ else if .Params.thumbnail }}
-            <img src="{{ .Params.thumbnail | absURL }}" class="card-img-top" alt="{{ .Title }}">
+          <img src="{{ .Params.thumbnail | absURL }}" class="card-img-top" alt="{{ .Title }}">
           {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
-            {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
-            <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
-          {{ else if fileExists (printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base .File.Dir)) }}
-            {{ $pattern := printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base .File.Dir) }}
-            {{ $image := resources.GetMatch $pattern }}
-            {{ if $image }}
-              <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
-            {{ end }}
+          {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
+          {{ else if and .File (fileExists (printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base ($.File | default dict).Dir | default ""))) }}
+          {{ $pattern := printf "content/%s/%s/images/*.{jpg,png,gif,webp}" .Section (path.Base ($.File | default dict).Dir | default "") }}
+          {{ $image := resources.GetMatch $pattern }}
+          {{ if $image }}
+          <img src="{{ $image.Permalink }}" class="card-img-top" alt="{{ .Title }}">
+          {{ end }}
           {{ end }}
           <div class="card-body">
             <h5 class="card-title">{{ .Title }}</h5>

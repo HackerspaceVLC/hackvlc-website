@@ -1,6 +1,5 @@
 ---
 title: "Ignacio Delgado"
-image: ""
 email: "me@igdel.com"
 social: 
   - icon : "ti-linkedin" # themify icon pack : https://themify.me/themify-icons

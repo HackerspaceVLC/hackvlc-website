@@ -1,7 +1,6 @@
 ---
 title: "Hackerspace"
 summary: "Valencia’s Hackerspace official blog account"
-image: "images/logo-orange.png"
 email: "hackerspacevlc@gmail.coms"
  
 ---
