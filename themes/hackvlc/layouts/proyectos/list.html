@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h1 class="text-center mb-5">{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+
+      {{ .Content }}
+
+      <div class="project-grid mt-5">
+        {{ range .Pages }}
+        <div class="project-card has-animation">
+          {{ if .Params.image }}
+          <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="card-img-top">
+          {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          <img src="{{ $image.Permalink }}" alt="{{ .Title }}" class="card-img-top">
+          {{ else }}
+          <img src="{{ "images/portfolio/project-1.jpg" | absURL }}" alt="{{ .Title }}" class="card-img-top">
+          {{ end }}
+          
+          <div class="card-body">
+            <h3 class="card-title">{{ .Title }}</h3>
+            <p class="card-text">{{ .Summary | truncate 100 }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-primary">
+              {{ i18n "seeMore" | default "Ver más" }}
+            </a>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

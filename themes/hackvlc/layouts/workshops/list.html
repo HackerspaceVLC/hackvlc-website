@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h1 class="text-center mb-5">{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+
+      {{ .Content }}
+
+      <div class="workshops-grid mt-5">
+        {{ range .Pages }}
+        <div class="workshop-card has-animation">
+          <div class="workshop-image">
+            {{ if .Params.image }}
+            <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+            {{ else if .Params.thumbnail }}
+            <img src="{{ .Params.thumbnail | absURL }}" alt="{{ .Title }}">
+            {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+            {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+            <img src="{{ $image.Permalink }}" alt="{{ .Title }}">
+            {{ else }}
+            <div class="workshop-image-placeholder">
+              <img src="{{ "images/workshop-placeholder.jpg" | absURL }}" alt="{{ .Title }}">
+            </div>
+            {{ end }}
+            <div class="workshop-overlay">
+              {{ with .Params.category }}
+              <span class="workshop-category">{{ . }}</span>
+              {{ end }}
+            </div>
+          </div>
+          <div class="workshop-content">
+            <h3 class="workshop-title">{{ .Title }}</h3>
+
+            {{ if or .Params.date .Params.location .Params.instructor }}
+            <div class="workshop-details">
+              {{ with .Params.date }}
+              <div class="workshop-date">
+                <i class="fa-solid fa-calendar-days"></i> {{ . | time.Format "02 Jan 2006" }}
+              </div>
+              {{ end }}
+
+              {{ with .Params.location }}
+              <div class="workshop-location">
+                <i class="fa-solid fa-location-dot"></i> {{ . }}
+              </div>
+              {{ end }}
+
+              {{ with .Params.instructor }}
+              <div class="workshop-instructor">
+                <i class="fa-solid fa-chalkboard-user"></i> {{ . }}
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+
+            <a href="{{ .Permalink }}" class="btn btn-primary workshop-button">
+              {{ i18n "seeMore" | default "Ver más" }}
+            </a>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
