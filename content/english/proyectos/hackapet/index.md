@@ -3,10 +3,16 @@ title: "Hackapet"
 date: 2024-03-10
 image: images/portfolio/hackapet.webp
 socios: ["Hackerspace Valencia"]
-summary: "Community project for Animal shelters"
-description: "Completed project, in documentation phase"
-tags: ["project", "upcoming"]
+summary: "Open-source platform for animal shelters management"
+description: "A comprehensive open-source software platform designed to help animal shelters manage their operations, including animal tracking, adoption processes, and volunteer coordination. This community-driven project makes shelter management accessible to all."
+tags: ["animal-shelter", "open-source", "web-application", "community-project", "animal-welfare", "shelter-management", "non-profit", "javascript"]
+categories: ["CS", "web"]
 featured: true
+status: "active"
+difficulty: "intermediate"
+tech_stack: ["JavaScript", "Web Development", "Database", "UI/UX"]
+repo_url: "https://hackapet.com"
+demo_url: "https://hackapet.com"
 ---
 
 # Documentation in Progress

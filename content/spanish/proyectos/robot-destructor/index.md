@@ -3,10 +3,16 @@ title: "Robot Destructor"
 date: 2024-03-09
 image: images/portfolio/destructor.webp
 socios: ["José Gil"]
-summary: "¡Destrucción Mundial!"
-description: "Completed project, in documentation phase"
-tags: ["project", "upcoming"]
+summary: "Vehículo robótico con capacidades de destrucción"
+description: "Vehículo robótico potente diseñado para competencias de destrucción. Este proyecto combina mecánica pesada, sistemas de control robustos y diseño estratégico para competencias de robótica de combate."
+tags: ["robot-combate", "robot-destructor", "battlebot", "competencia-robotica", "mecanica-pesada", "robotica-competitiva", "dispositivo-destruccion", "vehiculo-combate"]
+categories: ["robotica", "electronica"]
 featured: true
+status: "completado"
+difficulty: "avanzado"
+tech_stack: ["Estructura Metálica", "Motores DC", "Sistemas de Arma", "Control RC"]
+repo_url: ""
+demo_url: ""
 ---
 
 # Documentation in Progress

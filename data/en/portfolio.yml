@@ -9,46 +9,69 @@ portfolio:
       image : images/portfolio/cuadrúpedo.jpg
       image_webp : images/portfolio/cuadrupedo.webp
       categories : ["robotics", "electronics"]
-      content : Quadruped robot made with Arduino.
+      content : Four-legged robot with infrared remote control and advanced locomotion.
       link : "proyectos/cuadrupedo"
       
     # portfolio item loop
-    - name : Member cards
+    - name : RFID Member Cards
       image : images/portfolio/tarjetas-de-socio.webp
       image_webp : images/portfolio/tarjetas-de-socio.webp
       categories : ["CS", "electronics"]
-      content : Member card system.
+      content : RFID-based membership system for hackerspace access control.
       link : "proyectos/tarjetas-de-socio"
       
     - name: Hackapet
       image: images/portfolio/hackapet.jpg
       image_webp: images/portfolio/hackapet.webp
-      categories: [ "CS" ]
-      content: Non profit software for Animal Shelters
+      categories: [ "CS", "web" ]
+      content: Open-source platform for animal shelter management.
       link: "https://hackapet.com"
 
     # portfolio item loop
     - name: 1st Videogame
       image: images/portfolio/1-videojuego.webp
       image_webp: images/portfolio/1-videojuego.webp
-      categories: [ "electronics", "CS" ]
-      content: First ever videogame recreated with an Arduino UNO and VGA interface
+      categories: [ "electronics", "CS", "gaming" ]
+      content: Complete PONG recreation with Arduino UNO, VGA output, and 3D printed controls.
       link: "proyectos/1-videojuego"
 
+    # portfolio item loop
+    - name : Arcade Machine
+      image : images/portfolio/arcade.webp
+      image_webp : images/portfolio/arcade.webp
+      categories : ["electronics", "CS", "gaming"]
+      content : Full arcade machine with Raspberry Pi 3B+ and custom controls.
+      link : "proyectos/arcade"
 
     # portfolio item loop
-    - name : Plotter
+    - name : Recycled Plotter
       image : images/portfolio/plotter.jpg
       image_webp : images/portfolio/plotter.webp
       categories : ["robotics", "electronics"]
-      content : Plotter made with recycled components.
+      content : CNC plotter built from salvaged PC CD-ROM drives.
       link : "proyectos/plotter"
       
     # portfolio item loop
-    - name : Radios
+    - name : Vintage Radio Restoration
       image : images/portfolio/radios.jpg
       image_webp : images/portfolio/radios.webp
-      categories : ["radio", "electronics"]
-      content : Old radios restored.
+      categories : ["electronics", "vintage"]
+      content : Restoration and repair of vintage tube radios.
       link : "proyectos/radios"
+
+    # portfolio item loop
+    - name : Crop Companion
+      image : images/portfolio/crop-companion.webp
+      image_webp : images/portfolio/crop-companion.webp
+      categories : ["CS", "iot"]
+      content : NASA Space Apps Hackathon 2nd Prize winner - Agricultural monitoring system.
+      link : "proyectos/crop-companion"
+
+    # portfolio item loop
+    - name : RetroBooth
+      image : images/portfolio/retrobooth.webp
+      image_webp : images/portfolio/retrobooth.webp
+      categories : ["electronics", "photography"]
+      content : Retro photo booth with NFC filter selection and privacy-focused design.
+      link : "proyectos/retrobooth"
       
