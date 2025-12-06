@@ -195,16 +195,14 @@
 {{ end }}
 
 <!-- Recently Finished Projects Section -->
-{{ $completedProjects := where (where site.RegularPages "Section" "proyectos") "Params.status" (cond (eq .Site.Language.Lang "es") "completado" "completed") }}
-{{ if $completedProjects }}
 <section id="recent-projects" class="py-5">
   <div class="container">
     <div class="section-header has-animation text-center mb-5">
-      > ls projects/ --filter=completado
+      > ls projects/ --filter=documented
     </div>
 
     <div class="row g-4">
-      {{ range first 3 $completedProjects }}
+      <!-- RetroBooth -->
       <div class="col-lg-4 col-md-6">
         <div class="terminal-window project-card has-animation">
           <div class="terminal-header">
@@ -213,34 +211,84 @@
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
             </div>
-            <div class="terminal-title">{{ .Title }}</div>
+            <div class="terminal-title">RetroBooth</div>
           </div>
           <div class="terminal-body p-0">
-            {{ if .Params.image }}
-            <img src="{{ .Params.image | relURL }}" class="card-img-top" alt="{{ .Title }}" style="border-radius: 0;">
-            {{ end }}
+            <img src="images/portfolio/retrobooth.webp" class="card-img-top" alt="RetroBooth" style="border-radius: 0;">
             <div class="p-3">
               <div class="output">
                 <span class="prompt">$</span> <span class="command">cat status.txt</span><br>
-                <span class="success">✓ {{ i18n "completed" | default "Completado" }}</span><br>
-                <span class="output">{{ .Summary | truncate 80 }}</span>
+                <span class="success">✓ En Progreso</span><br>
+                <span class="output">Fotomatón retro con selección de filtros NFC</span>
               </div>
               <div class="mt-3">
-                <a href="{{ .Permalink }}" class="btn btn-sm">$ ./view_project.sh</a>
+                <a href="{{ "proyectos/retrobooth" | relLangURL }}" class="btn btn-sm">$ ./view_project.sh</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {{ end }}
+
+      <!-- Robot Destructor -->
+      <div class="col-lg-4 col-md-6">
+        <div class="terminal-window project-card has-animation">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">Robot Destructor</div>
+          </div>
+          <div class="terminal-body p-0">
+            <img src="images/portfolio/destructor.webp" class="card-img-top" alt="Robot Destructor" style="border-radius: 0;">
+            <div class="p-3">
+              <div class="output">
+                <span class="prompt">$</span> <span class="command">cat status.txt</span><br>
+                <span class="success">✓ Completado</span><br>
+                <span class="output">Vehículo robótico con capacidades de destrucción</span>
+              </div>
+              <div class="mt-3">
+                <a href="{{ "proyectos/robot-destructor" | relLangURL }}" class="btn btn-sm">$ ./view_project.sh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Máquina Arcade -->
+      <div class="col-lg-4 col-md-6">
+        <div class="terminal-window project-card has-animation">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">Máquina Arcade</div>
+          </div>
+          <div class="terminal-body p-0">
+            <img src="images/portfolio/arcade.webp" class="card-img-top" alt="Máquina Arcade" style="border-radius: 0;">
+            <div class="p-3">
+              <div class="output">
+                <span class="prompt">$</span> <span class="command">cat status.txt</span><br>
+                <span class="success">✓ Completado</span><br>
+                <span class="output">Máquina arcade completa construida con Raspberry Pi 3B+</span>
+              </div>
+              <div class="mt-3">
+                <a href="{{ "proyectos/arcade" | relLangURL }}" class="btn btn-sm">$ ./view_project.sh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="text-center mt-5">
-      <a href="{{ "proyectos" | relLangURL }}" class="btn">$ ls -la projects/ --status=completado</a>
+      <a href="{{ "proyectos" | relLangURL }}" class="btn">$ ls -la projects/</a>
     </div>
   </div>
 </section>
-{{ end }}
 
 <!-- Projects That Need Help Section -->
 {{ $helpProjects := where (where site.RegularPages "Section" "proyectos") "Params.needs_help" true }}
