@@ -1097,3 +1097,88 @@ pre code {
     background: var(--terminal-green);
     color: var(--terminal-bg);
 }
+
+/* Blog posts and projects paragraph text */
+.content p,
+.project-sheet p,
+.blog-content p,
+.single p,
+article p,
+.proyectos p,
+.workshops p {
+    color: #ffffff !important;
+}
+
+/* Blog posts and projects heading text */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.project-sheet h1,
+.project-sheet h2,
+.project-sheet h3,
+.project-sheet h4,
+.project-sheet h5,
+.project-sheet h6,
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6,
+.single h1,
+.single h2,
+.single h3,
+.single h4,
+.single h5,
+.single h6,
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+.proyectos h1,
+.proyectos h2,
+.proyectos h3,
+.proyectos h4,
+.proyectos h5,
+.proyectos h6,
+.workshops h1,
+.workshops h2,
+.workshops h3,
+.workshops h4,
+.workshops h5,
+.workshops h6 {
+    color: var(--terminal-green) !important;
+}
+
+/* Blog posts and projects list text */
+.content ul,
+.content ol,
+.project-sheet ul,
+.project-sheet ol,
+.blog-content ul,
+.blog-content ol,
+.single ul,
+.single ol,
+article ul,
+article ol,
+.proyectos ul,
+.proyectos ol,
+.workshops ul,
+.workshops ol {
+    color: #ffffff !important;
+}
+
+.content li,
+.project-sheet li,
+.blog-content li,
+.single li,
+article li,
+.proyectos li,
+.workshops li {
+    color: #ffffff !important;
+}
