@@ -482,6 +482,15 @@ img {
     background-color: #17a2b8 !important;
 }
 
+.project-badges .bg-primary {
+    background-color: #007bff !important;
+}
+
+.project-badges .bg-dark {
+    background-color: #343a40 !important;
+    color: #ffffff !important;
+}
+
 /* No results styling */
 #error {
     color: #dc3545;
