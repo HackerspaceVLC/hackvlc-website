@@ -23,10 +23,30 @@
               <div class="col-md-4">
                 <label class="filter-label">Status:</label>
                 <select class="form-select filter-select" data-filter="status">
-                  <option value="all">All Projects</option>
-                  <option value="recently_finished">Recently Finished</option>
-                  <option value="needs_help">Needs Help</option>
-                  <option value="ongoing">Ongoing</option>
+                  <option value="all">{{ i18n "allProjects" | default "Todos los proyectos" }}</option>
+                  {{ $statuses := slice }}
+                  {{ range .Pages }}
+                    {{ if .Params.status }}
+                      {{ $statuses = $statuses | append .Params.status }}
+                    {{ end }}
+                  {{ end }}
+                  {{ range (uniq $statuses) | sort }}
+                    {{ $statusText := . }}
+                    {{ if eq . "completado" }}
+                      {{ $statusText = i18n "completed" | default "Completado" }}
+                    {{ else if eq . "activo" }}
+                      {{ $statusText = i18n "active" | default "Activo" }}
+                    {{ else if eq . "en_progreso" }}
+                      {{ $statusText = i18n "inProgress" | default "En Progreso" }}
+                    {{ else if eq . "pausado" }}
+                      {{ $statusText = i18n "paused" | default "Pausado" }}
+                    {{ else if eq . "completed" }}
+                      {{ $statusText = i18n "completed" | default "Completed" }}
+                    {{ else if eq . "active" }}
+                      {{ $statusText = i18n "active" | default "Active" }}
+                    {{ end }}
+                    <option value="{{ . }}">{{ $statusText }}</option>
+                  {{ end }}
                 </select>
               </div>
 
@@ -67,7 +87,7 @@
       <div class="project-grid mt-5" id="projects-container">
         {{ range .Pages }}
         <div class="project-card has-animation" 
-             data-status="{{ if .Params.recently_finished }}recently_finished{{ else if .Params.needs_help }}needs_help{{ else }}ongoing{{ end }}"
+             data-status="{{ .Params.status | default "activo" }}"
              data-tags="{{ delimit .Params.tags "," }}"
              data-title="{{ .Title }}"
              data-summary="{{ .Summary }}">
@@ -82,14 +102,20 @@
           
           <div class="card-body">
             <div class="project-badges mb-2">
-              {{ if .Params.recently_finished }}
-              <span class="badge bg-success">Recently Finished</span>
-              {{ end }}
-              {{ if .Params.needs_help }}
-              <span class="badge bg-warning">Needs Help</span>
+              {{ $status := .Params.status | default "activo" }}
+              {{ if eq $status "completado" }}
+              <span class="badge bg-success">{{ i18n "completed" | default "Completado" }}</span>
+              {{ else if eq $status "activo" }}
+              <span class="badge bg-info">{{ i18n "active" | default "Activo" }}</span>
+              {{ else if eq $status "en_progreso" }}
+              <span class="badge bg-primary">{{ i18n "inProgress" | default "En Progreso" }}</span>
+              {{ else if eq $status "pausado" }}
+              <span class="badge bg-secondary">{{ i18n "paused" | default "Pausado" }}</span>
+              {{ else }}
+              <span class="badge bg-secondary">{{ $status }}</span>
               {{ end }}
               {{ range .Params.tags }}
-              <span class="badge bg-secondary">{{ . }}</span>
+              <span class="badge bg-dark">{{ . }}</span>
               {{ end }}
             </div>
             <h3 class="card-title">{{ .Title }}</h3>
@@ -162,7 +188,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Update active filters display
-    if (statusFilter !== 'all') activeFilters.push(`Status: ${statusFilter}`);
+    if (statusFilter !== 'all') {
+      const statusText = statusFilter.replace('_', ' ').charAt(0).toUpperCase() + statusFilter.replace('_', ' ').slice(1);
+      activeFilters.push(`Status: ${statusText}`);
+    }
     if (tagsFilter !== 'all') activeFilters.push(`Tech: ${tagsFilter}`);
     if (searchFilter !== '') activeFilters.push(`Search: "${searchFilter}"`);
     
