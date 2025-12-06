@@ -50,20 +50,22 @@
                 </select>
               </div>
 
+
+
               <!-- Tags Filter -->
               <div class="col-md-4">
                 <label class="filter-label">Technology:</label>
                 <select class="form-select filter-select" data-filter="tags">
                   <option value="all">All Technologies</option>
-                  {{ $tags := slice }}
-                  {{ range .Pages }}
-                    {{ range .Params.tags }}
-                      {{ $tags = $tags | append . }}
-                    {{ end }}
-                  {{ end }}
-                  {{ range (uniq $tags) | sort }}
-                    <option value="{{ . }}">{{ . }}</option>
-                  {{ end }}
+                  <option value="arduino">Arduino</option>
+                  <option value="raspberry-pi">Raspberry Pi</option>
+                  <option value="robotica">Robótica</option>
+                  <option value="electronica">Electrónica</option>
+                  <option value="3d-printing">Impresión 3D</option>
+                  <option value="web">Web</option>
+                  <option value="open-source">Open Source</option>
+                  <option value="rfid">RFID</option>
+                  <option value="nfc">NFC</option>
                 </select>
               </div>
 
@@ -114,7 +116,7 @@
               {{ else }}
               <span class="badge bg-secondary">{{ $status }}</span>
               {{ end }}
-              {{ range .Params.tags }}
+              {{ range first 3 .Params.tags }}
               <span class="badge bg-dark">{{ . }}</span>
               {{ end }}
             </div>
@@ -176,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const summary = card.dataset.summary.toLowerCase();
       
       let matchesStatus = statusFilter === 'all' || status === statusFilter;
-      let matchesTags = tagsFilter === 'all' || tags.includes(tagsFilter);
+      let matchesTags = tagsFilter === 'all' || tags.some(tag => tag.toLowerCase().includes(tagsFilter.toLowerCase()));
       let matchesSearch = searchFilter === '' || title.includes(searchFilter) || summary.includes(searchFilter);
       
       if (matchesStatus && matchesTags && matchesSearch) {
