@@ -367,6 +367,139 @@ img {
     box-shadow: 0 5px 15px rgba(155, 197, 61, 0.3);
 }
 
+/* Recently Finished Projects */
+#recent-projects {
+    background-color: var(--bg-dark);
+}
+
+#recent-projects .success {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Projects That Need Help */
+#help-projects {
+    background-color: #1a1a1a;
+    border-top: 2px solid #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+#help-projects .border-warning {
+    border-color: #ffc107 !important;
+}
+
+#help-projects .bg-warning {
+    background-color: #ffc107 !important;
+}
+
+#help-projects .warning {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+#help-projects .terminal-title {
+    color: var(--bg-dark) !important;
+    font-weight: bold;
+}
+
+.btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: var(--bg-dark) !important;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800 !important;
+    border-color: #e0a800 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+/* Smart Filtering System */
+.filter-system {
+    margin-bottom: 2rem;
+}
+
+.filter-label {
+    color: var(--terminal-green);
+    font-family: var(--font-terminal);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.filter-select,
+.filter-input {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--terminal-green);
+    color: var(--text-color);
+    font-family: var(--font-terminal);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(155, 197, 61, 0.3);
+    outline: none;
+}
+
+.filter-select option {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+}
+
+.active-filters {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.project-badges .badge {
+    font-size: 0.7rem;
+    margin-right: 0.25rem;
+    font-family: var(--font-terminal);
+    text-transform: uppercase;
+}
+
+.project-badges .bg-success {
+    background-color: #28a745 !important;
+}
+
+.project-badges .bg-warning {
+    background-color: #ffc107 !important;
+    color: var(--bg-dark) !important;
+}
+
+.project-badges .bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.project-badges .bg-info {
+    background-color: #17a2b8 !important;
+}
+
+/* No results styling */
+#error {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for filters */
+@media (max-width: 768px) {
+    .filter-system .row {
+        gap: 1rem;
+    }
+    
+    .filter-system .col-md-4 {
+        flex: 1 1 100%;
+    }
+}
+
 .navbar-nav .nav-link {
     color: var(--text-secondary) !important;
     font-family: var(--font-terminal) !important;

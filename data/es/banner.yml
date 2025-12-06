@@ -1,13 +1,13 @@
 ############################### Banner ################################
 banner:
   enable : true
-  bg_image_webp : "images/workshop/local-4.webp"
-  bg_image : "images/workshop/local-4.webp"
+  bg_image_webp : "images/backgrounds/bg-electronics.webp"
+  bg_image : "images/backgrounds/bg-electronics.webp"
   image_webp : "images/banner.webp"
   icon : ""
-  title: "HACKERSPACE VALENCIA"
-  content: "Tu espacio 🛠️maker🛠️ en Valencia | Martes 18h | ¡Aprende, hackea y crea con nosotros!️"
+  title: "> HACKERSPACE VALENCIA"
+  content: "$ ./init_community.sh --mode=real --passion=tech\nDonde las ideas se compilan y la comunidad florece | Martes 18h | WiFi, café y código abierto"
   button:
     enable : true
-    label : "¡Únete a la comunidad!"
+    label : "$ git join community"
     link : "#about"
