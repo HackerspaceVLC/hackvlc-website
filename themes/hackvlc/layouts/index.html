@@ -195,16 +195,16 @@
 {{ end }}
 
 <!-- Recently Finished Projects Section -->
-{{ $recentProjects := where (where site.RegularPages "Section" "proyectos") "Params.recently_finished" true }}
-{{ if $recentProjects }}
+{{ $completedProjects := where (where site.RegularPages "Section" "proyectos") "Params.status" (cond (eq .Site.Language.Lang "es") "completado" "completed") }}
+{{ if $completedProjects }}
 <section id="recent-projects" class="py-5">
   <div class="container">
     <div class="section-header has-animation text-center mb-5">
-      > ls projects/ --filter=recently_finished
+      > ls projects/ --filter=completado
     </div>
 
     <div class="row g-4">
-      {{ range first 3 $recentProjects }}
+      {{ range first 3 $completedProjects }}
       <div class="col-lg-4 col-md-6">
         <div class="terminal-window project-card has-animation">
           <div class="terminal-header">
@@ -222,7 +222,25 @@
             <div class="p-3">
               <div class="output">
                 <span class="prompt">$</span> <span class="command">cat status.txt</span><br>
-                <span class="success">✓ Recently Completed</span><br>
+                <span class="success">✓ {{ i18n "completed" | default "Completado" }}</span><br>
+                <span class="output">{{ .Summary | truncate 80 }}</span>
+              </div>
+              <div class="mt-3">
+                <a href="{{ .Permalink }}" class="btn btn-sm">$ ./view_project.sh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="{{ "proyectos" | relLangURL }}" class="btn">$ ls -la projects/ --status=completado</a>
+    </div>
+  </div>
+</section>
+{{ end }}ted</span><br>
                 <span class="output">{{ .Params.summary | default "Project successfully finished" }}</span>
               </div>
               <div class="mt-3">
