@@ -6,9 +6,71 @@
 
       {{ .Content }}
 
-      <div class="project-grid mt-5">
+      <!-- Smart Filtering System -->
+      <div class="filter-system mt-5">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">$ ./filter_projects.sh</div>
+          </div>
+          <div class="terminal-body p-3">
+            <div class="row g-3">
+              <!-- Status Filter -->
+              <div class="col-md-4">
+                <label class="filter-label">Status:</label>
+                <select class="form-select filter-select" data-filter="status">
+                  <option value="all">All Projects</option>
+                  <option value="recently_finished">Recently Finished</option>
+                  <option value="needs_help">Needs Help</option>
+                  <option value="ongoing">Ongoing</option>
+                </select>
+              </div>
+
+              <!-- Tags Filter -->
+              <div class="col-md-4">
+                <label class="filter-label">Technology:</label>
+                <select class="form-select filter-select" data-filter="tags">
+                  <option value="all">All Technologies</option>
+                  {{ $tags := slice }}
+                  {{ range .Pages }}
+                    {{ range .Params.tags }}
+                      {{ $tags = $tags | append . }}
+                    {{ end }}
+                  {{ end }}
+                  {{ range (uniq $tags) | sort }}
+                    <option value="{{ . }}">{{ . }}</option>
+                  {{ end }}
+                </select>
+              </div>
+
+              <!-- Search Filter -->
+              <div class="col-md-4">
+                <label class="filter-label">Search:</label>
+                <input type="text" class="form-control filter-input" data-filter="search" placeholder="grep projects...">
+              </div>
+            </div>
+
+            <!-- Active Filters Display -->
+            <div class="active-filters mt-3">
+              <span class="text-muted">Active filters:</span>
+              <div id="active-filters-list" class="d-inline-block ms-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="project-grid mt-5" id="projects-container">
         {{ range .Pages }}
-        <div class="project-card has-animation">
+        <div class="project-card has-animation" 
+             data-status="{{ if .Params.recently_finished }}recently_finished{{ else if .Params.needs_help }}needs_help{{ else }}ongoing{{ end }}"
+             data-tags="{{ delimit .Params.tags "," }}"
+             data-title="{{ .Title }}"
+             data-summary="{{ .Summary }}">
           {{ if .Params.image }}
           <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="card-img-top">
           {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
@@ -19,6 +81,17 @@
           {{ end }}
           
           <div class="card-body">
+            <div class="project-badges mb-2">
+              {{ if .Params.recently_finished }}
+              <span class="badge bg-success">Recently Finished</span>
+              {{ end }}
+              {{ if .Params.needs_help }}
+              <span class="badge bg-warning">Needs Help</span>
+              {{ end }}
+              {{ range .Params.tags }}
+              <span class="badge bg-secondary">{{ . }}</span>
+              {{ end }}
+            </div>
             <h3 class="card-title">{{ .Title }}</h3>
             <p class="card-text">{{ .Summary | truncate 100 }}</p>
             <a href="{{ .Permalink }}" class="btn btn-primary">
@@ -28,7 +101,94 @@
         </div>
         {{ end }}
       </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="text-center d-none">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">404 - No Projects Found</div>
+          </div>
+          <div class="terminal-body p-3">
+            <div class="output">
+              <span class="prompt">$</span> <span class="command">find . -name "project" -type f</span><br>
+              <span class="error">No projects found matching your filters</span><br>
+              <span class="output">Try adjusting your search criteria</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterSelects = document.querySelectorAll('.filter-select');
+  const searchInput = document.querySelector('.filter-input');
+  const projectsContainer = document.getElementById('projects-container');
+  const projectCards = document.querySelectorAll('.project-card');
+  const noResults = document.getElementById('no-results');
+  const activeFiltersList = document.getElementById('active-filters-list');
+
+  function applyFilters() {
+    const statusFilter = document.querySelector('[data-filter="status"]').value;
+    const tagsFilter = document.querySelector('[data-filter="tags"]').value;
+    const searchFilter = document.querySelector('[data-filter="search"]').value.toLowerCase();
+    
+    let visibleCount = 0;
+    const activeFilters = [];
+
+    projectCards.forEach(card => {
+      const status = card.dataset.status;
+      const tags = card.dataset.tags.split(',');
+      const title = card.dataset.title.toLowerCase();
+      const summary = card.dataset.summary.toLowerCase();
+      
+      let matchesStatus = statusFilter === 'all' || status === statusFilter;
+      let matchesTags = tagsFilter === 'all' || tags.includes(tagsFilter);
+      let matchesSearch = searchFilter === '' || title.includes(searchFilter) || summary.includes(searchFilter);
+      
+      if (matchesStatus && matchesTags && matchesSearch) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Update active filters display
+    if (statusFilter !== 'all') activeFilters.push(`Status: ${statusFilter}`);
+    if (tagsFilter !== 'all') activeFilters.push(`Tech: ${tagsFilter}`);
+    if (searchFilter !== '') activeFilters.push(`Search: "${searchFilter}"`);
+    
+    activeFiltersList.innerHTML = activeFilters.length > 0 
+      ? activeFilters.map(f => `<span class="badge bg-info me-1">${f}</span>`).join('')
+      : '<span class="text-muted">None</span>';
+
+    // Show/hide no results message
+    if (visibleCount === 0) {
+      noResults.classList.remove('d-none');
+      projectsContainer.style.display = 'none';
+    } else {
+      noResults.classList.add('d-none');
+      projectsContainer.style.display = 'grid';
+    }
+  }
+
+  // Add event listeners
+  filterSelects.forEach(select => {
+    select.addEventListener('change', applyFilters);
+  });
+  
+  searchInput.addEventListener('input', applyFilters);
+
+  // Initial filter application
+  applyFilters();
+});
+</script>
 {{ end }}

@@ -1,11 +1,11 @@
 banner:
   enable : true
-  bg_image_webp : "images/workshop/local-4.webp"
-  bg_image : "images/workshop/local-4.webp"
+  bg_image_webp : "images/backgrounds/bg-electronics.webp"
+  bg_image : "images/backgrounds/bg-electronics.webp"
   image_webp : "images/banner.webp"
-  title : "HACKERSPACE VALENCIA"
-  content : " Your 🛠️maker🛠️ space in Valencia | Tuesdays 6PM | Learn, hack and create with us!"
+  title : "> HACKERSPACE VALENCIA"
+  content : "$ ./init_community.sh --mode=real --passion=tech\nWhere ideas compile and community thrives | Tuesdays 6PM | WiFi, coffee & open source"
   button:
     enable : true
-    label : "Learn More"
+    label : "$ git join community"
     link : "#about"
