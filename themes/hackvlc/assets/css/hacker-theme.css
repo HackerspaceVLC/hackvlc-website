@@ -209,7 +209,6 @@ body {
 .navbar {
     background: var(--terminal-bg) !important;
     border-bottom: 2px solid var(--terminal-green);
-    box-shadow: 0 2px 10px rgba(0, 255, 65, 0.2);
 }
 
 .navbar-brand {
@@ -512,8 +511,6 @@ img {
 
 .navbar-nav .nav-link:hover {
     color: var(--terminal-green) !important;
-    text-shadow: 0 0 5px var(--terminal-green);
-    transform: translateY(-2px);
 }
 
 .navbar-nav .nav-link::before {
