@@ -8,7 +8,7 @@ description: "Teclado mecánico personalizado construido con el kit Ferris Sweep
 tags: ["teclado-mecanico", "ferris-sweep", "teclado-ergonomico", "construccion-teclados", "teclado-personalizado", "teclado-dividido", "firmware-qmk", "diy-teclado"]
 categories: ["electronica", "informatica"]
 featured: false
-status: "completado"
+status: "pausado"
 difficulty: "intermedio"
 tech_stack: ["Ferris Sweep 2.0", "Firmware QMK", "Soldadura", "Modificación de Switches"]
 repo_url: ""

@@ -8,7 +8,7 @@ description: "A modern retro photo booth combining vintage aesthetics with NFC t
 tags: ["photo-booth", "nfc-filters", "retro-photography", "polaroid-style", "privacy-focused", "raspberry-pi-camera", "interactive-installation", "vintage-aesthetics"]
 categories: ["electronics", "photography"]
 featured: true
-status: "completed"
+status: "in_progress"
 difficulty: "advanced"
 tech_stack: ["Raspberry Pi", "NFC Reader", "Camera Module", "Python", "Image Processing"]
 repo_url: "https://github.com/HackerspaceVLC/retrobooth"

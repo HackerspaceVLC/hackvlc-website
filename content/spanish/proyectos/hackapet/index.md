@@ -8,7 +8,7 @@ description: "Plataforma integral de software open source diseñada para ayudar 
 tags: ["refugio-animales", "open-source", "aplicacion-web", "proyecto-comunitario", "bienestar-animal", "gestion-refugios", "sin-lucro", "javascript"]
 categories: ["informatica", "web"]
 featured: true
-status: "activo"
+status: "en_progreso"
 difficulty: "intermedio"
 tech_stack: ["JavaScript", "Desarrollo Web", "Base de Datos", "UI/UX"]
 repo_url: "https://hackapet.com"

@@ -8,7 +8,7 @@ description: "Proyecto integral de restauración de radios antiguas devolviendo 
 tags: ["radio-antigua", "radio-válvulas", "restauracion-radio", "audio-antiguo", "válvulas-vacío", "restauracion-audio", "electronica-vintage", "audio-analógico"]
 categories: ["electronica", "vintage"]
 featured: true
-status: "completado"
+status: "activo"
 difficulty: "avanzado"
 tech_stack: ["Electrónica de Válvulas", "Circuitos Analógicos", "Restauración de Audio", "Componentes Vintage"]
 repo_url: ""

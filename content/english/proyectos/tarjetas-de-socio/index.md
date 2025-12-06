@@ -8,7 +8,7 @@ description: "A comprehensive RFID membership card system for hackerspace access
 tags: ["rfid-cards", "access-control", "membership-system", "hackerspace-automation", "rfid-reader", "raspberry-pi-rfid", "door-access", "member-management"]
 categories: ["electronics", "CS"]
 featured: true
-status: "completed"
+status: "paused"
 difficulty: "intermediate"
 tech_stack: ["RFID Reader", "Raspberry Pi", "Access Control", "Database"]
 repo_url: ""
