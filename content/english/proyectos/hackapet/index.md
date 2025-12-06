@@ -8,7 +8,7 @@ description: "A comprehensive open-source software platform designed to help ani
 tags: ["animal-shelter", "open-source", "web-application", "community-project", "animal-welfare", "shelter-management", "non-profit", "javascript"]
 categories: ["CS", "web"]
 featured: true
-status: "active"
+status: "in_progress"
 difficulty: "intermediate"
 tech_stack: ["JavaScript", "Web Development", "Database", "UI/UX"]
 repo_url: "https://hackapet.com"

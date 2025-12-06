@@ -8,7 +8,7 @@ description: "A comprehensive vintage radio restoration project bringing classic
 tags: ["vintage-radio", "tube-radio", "radio-restoration", "antique-audio", "vacuum-tube", "audio-restoration", "vintage-electronics", "analog-audio"]
 categories: ["electronics", "vintage"]
 featured: false
-status: "completed"
+status: "active"
 difficulty: "advanced"
 tech_stack: ["Tube Electronics", "Analog Circuits", "Audio Restoration", "Vintage Components"]
 repo_url: ""

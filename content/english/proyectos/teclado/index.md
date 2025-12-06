@@ -8,7 +8,7 @@ description: "A custom-built Ferris Sweep 2.0 ergonomic mechanical keyboard asse
 tags: ["mechanical-keyboard", "ferris-sweep", "ergonomic-keyboard", "keyboard-building", "custom-keyboard", "split-keyboard", "qmk-firmware", "diy-keyboard"]
 categories: ["electronics", "CS"]
 featured: false
-status: "completed"
+status: "paused"
 difficulty: "intermediate"
 tech_stack: ["Ferris Sweep 2.0", "QMK Firmware", "Soldering", "Switch Modding"]
 repo_url: ""

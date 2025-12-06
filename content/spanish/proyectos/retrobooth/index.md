@@ -8,7 +8,7 @@ description: "Fotomatón retro moderno combinando estética vintage con tecnolog
 tags: ["fotomatón", "filtros-nfc", "fotografia-retro", "estilo-polaroid", "privacidad-focalizada", "camara-raspberry-pi", "instalacion-interactiva", "estetica-vintage"]
 categories: ["electronica", "fotografia"]
 featured: true
-status: "completado"
+status: "en_progreso"
 difficulty: "avanzado"
 tech_stack: ["Raspberry Pi", "Lector NFC", "Módulo Cámara", "Python", "Procesamiento Imágenes"]
 repo_url: "https://github.com/HackerspaceVLC/retrobooth"

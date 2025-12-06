@@ -8,7 +8,7 @@ description: "Sistema integral de tarjetas de membresía RFID para control de ac
 tags: ["tarjetas-rfid", "control-acceso", "sistema-membresia", "automatizacion-hackerspace", "lector-rfid", "raspberry-pi-rfid", "acceso-puerta", "gestion-miembros"]
 categories: ["electronica", "informatica"]
 featured: true
-status: "completado"
+status: "pausado"
 difficulty: "intermedio"
 tech_stack: ["Lector RFID", "Raspberry Pi", "Control de Acceso", "Base de Datos"]
 repo_url: ""

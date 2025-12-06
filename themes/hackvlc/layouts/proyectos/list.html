@@ -103,13 +103,13 @@
           <div class="card-body">
             <div class="project-badges mb-2">
               {{ $status := .Params.status | default "activo" }}
-              {{ if eq $status "completado" }}
+              {{ if or (eq $status "completado") (eq $status "completed") }}
               <span class="badge bg-success">{{ i18n "completed" | default "Completado" }}</span>
-              {{ else if eq $status "activo" }}
+              {{ else if or (eq $status "activo") (eq $status "active") }}
               <span class="badge bg-info">{{ i18n "active" | default "Activo" }}</span>
-              {{ else if eq $status "en_progreso" }}
+              {{ else if or (eq $status "en_progreso") (eq $status "in_progress") }}
               <span class="badge bg-primary">{{ i18n "inProgress" | default "En Progreso" }}</span>
-              {{ else if eq $status "pausado" }}
+              {{ else if or (eq $status "pausado") (eq $status "paused") }}
               <span class="badge bg-secondary">{{ i18n "paused" | default "Pausado" }}</span>
               {{ else }}
               <span class="badge bg-secondary">{{ $status }}</span>
