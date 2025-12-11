@@ -1,16 +1,16 @@
 ############################### About ###################################
 about:
   enable : true
-  title : Sobre nosotros
+  title : "> whoami"
   about_item :
-    - icon : ti-rocket # Icono de innovación y crecimiento
-      title : Comunidad de Aprendizaje
-      content : Compartimos conocimiento, experiencia y pasión por la tecnología. Aquí todos enseñamos y todos aprendemos.
+    - icon : ti-terminal # Icono terminal
+      title : [root@hackerspace]# ./community.sh
+      content : Somos un espacio autogestionado donde la curiosidad es el único requisito. No hay maestros ni alumnos, solo personas compartiendo conocimiento.
 
-    - icon : ti-github # Icono más tech-oriented
-      title : Open Source es Nuestro ADN
-      content : Creemos en el software y hardware libre. Compartir es nuestra forma de innovar.
+    - icon : ti-package # Icono de paquetes/repos
+      title : apt-get install freedom
+      content : Software libre/libre y de código abierto (FOSS) y hardware abierto. Compartir conocimiento y código es cómo innovamos y construimos comunidad.
 
-    - icon : ti-pulse # Icono que representa creatividad y actividad
-      title : Hackers Creativos
-      content : Transformamos tecnología en soluciones ingeniosas. De chatarra a máquinas, de ideas a realidad.
+    - icon : ti-wand # Icono de magia/hacking
+      title : chmod +x creativity
+      content : Desmontamos, modificamos y mejoramos todo lo que pasa por nuestras manos. Si no se puede abrir, no es nuestro.

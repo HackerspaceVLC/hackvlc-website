@@ -1,11 +1,18 @@
 ---
-title: "BaH"
+title: "BaH - Display de Bienvenida"
 date: 2024-03-09
 image: images/portfolio/bah.webp
 socios: ["José Gil"]
-summary: "Bienvenido al Hackerspace"
-description: "Completed project, in documentation phase"
-tags: ["project", "upcoming"]
+summary: "Display interactivo de bienvenida para Hackerspace Valencia"
+description: "Un letrero digital de bienvenida que recibe a los visitantes del Hackerspace Valencia. Este proyecto combina electrónica y programación para crear una experiencia de entrada atractiva para el hackerspace."
+tags: ["display-bienvenida", "hackerspace", "matriz-led", "instalacion-interactiva", "proyecto-arduino", "carteleria-digital", "proyecto-comunitario"]
+categories: ["electronica"]
+featured: false
+status: "completado"
+difficulty: "principiante"
+tech_stack: ["Arduino", "Display LED", "Sensores"]
+repo_url: ""
+demo_url: ""
 ---
 
 # Documentation in Progress

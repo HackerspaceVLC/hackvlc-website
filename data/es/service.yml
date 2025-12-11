@@ -1,34 +1,33 @@
-################################# Service #################################
 service:
   enable: true
-  title: Nuestras Actividades
+  title: "> ls activities/"
   service_item:
     # service item loop
-    - name: Red Global
+    - name: $ ./global_network.sh
       icon: ti-world
-      content: Conéctate con hackerspaces de todo el mundo desde Valencia.
+      content: Conexión SSH con hackerspaces worldwide. Ping 1ms a la comunidad global.
 
     # service item loop
-    - name: Espacio Maker
+    - name: $ ./maker_space --mode=full
       icon: ti-home
-      content: Local equipado en Benimaclet. Tu taller tecnológico con todas las herramientas que necesitas.
+      content: "Local en Benimaclet con herramientas, impresoras 3D y café. sudo make coffee."
 
     # service item loop
-    - name: Workshops
+    - name: $ ./workshop --topic=all
       icon: ti-blackboard
-      content: Talleres prácticos de Arduino, Impresión 3D, IoT, KiCad y más. Aprende haciendo.
+      content: "Arduino, 3D, IoT, KiCad. git pull knowledge cada martes."
 
     # service item loop
-    - name: Comunidad Activa
+    - name: $ ./community --status=active
       icon: ti-rocket
-      content: Comparte conocimientos y aprende de otros makers apasionados.
+      content: "chmod 777 knowledge. Compartimos sin restricciones, aprendemos juntos."
 
     # service item loop
-    - name: Desarrollo Tech
+    - name: $ ./dev --impact=social
       icon: ti-github
-      content: Creamos proyectos de software y hardware con impacto social.
+      content: "Proyectos open source con propósito. commit --message=hacking for good."
 
     # service item loop
-    - name: Repair Café
+    - name: $ ./repair --mode=sustainable
       icon: ti-loop
-      content: Dale nueva vida a la tecnología. Reparamos y reutilizamos por un futuro sostenible.
+      content: "sudo rm -rf e-waste. Reparamos todo lo que se pueda desmontar."

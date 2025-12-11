@@ -1,0 +1,225 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h1 class="text-center mb-5">{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+
+      {{ .Content }}
+
+      <!-- Smart Filtering System -->
+      <div class="filter-system mt-5">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">$ ./filter_projects.sh</div>
+          </div>
+          <div class="terminal-body p-3">
+            <div class="row g-3">
+              <!-- Status Filter -->
+              <div class="col-md-4">
+                <label class="filter-label">Status:</label>
+                <select class="form-select filter-select" data-filter="status">
+                  <option value="all">{{ i18n "allProjects" | default "Todos los proyectos" }}</option>
+                  {{ $statuses := slice }}
+                  {{ range .Pages }}
+                    {{ if .Params.status }}
+                      {{ $statuses = $statuses | append .Params.status }}
+                    {{ end }}
+                  {{ end }}
+                  {{ range (uniq $statuses) | sort }}
+                    {{ $statusText := . }}
+                    {{ if eq . "completado" }}
+                      {{ $statusText = i18n "completed" | default "Completado" }}
+                    {{ else if eq . "activo" }}
+                      {{ $statusText = i18n "active" | default "Activo" }}
+                    {{ else if eq . "en_progreso" }}
+                      {{ $statusText = i18n "inProgress" | default "En Progreso" }}
+                    {{ else if eq . "pausado" }}
+                      {{ $statusText = i18n "paused" | default "Pausado" }}
+                    {{ else if eq . "completed" }}
+                      {{ $statusText = i18n "completed" | default "Completed" }}
+                    {{ else if eq . "active" }}
+                      {{ $statusText = i18n "active" | default "Active" }}
+                    {{ end }}
+                    <option value="{{ . }}">{{ $statusText }}</option>
+                  {{ end }}
+                </select>
+              </div>
+
+
+
+              <!-- Tags Filter -->
+              <div class="col-md-4">
+                <label class="filter-label">Technology:</label>
+                <select class="form-select filter-select" data-filter="tags">
+                  <option value="all">All Technologies</option>
+                  <option value="arduino">Arduino</option>
+                  <option value="raspberry-pi">Raspberry Pi</option>
+                  <option value="robotica">Robótica</option>
+                  <option value="electronica">Electrónica</option>
+                  <option value="3d-printing">Impresión 3D</option>
+                  <option value="web">Web</option>
+                  <option value="open-source">Open Source</option>
+                  <option value="rfid">RFID</option>
+                  <option value="nfc">NFC</option>
+                </select>
+              </div>
+
+              <!-- Search Filter -->
+              <div class="col-md-4">
+                <label class="filter-label">Search:</label>
+                <input type="text" class="form-control filter-input" data-filter="search" placeholder="grep projects...">
+              </div>
+            </div>
+
+            <!-- Active Filters Display -->
+            <div class="active-filters mt-3">
+              <span class="text-muted">Active filters:</span>
+              <div id="active-filters-list" class="d-inline-block ms-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="project-grid mt-5" id="projects-container">
+        {{ range .Pages }}
+        <div class="project-card has-animation" 
+             data-status="{{ .Params.status | default "activo" }}"
+             data-tags="{{ delimit .Params.tags "," }}"
+             data-title="{{ .Title }}"
+             data-summary="{{ .Summary }}">
+          {{ if .Params.image }}
+          <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" class="card-img-top">
+          {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          <img src="{{ $image.Permalink }}" alt="{{ .Title }}" class="card-img-top">
+          {{ else }}
+          <img src="{{ "images/portfolio/project-1.jpg" | absURL }}" alt="{{ .Title }}" class="card-img-top">
+          {{ end }}
+          
+          <div class="card-body">
+            <div class="project-badges mb-2">
+              {{ $status := .Params.status | default "activo" }}
+              {{ if or (eq $status "completado") (eq $status "completed") }}
+              <span class="badge bg-success">{{ i18n "completed" | default "Completado" }}</span>
+              {{ else if or (eq $status "activo") (eq $status "active") }}
+              <span class="badge bg-info">{{ i18n "active" | default "Activo" }}</span>
+              {{ else if or (eq $status "en_progreso") (eq $status "in_progress") }}
+              <span class="badge bg-primary">{{ i18n "inProgress" | default "En Progreso" }}</span>
+              {{ else if or (eq $status "pausado") (eq $status "paused") }}
+              <span class="badge bg-secondary">{{ i18n "paused" | default "Pausado" }}</span>
+              {{ else }}
+              <span class="badge bg-secondary">{{ $status }}</span>
+              {{ end }}
+              {{ range first 3 .Params.tags }}
+              <span class="badge bg-dark">{{ . }}</span>
+              {{ end }}
+            </div>
+            <h3 class="card-title">{{ .Title }}</h3>
+            <p class="card-text">{{ .Summary | truncate 100 }}</p>
+            <a href="{{ .Permalink }}" class="btn btn-primary">
+              {{ i18n "seeMore" | default "Ver más" }}
+            </a>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="text-center d-none">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">404 - No Projects Found</div>
+          </div>
+          <div class="terminal-body p-3">
+            <div class="output">
+              <span class="prompt">$</span> <span class="command">find . -name "project" -type f</span><br>
+              <span class="error">No projects found matching your filters</span><br>
+              <span class="output">Try adjusting your search criteria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterSelects = document.querySelectorAll('.filter-select');
+  const searchInput = document.querySelector('.filter-input');
+  const projectsContainer = document.getElementById('projects-container');
+  const projectCards = document.querySelectorAll('.project-card');
+  const noResults = document.getElementById('no-results');
+  const activeFiltersList = document.getElementById('active-filters-list');
+
+  function applyFilters() {
+    const statusFilter = document.querySelector('[data-filter="status"]').value;
+    const tagsFilter = document.querySelector('[data-filter="tags"]').value;
+    const searchFilter = document.querySelector('[data-filter="search"]').value.toLowerCase();
+    
+    let visibleCount = 0;
+    const activeFilters = [];
+
+    projectCards.forEach(card => {
+      const status = card.dataset.status;
+      const tags = card.dataset.tags.split(',');
+      const title = card.dataset.title.toLowerCase();
+      const summary = card.dataset.summary.toLowerCase();
+      
+      let matchesStatus = statusFilter === 'all' || status === statusFilter;
+      let matchesTags = tagsFilter === 'all' || tags.some(tag => tag.toLowerCase().includes(tagsFilter.toLowerCase()));
+      let matchesSearch = searchFilter === '' || title.includes(searchFilter) || summary.includes(searchFilter);
+      
+      if (matchesStatus && matchesTags && matchesSearch) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Update active filters display
+    if (statusFilter !== 'all') {
+      const statusText = statusFilter.replace('_', ' ').charAt(0).toUpperCase() + statusFilter.replace('_', ' ').slice(1);
+      activeFilters.push(`Status: ${statusText}`);
+    }
+    if (tagsFilter !== 'all') activeFilters.push(`Tech: ${tagsFilter}`);
+    if (searchFilter !== '') activeFilters.push(`Search: "${searchFilter}"`);
+    
+    activeFiltersList.innerHTML = activeFilters.length > 0 
+      ? activeFilters.map(f => `<span class="badge bg-info me-1">${f}</span>`).join('')
+      : '<span class="text-muted">None</span>';
+
+    // Show/hide no results message
+    if (visibleCount === 0) {
+      noResults.classList.remove('d-none');
+      projectsContainer.style.display = 'none';
+    } else {
+      noResults.classList.add('d-none');
+      projectsContainer.style.display = 'grid';
+    }
+  }
+
+  // Add event listeners
+  filterSelects.forEach(select => {
+    select.addEventListener('change', applyFilters);
+  });
+  
+  searchInput.addEventListener('input', applyFilters);
+
+  // Initial filter application
+  applyFilters();
+});
+</script>
+{{ end }}

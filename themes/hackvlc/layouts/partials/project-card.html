@@ -81,14 +81,12 @@
 
   {{ if $project.Params.images }}
   <div class="project-gallery mt-4">
-    <div class="row gy-4">
+    <div class="d-flex flex-wrap gap-2">
       {{ range $index, $image := $project.Params.images }}
-      <div class="col-md-4">
-        <div class="gallery-image">
-          <a href="{{ $image | absURL }}" class="glightbox" data-gallery="project-gallery">
-            <img src="{{ $image | absURL }}" alt="{{ $project.Title }} - Image {{ add $index 1 }}" class="img-fluid">
-          </a>
-        </div>
+      <div class="gallery-image">
+        <a href="{{ $image | absURL }}" class="glightbox" data-gallery="project-gallery">
+          <img src="{{ $image | absURL }}" alt="{{ $project.Title }} - Image {{ add $index 1 }}" class="img-fluid">
+        </a>
       </div>
       {{ end }}
     </div>

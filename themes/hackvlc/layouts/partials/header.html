@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}" aria-label="Home">
           {{ if .Site.Params.logo }}
-          <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" height="40" class="me-2 img-fluid">
+          <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" class="me-2 img-fluid">
           {{ else }}
           <span class="brand-text">HACKERSPACE VALENCIA</span>
           {{ end }}
@@ -26,11 +26,12 @@
             </li>
             {{ end }}
 
-            {{ if templates.Exists "partials/theme-toggle.html" }}
+            <!-- Theme toggle removed -->
+            <!-- {{ if templates.Exists "partials/theme-toggle.html" }}
             <li class="nav-item ms-2">
               {{ partial "theme-toggle.html" . }}
             </li>
-            {{ end }}
+            {{ end }} -->
 
             {{ if .IsTranslated }}
             <li class="nav-item dropdown ms-2">

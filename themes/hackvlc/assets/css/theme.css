@@ -141,7 +141,7 @@ p {
 }
 
 .header-modern .navbar-brand img {
-    max-height: 40px;
+    max-height: 28px;
     transition: transform 0.3s ease;
 }
 
