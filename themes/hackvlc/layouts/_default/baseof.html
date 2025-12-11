@@ -13,36 +13,36 @@
   <link rel="shortcut icon" href="{{ . | relURL }}">
   {{ end }}
   
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+   <!-- Plugin CSS from config -->
+   {{ range .Site.Params.plugins.css }}
+   <link rel="stylesheet" href="{{ .link }}">
+   {{ end }}
+   
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+   <!-- GLightbox for image galleries -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Google Fonts: Fira Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- GLightbox for image galleries -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-  
-  <!-- Hacker Theme CSS -->
-  {{ with resources.Get "css/hacker-theme.css" }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-  
-  <!-- Project Card CSS -->
-  {{ with resources.Get "css/project-card.css" }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-  
-  <!-- Custom CSS for specific pages -->
-  {{ range .Site.Params.customCSS -}}
-  {{ with resources.Get . }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-  {{- end }}
+   <!-- Hacker Theme CSS -->
+   {{ with resources.Get "css/hacker-theme.css" }}
+   {{ $hackerTheme := . | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $hackerTheme.RelPermalink }}" integrity="{{ $hackerTheme.Data.Integrity }}">
+   {{ end }}
+   
+   <!-- Project Card CSS -->
+   {{ with resources.Get "css/project-card.css" }}
+   {{ $projectCard := . | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $projectCard.RelPermalink }}" integrity="{{ $projectCard.Data.Integrity }}">
+   {{ end }}
+   
+   <!-- Custom CSS for specific pages -->
+   {{ range .Site.Params.customCSS -}}
+   {{ with resources.Get . }}
+   {{ $customCSS := . | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}">
+   {{ end }}
+   {{- end }}
   
 
   
@@ -62,16 +62,19 @@
   {{ partial "footer.html" . }}
 </div>
 
-<!-- GLightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+ <!-- GLightbox JS -->
+ <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+ 
+ <!-- Plugin JS from config -->
+ {{ range .Site.Params.plugins.js }}
+ <script src="{{ .link }}"></script>
+ {{ end }}
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Theme JS -->
-{{ with resources.Get "js/theme.js" }}
-<script src="{{ .RelPermalink }}"></script>
-{{ end }}
+ <!-- Theme JS -->
+ {{ with resources.Get "js/theme.js" }}
+ {{ $themeJS := . | resources.Fingerprint "sha512" }}
+ <script src="{{ $themeJS.RelPermalink }}" integrity="{{ $themeJS.Data.Integrity }}"></script>
+ {{ end }}
 
 <!-- Custom footer scripts -->
 {{ block "scripts" . }}{{ end }}
