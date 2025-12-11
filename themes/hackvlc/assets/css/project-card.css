@@ -408,20 +408,21 @@
 
 /* Image gallery for projects */
 .project-gallery {
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 .gallery-image {
     border-radius: var(--border-radius);
     overflow: hidden;
-    margin-bottom: 20px;
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
+    flex: 0 0 auto;
 }
 
 .gallery-image img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
     display: block;
     transition: all 0.5s ease;
 }

@@ -1,12 +1,18 @@
 ---
-title: "Robot arm"
+title: "Robotic Arm"
 date: 2024-03-10
 image: images/portfolio/brazo.webp
 socios: ["José Gil"]
 summary: "Small assembly of already made project, robotic arm"
-description: "Completed project, in documentation phase"
-tags: ["project", "upcoming"]
+description: "A compact robotic arm project built from existing components. This project demonstrates basic robotics principles, servo control, and mechanical assembly techniques."
+tags: ["robotic-arm", "servo-motors", "arduino-robotics", "mechanical-assembly", "diy-robotics", "educational-project", "beginner-robotics"]
+categories: ["robotics", "electronics"]
 featured: false
+status: "completed"
+difficulty: "beginner"
+tech_stack: ["Servos", "Arduino", "Mechanical Assembly"]
+repo_url: ""
+demo_url: ""
 ---
 
 # Documentation in Progress

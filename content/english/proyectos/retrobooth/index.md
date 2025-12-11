@@ -1,12 +1,18 @@
 ---
-title: "Retrobooth"
+title: "RetroBooth"
 date: 2025-01-25
 image: images/portfolio/retrobooth.webp
-members: ["José Gil", "Javier Donate", "Ignacio Delgado"]
-summary: "Retro Photo Booth"
-description: "Completed project, in documentation phase"
-tags: ["project", "upcoming"]
+socios: ["José Gil", "Javier Donate", "Ignacio Delgado"]
+summary: "Retro photo booth with NFC filter selection"
+description: "A modern retro photo booth combining vintage aesthetics with NFC technology. Users select filters using physical NFC cards, creating an interactive experience. Features privacy-focused design with automatic photo deletion after printing."
+tags: ["photo-booth", "nfc-filters", "retro-photography", "polaroid-style", "privacy-focused", "raspberry-pi-camera", "interactive-installation", "vintage-aesthetics"]
+categories: ["electronics", "photography"]
 featured: true
+status: "in_progress"
+difficulty: "advanced"
+tech_stack: ["Raspberry Pi", "NFC Reader", "Camera Module", "Python", "Image Processing"]
+repo_url: "https://github.com/HackerspaceVLC/retrobooth"
+demo_url: ""
 ---
 
 # RetroBooth Documentation
