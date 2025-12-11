@@ -60,9 +60,9 @@ learningCommunity:
 learningCommunityDesc:
   other: "We share knowledge, experience, and passion for technology. Here everyone teaches and everyone learns."
 openSource:
-  other: "Open Source is Our DNA"
+  other: "Libre/Open Source is Our DNA"
 openSourceDesc:
-  other: "We believe in free software and hardware. Sharing is our way of innovating."
+  other: "We believe in free/libre and open source software (FOSS) and hardware. Sharing knowledge and code is how we innovate and build community."
 creativeHackers:
   other: "Creative Hackers"
 creativeHackersDesc:
