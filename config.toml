@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://hackerspace.ignacio.tech/"
+baseURL = "https://hackvlc.es/"
 title = "Hackerspace Valencia"
 theme = "hackvlc"  # Changed from meghna-hugo to our new hackvlc theme
 # post pagination
