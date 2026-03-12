@@ -1,0 +1,92 @@
+backend:
+  name: github
+  repo: HackerspaceVLC/hackvlc-website
+  branch: feat/sveltia-cms
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "proyectos_es"
+    label: "Proyectos (ES)"
+    folder: "content/spanish/proyectos"
+    create: true
+    slug: "{{slug}}/index"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Imagen", name: "image", widget: "image" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Etiquetas", name: "tags", widget: "list" }
+      - { label: "Categorías", name: "categories", widget: "list" }
+      - { label: "Destacado", name: "featured", widget: "boolean", default: false }
+      - { label: "Estado", name: "status", widget: "string", required: false }
+      - { label: "Tecnologías", name: "tech_stack", widget: "list", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "proyectos_en"
+    label: "Proyectos (EN)"
+    folder: "content/english/proyectos"
+    create: true
+    slug: "{{slug}}/index"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Categories", name: "categories", widget: "list" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Status", name: "status", widget: "string", required: false }
+      - { label: "Tech Stack", name: "tech_stack", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "workshops_es"
+    label: "Workshops (ES)"
+    folder: "content/spanish/workshops"
+    create: true
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Imagen", name: "image", widget: "image" }
+      - { label: "Socios", name: "socios", widget: "list" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Etiquetas", name: "tags", widget: "list" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "workshops_en"
+    label: "Workshops (EN)"
+    folder: "content/english/workshops"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Members", name: "socios", widget: "list" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages_es"
+    label: "Pages (ES)"
+    folder: "content/spanish/pages"
+    create: true
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "pages_en"
+    label: "Pages (EN)"
+    folder: "content/english/pages"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
