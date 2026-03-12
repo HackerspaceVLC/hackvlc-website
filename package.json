@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo serve",
-    "build": "hugo"
+    "dev": "npx tinacms dev -c \"hugo serve\"",
+    "build": "npx tinacms build && hugo"
   },
   "keywords": [],
   "author": "",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "tinacms": "^2.4.0"
+    "tinacms": "^3.6.1"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.6.11",
-    "@types/node": "^22.9.0"
+    "@tinacms/cli": "^2.1.9",
+    "@types/node": "^25.4.0"
   }
 }
