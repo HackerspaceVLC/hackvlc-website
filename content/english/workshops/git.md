@@ -1,7 +1,7 @@
 ---
 title: "Git Fundamentals Workshop"
 date: 2024-01-01
-image: images/workshop/git.webp
+image: /images/workshop/git.webp
 socios: ["Ignacio Delgado", "Lua Marchante"]
 description: "Learn version control fundamentals with Git. Perfect for beginners interested in collaborative development and code management."
 tags: ["Development"]

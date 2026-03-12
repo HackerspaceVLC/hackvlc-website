@@ -1,7 +1,7 @@
 ---
 title: "Hacker Lamp"
 date: 2024-03-09
-image: images/portfolio/lampara-hacker.webp
+image: /images/portfolio/lampara-hacker.webp
 socios: ["Javier Donate"]
 summary: "Decorative hacker-themed lamps created for ESLibre 2024"
 description: "Custom-designed decorative lamps with hacker aesthetics, created as scale models for ESLibre 2024. These lamps combine electronics, craftsmanship, and creative design to celebrate hacker culture."

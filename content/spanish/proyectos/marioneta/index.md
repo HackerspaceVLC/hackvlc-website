@@ -1,7 +1,7 @@
 ---
 title: "Marioneta Interactiva"
 date: 2024-03-09
-image: images/portfolio/marioneta.webp
+image: /images/portfolio/marioneta.webp
 socios: ["José Gil"]
 summary: "Marioneta interactiva con características sorpresa"
 description: "Proyecto de marioneta interactiva con sorpresas inesperadas y mecanismos ocultos. Este proyecto creativo combina la marioneta tradicional con la electrónica moderna para crear una experiencia atractiva y misteriosa."

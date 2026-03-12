@@ -1,7 +1,7 @@
 ---
 title: "Robotic Arm"
 date: 2024-03-10
-image: images/portfolio/brazo.webp
+image: /images/portfolio/brazo.webp
 socios: ["José Gil"]
 summary: "Small assembly of already made project, robotic arm"
 description: "A compact robotic arm project built from existing components. This project demonstrates basic robotics principles, servo control, and mechanical assembly techniques."

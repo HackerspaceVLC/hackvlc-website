@@ -1,7 +1,7 @@
 ---
 title: "Halloween Hand"
 date: 2024-03-09
-image: images/portfolio/mano.webp
+image: /images/portfolio/mano.webp
 socios: ["José Gil"]
 summary: "Animated Halloween decoration hand"
 description: "A spooky animated hand decoration created for Halloween festivities. This project combines mechanics, electronics, and creative design to create an engaging Halloween prop with realistic movement."

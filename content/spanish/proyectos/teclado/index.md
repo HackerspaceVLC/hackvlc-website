@@ -1,7 +1,7 @@
 ---
 title: "Teclado Mecánico Ferris Sweep 2.0"
 date: 2024-03-09
-image: images/portfolio/teclado.webp
+image: /images/portfolio/teclado.webp
 socios: ["Ignacio Delgado"]
 summary: "Ensamble personalizado del teclado ergonómico Ferris Sweep 2.0"
 description: "Teclado mecánico personalizado construido con el kit Ferris Sweep 2.0. Este proyecto showcase técnicas avanzadas de construcción de teclados incluyendo soldadura, configuración de firmware y principios de diseño ergonómico."

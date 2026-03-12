@@ -1,7 +1,7 @@
 ---
 title: "Restauración de Radios Antiguas"
 date: 2024-03-09
-image: images/portfolio/radios.webp
+image: /images/portfolio/radios.webp
 socios: ["Pachón", "Hackerspace Valencia"]
 summary: "Restauración y reparación de radios de válvulas antiguas"
 description: "Proyecto integral de restauración de radios antiguas devolviendo la vida a clásicos de válvulas. Este proyecto preserva la historia del audio reparando y restaurando radios antiguas manteniendo su carácter y calidad de sonido original."

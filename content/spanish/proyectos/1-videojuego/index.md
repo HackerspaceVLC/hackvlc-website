@@ -1,7 +1,7 @@
 ---
 title: "1º Videojuego"
 date: 2024-03-09
-image: images/portfolio/1-videojuego.webp
+image: /images/portfolio/1-videojuego.webp
 socios: ["José Gil"]
 summary: "Recreación del primer videojuego de la historia con Arduino UNO vía VGA"
 description: "Recreación completa de PONG utilizando Arduino UNO con salida VGA personalizada, controles impresos en 3D y diseño portátil. Este proyecto demuestra el potencial de los microcontroladores para gaming retro y sirve como ejemplo educativo integrando electrónica, programación e impresión 3D."

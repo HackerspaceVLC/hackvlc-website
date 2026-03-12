@@ -1,7 +1,7 @@
 ---
 title: "RetroBooth"
 date: 2025-01-25
-image: images/portfolio/retrobooth.webp
+image: /images/portfolio/retrobooth.webp
 socios: ["José Gil", "Javier Donate", "Ignacio Delgado"]
 summary: "Retro photo booth with NFC filter selection"
 description: "A modern retro photo booth combining vintage aesthetics with NFC technology. Users select filters using physical NFC cards, creating an interactive experience. Features privacy-focused design with automatic photo deletion after printing."

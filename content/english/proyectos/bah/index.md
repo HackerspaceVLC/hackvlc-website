@@ -1,7 +1,7 @@
 ---
 title: "BaH - Welcome Display"
 date: 2024-03-09
-image: images/portfolio/bah.webp
+image: /images/portfolio/bah.webp
 socios: ["José Gil"]
 summary: "Interactive welcome display for Hackerspace Valencia"
 description: "A digital welcome sign that greets visitors to Hackerspace Valencia. This project combines electronics and programming to create an engaging entrance experience for the hackerspace."

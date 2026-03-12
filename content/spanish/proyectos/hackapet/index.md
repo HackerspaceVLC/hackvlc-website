@@ -1,7 +1,7 @@
 ---
 title: "Hackapet"
 date: 2024-03-10
-image: images/portfolio/hackapet.webp
+image: /images/portfolio/hackapet.webp
 socios: ["Hackerspace Valencia"]
 summary: "Plataforma open source para gestión de refugios de animales"
 description: "Plataforma integral de software open source diseñada para ayudar a los refugios de animales a gestionar sus operaciones, incluyendo seguimiento de animales, procesos de adopción y coordinación de voluntarios. Este proyecto impulsado por la comunidad hace accesible la gestión de refugios para todos."

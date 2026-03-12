@@ -1,7 +1,7 @@
 ---
 title: DeepSeek R1 Democratizando la IA
 date: 2025-02-08
-image: images/workshop/deepseek.webp
+image: /images/workshop/deepseek.webp
 socios: ["Ignacio Delgado"]
 description: "DeepSeek R1 es un modelo de lenguaje de código abierto que está cambiando el panorama de la IA" 
 tags: ["IA"]

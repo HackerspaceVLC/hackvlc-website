@@ -1,7 +1,7 @@
 ---
 title: "Ferris Sweep 2.0 Mechanical Keyboard"
 date: 2024-03-09
-image: images/portfolio/teclado.webp
+image: /images/portfolio/teclado.webp
 socios: ["Ignacio Delgado"]
 summary: "Custom assembly of Ferris Sweep 2.0 ergonomic keyboard"
 description: "A custom-built Ferris Sweep 2.0 ergonomic mechanical keyboard assembly. This project showcases advanced keyboard building techniques including soldering, firmware configuration, and ergonomic design principles."

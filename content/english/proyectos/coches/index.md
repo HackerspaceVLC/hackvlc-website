@@ -1,7 +1,7 @@
 ---
 title: "Line Following Car"
 date: 2024-03-10
-image: images/portfolio/coches.webp
+image: /images/portfolio/coches.webp
 socios: ["Hackerspace Valencia", "José Gil", "Julio"]
 summary: "Castellón's Following line car Hackathon winners"
 description: "Winning project from Castellón's line following car hackathon. This autonomous vehicle uses sensors to follow lines and demonstrates robotics, sensor integration, and competitive programming skills."

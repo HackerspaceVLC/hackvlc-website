@@ -1,7 +1,7 @@
 ---
 title: "ScaLEDtric"
 date: 2024-03-09
-image: images/portfolio/scaledtric.webp
+image: /images/portfolio/scaledtric.webp
 socios: ["José Gil", "Ángel Andrés"]
 summary: "Juego de carreras donde compiten patrones de LED"
 description: "Juego de carreras innovador donde compiten LEDs en lugar de coches. Este proyecto crea una experiencia de gaming competitivo usando tiras LED programables, microcontroladores y mecánicas de juego creativas."

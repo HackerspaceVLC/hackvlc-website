@@ -1,7 +1,7 @@
 ---
 title: "RetroBooth"
 date: 2025-01-25
-image: images/portfolio/retrobooth.webp
+image: /images/portfolio/retrobooth.webp
 socios: ["José Gil", "Javier Donate", "Ignacio Delgado"]
 summary: "Fotomatón retro con selección de filtros NFC"
 description: "Fotomatón retro moderno combinando estética vintage con tecnología NFC. Los usuarios seleccionan filtros usando tarjetas NFC físicas, creando una experiencia interactiva. Diseño enfocado en privacidad con eliminación automática de fotos después de imprimir."

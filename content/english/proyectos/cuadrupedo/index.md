@@ -1,7 +1,7 @@
 ---
 title: "Quadruped Robot"
 date: 2024-03-10
-image: images/portfolio/cuadrupedo.webp
+image: /images/portfolio/cuadrupedo.webp
 socios: ["José Gil"]
 summary: "4 legged robot, controlled via infrarred."
 description: "A four-legged walking robot with infrared remote control. This project demonstrates advanced robotics concepts including servo coordination, gait patterns, and wireless control systems."

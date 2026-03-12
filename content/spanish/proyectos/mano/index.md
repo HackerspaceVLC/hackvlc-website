@@ -1,7 +1,7 @@
 ---
 title: "Mano de Halloween"
 date: 2024-03-09
-image: images/portfolio/mano.webp
+image: /images/portfolio/mano.webp
 socios: ["José Gil"]
 summary: "Decoración animada de mano para Halloween"
 description: "Espeluznante decoración animada de mano creada para las festividades de Halloween. Este proyecto combina mecánica, electrónica y diseño creativo para crear un accesorio de Halloween atractivo con movimiento realista."

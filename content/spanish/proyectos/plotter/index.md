@@ -1,7 +1,7 @@
 ---
 title: "Plotter Reciclado"
 date: 2024-03-09
-image: images/portfolio/plotter.webp
+image: /images/portfolio/plotter.webp
 socios: ["Hackerspace Valencia"]
 summary: "Plotter DIY construido con lectores de CD-ROM de PC reciclados"
 description: "Plotter CNC creativo construido a partir de unidades de CD-ROM de PC recuperadas y otros componentes reciclados. Este proyecto demuestra el upcycling, principios CNC e ingeniería creativa promoviendo la sostenibilidad en la tecnología."

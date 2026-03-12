@@ -1,7 +1,7 @@
 ---
 title: "Introducción a la Síntesis de Audio"
 date: 2024-01-01
-image: images/workshop/audio.webp
+image: /images/workshop/audio.webp
 socios: ["Arturo"]
 description: "Taller práctico para aprender los fundamentos de la síntesis de audio. Perfecto para principiantes interesados en música electrónica y diseño sonoro."
 tags: ["Audio"]

@@ -1,7 +1,7 @@
 ---
 title: "Destructor Robot"
 date: 2024-03-09
-image: images/portfolio/destructor.webp
+image: /images/portfolio/destructor.webp
 socios: ["José Gil"]
 summary: "Robotic vehicle with destruction capabilities"
 description: "A powerful robotic vehicle designed for competitive destruction challenges. This project combines heavy-duty mechanics, robust control systems, and strategic design for combat robotics competitions."

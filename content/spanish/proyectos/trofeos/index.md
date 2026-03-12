@@ -1,7 +1,7 @@
 ---
 title: "Trofeos Personalizados 3D"
 date: 2024-03-09
-image: images/portfolio/trofeos.webp
+image: /images/portfolio/trofeos.webp
 socios: ["Ángel Andrés", "Javier Donate"]
 summary: "Trofeos impresos en 3D para festividades locales del barrio"
 description: "Trofeos personalizados diseñados e impresos en 3D para celebraciones y competencias locales del barrio. Este proyecto combina diseño creativo, modelado 3D y fabricación aditiva para producir premios únicos."

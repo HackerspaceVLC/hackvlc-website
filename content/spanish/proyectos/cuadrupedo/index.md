@@ -1,7 +1,7 @@
 ---
 title: "Robot Cuadrúpedo"
 date: 2024-03-10
-image: images/portfolio/cuadrupedo.webp
+image: /images/portfolio/cuadrupedo.webp
 socios: ["José Gil"]
 summary: "Robot de 4 patas controlado por infrarrojos"
 description: "Robot caminante de cuatro patas con control remoto por infrarrojos. Este proyecto demuestra conceptos avanzados de robótica incluyendo coordinación de servos, patrones de marcha y sistemas de control inalámbricos."

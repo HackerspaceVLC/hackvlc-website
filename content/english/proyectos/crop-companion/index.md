@@ -1,7 +1,7 @@
 ---
 title: "Crop Companion"
 date: 2024-03-09
-image: images/portfolio/crop-companion.webp
+image: /images/portfolio/crop-companion.webp
 socios: ["José Gil", "Héctor Cerdá", "Lua Marchante", "Diego Rejón", "Eugeni", "Ignacio Delgado"]
 summary: "NASA Space Apps Hackathon 2nd Prize winner"
 description: "Award-winning project from NASA Space Apps Hackathon securing 2nd prize. Crop Companion is an innovative agricultural technology solution that helps farmers monitor and optimize crop health using modern sensors and data analysis."

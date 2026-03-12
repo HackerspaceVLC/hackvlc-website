@@ -1,7 +1,7 @@
 ---
 title: "Juego Mata Bichos"
 date: 2024-03-09
-image: images/portfolio/matabichos.webp
+image: /images/portfolio/matabichos.webp
 socios: ["José Gil"]
 summary: "Juego estilo golpea el topo con bichos electrónicos"
 description: "Juego interactivo estilo golpea el topo con bichos electrónicos que se iluminan y mueven. Este juego de arcade combina tiempo, reflejos y controles electrónicos para una experiencia de entretenimiento atractiva."

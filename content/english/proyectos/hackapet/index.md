@@ -1,7 +1,7 @@
 ---
 title: "Hackapet"
 date: 2024-03-10
-image: images/portfolio/hackapet.webp
+image: /images/portfolio/hackapet.webp
 socios: ["Hackerspace Valencia"]
 summary: "Open-source platform for animal shelters management"
 description: "A comprehensive open-source software platform designed to help animal shelters manage their operations, including animal tracking, adoption processes, and volunteer coordination. This community-driven project makes shelter management accessible to all."
