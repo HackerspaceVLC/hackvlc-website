@@ -1,12 +1,9 @@
 ---
-difficulty: intermedio
-repo_url: ''
-demo_url: ''
-title: 1º Videojuego
+title: 1º Videojuego TEST
 date: 2024-03-09T00:00:00.000Z
 image: /images/portfolio/1-videojuego.webp
 summary: Recreación del primer videojuego de la historia con Arduino UNO vía VGA
-description: 'Recreación completa de PONG utilizando Arduino UNO con salida VGA personalizada, controles impresos en 3D y diseño portátil. Este proyecto demuestra el potencial de los microcontroladores para gaming retro y sirve como ejemplo educativo integrando electrónica, programación e impresión 3D.'
+description: Recreación completa de PONG utilizando Arduino UNO con salida VGA personalizada, controles impresos en 3D y diseño portátil. Este proyecto demuestra el potencial de los microcontroladores para gaming retro y sirve como ejemplo educativo integrando electrónica, programación e impresión 3D.
 tags:
   - videojuego-retro
   - arduino-uno
@@ -26,6 +23,9 @@ tech_stack:
   - VGA
   - C++
   - Impresión 3D
+demo_url: ''
+difficulty: intermedio
+repo_url: ''
 ---
 
 # Recreación de PONG en Arduino UNO con VGA
