@@ -7,11 +7,7 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{{ .Site.Params.favicon | default "/favicon.ico" }}">
-
-  {{ with .Site.Params.favicon.icon }}
-  <link rel="shortcut icon" href="{{ . | relURL }}">
-  {{ end }}
+  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}">
   
    <!-- Plugin CSS from config -->
    {{ range .Site.Params.plugins.css }}

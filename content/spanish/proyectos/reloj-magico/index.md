@@ -1,7 +1,7 @@
 ---
 title: "Reloj con Levitación Magnética"
 date: 2024-03-09
-image: images/portfolio/reloj-magico.gif
+image: images/portfolio/reloj-magico.webp
 socios: [""]
 summary: "Reloj flotante impulsado por levitación magnética"
 description: "Reloj hipnótico que parece flotar en el aire usando tecnología de levitación magnética. Este proyecto combina electromagnetismo, control de precisión y cronometraje para crear una pieza temporal mágica."
