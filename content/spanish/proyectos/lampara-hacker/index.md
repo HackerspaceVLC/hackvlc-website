@@ -2,7 +2,6 @@
 title: "Lámpara Hacker"
 date: 2024-03-09
 image: /images/portfolio/lampara-hacker.webp
-socios: ["Javier Donate"]
 summary: "Lámparas decorativas temáticas hacker creadas para ESLibre 2024"
 description: "Lámparas decorativas personalizadas con estética hacker, creadas como maquetas para ESLibre 2024. Estas lámparas combinan electrónica, artesanía y diseño creativo para celebrar la cultura hacker."
 tags: ["lamparas-decorativas", "eslibre-2024", "cultura-hacker", "electronica-arte", "iluminacion-personalizada", "diy-decor", "electronica-creativa", "maqueta"]

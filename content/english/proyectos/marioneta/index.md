@@ -2,7 +2,6 @@
 title: "Interactive Puppet"
 date: 2024-03-09
 image: /images/portfolio/marioneta.webp
-socios: ["José Gil"]
 summary: "Surprise interactive puppet with hidden features"
 description: "An interactive puppet project with unexpected surprises and hidden mechanisms. This creative project combines traditional puppetry with modern electronics to create an engaging and mysterious experience."
 tags: ["interactive-puppet", "surprise-mechanism", "creative-electronics", "puppetry-tech", "hidden-features", "arduino-puppet", "interactive-art", "mystery-project"]

@@ -2,7 +2,6 @@
 title: "Brazo Robótico"
 date: 2024-03-10
 image: /images/portfolio/brazo.webp
-socios: ["José Gil"]
 summary: "Pequeño montaje de brazo robótico a partir de proyecto existente"
 description: "Brazo robótico compacto construido a partir de componentes existentes. Este proyecto demuestra principios básicos de robótica, control de servos y técnicas de ensamblaje mecánico."
 tags: ["brazo-robotico", "motores-servo", "robotica-arduino", "ensamblaje-mecanico", "robotica-diy", "proyecto-educativo", "robotica-principiantes"]

@@ -2,7 +2,6 @@
 title: "Coche Seguidor de Línea"
 date: 2024-03-10
 image: /images/portfolio/coches.webp
-socios: ["Hackerspace Valencia", "José Gil", "Julio"]
 summary: "Ganadores del Hackathon de coches seguidores de línea de Castellón"
 description: "Proyecto ganador del hackathon de coches seguidores de línea de Castellón. Este vehículo autónomo utiliza sensores para seguir líneas y demuestra habilidades en robótica, integración de sensores y programación competitiva."
 tags: ["seguidor-linea", "vehiculo-autonomo", "ganador-hackathon", "integracion-sensores", "competicion-robotica", "coche-arduino", "hackathon-castellon"]

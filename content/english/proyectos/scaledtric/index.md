@@ -2,7 +2,6 @@
 title: "ScaLEDtric"
 date: 2024-03-09
 image: /images/portfolio/scaledtric.webp
-socios: ["José Gil", "Ángel Andrés"]
 summary: "LED racing game where light patterns compete"
 description: "An innovative racing game where LEDs race instead of cars. This project creates a competitive gaming experience using programmable LED strips, microcontrollers, and creative game mechanics."
 tags: ["led-racing", "light-game", "led-competition", "programmable-leds", "racing-game", "light-patterns", "microcontroller-game", "led-sports"]

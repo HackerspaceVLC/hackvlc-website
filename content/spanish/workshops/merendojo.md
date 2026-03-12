@@ -2,7 +2,6 @@
 title: "Merendojo: Code & Coffee"
 date: 2024-11-03
 image: /images/workshop/devscola/devscola.webp
-socios: ["Devscola", "Hackerspace Valencia"]
 description: "Une la programación con la merienda en este evento social único donde aprenderás coding en un ambiente relajado y divertido."
 tags: ["Software"]
 ---

@@ -2,7 +2,6 @@
 title: "How to Create Your Portfolio with Hugo and Deploy It"
 date: 2024-06-14T01:00:00+01:00
 image: /images/workshop/portfolio/portfolio.webp
-socios: ["Ignacio Delgado"]
 description : "TODO"
 tags : ["Software"]
 ---

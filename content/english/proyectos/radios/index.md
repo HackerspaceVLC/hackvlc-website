@@ -2,7 +2,6 @@
 title: "Vintage Radio Restoration"
 date: 2024-03-09
 image: /images/portfolio/radios.webp
-socios: ["Pachón", "Hackerspace Valencia"]
 summary: "Restoration and repair of vintage tube radios"
 description: "A comprehensive vintage radio restoration project bringing classic tube radios back to life. This project preserves audio history by repairing and restoring antique radios while maintaining their original character and sound quality."
 tags: ["vintage-radio", "tube-radio", "radio-restoration", "antique-audio", "vacuum-tube", "audio-restoration", "vintage-electronics", "analog-audio"]

@@ -156,7 +156,6 @@ customCSS = ["css/custom.css"]
 [taxonomies]
 category = "categories"
 tag = "tags"
-socio = "socios"
 
 # preloader
 [params.preloader]

@@ -2,7 +2,6 @@
 title: "Custom 3D Printed Trophies"
 date: 2024-03-09
 image: /images/portfolio/trofeos.webp
-socios: ["Ángel Andrés", "Javier Donate"]
 summary: "3D printed trophies for local neighborhood festivities"
 description: "Custom-designed and 3D printed trophies created for local neighborhood celebrations and competitions. This project combines creative design, 3D modeling, and additive manufacturing to produce unique awards."
 tags: ["3d-printing", "custom-trophies", "trophies-design", "additive-manufacturing", "local-festivities", "3d-modeling", "community-awards", "diy-trophies"]

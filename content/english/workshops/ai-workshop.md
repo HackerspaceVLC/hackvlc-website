@@ -2,7 +2,6 @@
 title: "Intro to Generative AI and LLMs Workshop"
 date: 2024-03-09T11:00:00+01:00
 image: /images/workshop/ai1/thumbnail.webp
-socios: ["Ignacio Delgado", "Enrique Domínguez"]
 description : "TODO"
 tags : ["Artificial Intelligence"]
 ---

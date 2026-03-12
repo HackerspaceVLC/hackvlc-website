@@ -2,7 +2,6 @@
 title: "Arcade Machine"
 date: 2024-03-09
 image: /images/portfolio/arcade.webp
-socios: ["José Gil"]
 summary: "Full arcade machine built with Raspberry Pi 3B+ and custom controls"
 description: "A complete arcade machine featuring Raspberry Pi 3B+, custom controls, and retro gaming software. This project combines woodworking, electronics, and software to create an authentic arcade experience."
 tags: ["arcade-machine", "retrogaming", "raspberry-pi-3b+", "retropie", "custom-controls", "woodworking", "diy-arcade", "gaming-cabinet"]

@@ -2,7 +2,6 @@
 title: "Learn PCB Design with Kicad"
 date: 2024-03-09
 image: /images/workshop/kicad/kicad.webp
-socios: ["Ángel Andrés"]
 description: "Hands-on workshop to learn PCB design using KiCad, from basic schematic capture to PCB layout. Perfect for beginners interested in electronics and digital fabrication."
 tags: ["Electronics"]
 ---

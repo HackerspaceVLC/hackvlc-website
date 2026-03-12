@@ -2,7 +2,6 @@
 title: "Introduction to DaVinci Resolve"
 date: 2024-01-01
 image: /images/workshop/davinci.webp
-socios: ["Arturo"]
 description: "Learn video editing with DaVinci Resolve 18.6. From basic concepts to creating content for YouTube."
 tags: ["Video"]
 ---

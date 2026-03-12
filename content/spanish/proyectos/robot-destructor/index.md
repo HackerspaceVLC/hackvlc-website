@@ -2,7 +2,6 @@
 title: "Robot Destructor"
 date: 2024-03-09
 image: /images/portfolio/destructor.webp
-socios: ["José Gil"]
 summary: "Vehículo robótico con capacidades de destrucción"
 description: "Vehículo robótico potente diseñado para competencias de destrucción. Este proyecto combina mecánica pesada, sistemas de control robustos y diseño estratégico para competencias de robótica de combate."
 tags: ["robot-combate", "robot-destructor", "battlebot", "competencia-robotica", "mecanica-pesada", "robotica-competitiva", "dispositivo-destruccion", "vehiculo-combate"]

@@ -1,6 +1,4 @@
 ---
-socios:
-  - José Gil
 difficulty: intermedio
 repo_url: ''
 demo_url: ''

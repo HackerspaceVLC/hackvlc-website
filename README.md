@@ -42,7 +42,6 @@ This is the official website repository for [Hackerspace Valencia](https://hackv
   - `pages/`: General pages like About or Signup.
   - `proyectos/`: Individual project portfolios and galleries.
   - `workshops/`: Information about past and upcoming workshops.
-  - `socios/`: Member profiles.
 - `data/`: YAML files containing structured data (e.g., portfolio lists, team members, features) for both `en/` and `es/`.
 - `static/`: Static assets like images, fonts, and documents that are served directly.
   - `images/portfolio/`: Optimized project thumbnails.

@@ -2,7 +2,6 @@
 title: "RFID Membership Cards"
 date: 2024-03-09
 image: /images/portfolio/tarjetas-de-socio.webp
-socios: ["José Gil", "Ignacio Delgado"]
 summary: "RFID-based membership system for hackerspace access control"
 description: "A comprehensive RFID membership card system for hackerspace access control and automation. This project enables secure identification, automated access, and member management using RFID technology."
 tags: ["rfid-cards", "access-control", "membership-system", "hackerspace-automation", "rfid-reader", "raspberry-pi-rfid", "door-access", "member-management"]

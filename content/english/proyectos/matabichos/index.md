@@ -2,7 +2,6 @@
 title: "Bug Whacker Game"
 date: 2024-03-09
 image: /images/portfolio/matabichos.webp
-socios: ["José Gil"]
 summary: "Whac-a-mole style game with electronic bugs"
 description: "An interactive whac-a-mole style game featuring electronic bugs that light up and move. This arcade-style game combines timing, reflexes, and electronic controls for an entertaining gaming experience."
 tags: ["whac-a-mole", "bug-game", "arcade-game", "reaction-game", "electronic-toy", "interactive-game", "arduino-gaming", "timing-game"]

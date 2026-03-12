@@ -2,7 +2,6 @@
 title: "Introduction to Audio Synthesis"
 date: 2024-01-01
 image: /images/workshop/audio.webp
-socios: ["Arturo"]
 description: "Hands-on workshop to learn the fundamentals of audio synthesis. Perfect for beginners interested in electronic music and sound design."
 tags: ["Audio"]
 ---

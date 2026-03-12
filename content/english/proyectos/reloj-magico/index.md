@@ -2,7 +2,6 @@
 title: "Magnetic Levitation Clock"
 date: 2024-03-09
 image: /images/portfolio/reloj-magico.webp
-socios: [""]
 summary: "Floating clock powered by magnetic levitation"
 description: "A mesmerizing clock that appears to float in mid-air using magnetic levitation technology. This project combines electromagnetism, precision control, and timekeeping to create a magical floating timepiece."
 tags: ["magnetic-levitation", "floating-clock", "electromagnetism", "levitation-tech", "magnetic-suspension", "timepiece", "physics-project", "electromagnetic-clock"]

@@ -57,7 +57,6 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Imagen", name: "image", widget: "image" }
-      - { label: "Socios", name: "socios", widget: "list" }
       - { label: "Descripción", name: "description", widget: "text" }
       - { label: "Etiquetas", name: "tags", widget: "list" }
       - { label: "Contenido", name: "body", widget: "markdown" }
@@ -70,7 +69,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Members", name: "socios", widget: "list" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
