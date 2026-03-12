@@ -70,3 +70,10 @@ bower_components/
 # Hugo lock file
 /.hugo_build.lock
 node_modules
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+tina-lock.json
+*-lock.json
