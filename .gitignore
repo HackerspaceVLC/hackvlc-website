@@ -77,3 +77,7 @@ yarn.lock
 pnpm-lock.yaml
 tina-lock.json
 *-lock.json
+
+# Cloudflare Workers
+cms-proxy/.dev.vars
+cms-proxy/.wrangler/
