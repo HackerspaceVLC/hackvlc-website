@@ -1,18 +1,33 @@
 ---
-title: "1º Videojuego"
-date: 2024-03-09
+socios:
+  - José Gil
+difficulty: intermedio
+repo_url: ''
+demo_url: ''
+title: 1º Videojuego
+date: 2024-03-09T00:00:00.000Z
 image: /images/portfolio/1-videojuego.webp
-socios: ["José Gil"]
-summary: "Recreación del primer videojuego de la historia con Arduino UNO vía VGA"
-description: "Recreación completa de PONG utilizando Arduino UNO con salida VGA personalizada, controles impresos en 3D y diseño portátil. Este proyecto demuestra el potencial de los microcontroladores para gaming retro y sirve como ejemplo educativo integrando electrónica, programación e impresión 3D."
-tags: ["videojuego-retro", "arduino-uno", "salida-vga", "impresion-3d", "microcontrolador", "pong", "diy-gaming", "proyecto-electronica"]
-categories: ["electronica", "informatica"]
+summary: Recreación del primer videojuego de la historia con Arduino UNO vía VGA
+description: 'Recreación completa de PONG utilizando Arduino UNO con salida VGA personalizada, controles impresos en 3D y diseño portátil. Este proyecto demuestra el potencial de los microcontroladores para gaming retro y sirve como ejemplo educativo integrando electrónica, programación e impresión 3D.'
+tags:
+  - videojuego-retro
+  - arduino-uno
+  - salida-vga
+  - impresion-3d
+  - microcontrolador
+  - pong
+  - diy-gaming
+  - proyecto-electronica
+categories:
+  - electronica
+  - informatica
 featured: true
-status: "completado"
-difficulty: "intermedio"
-tech_stack: ["Arduino UNO", "VGA", "C++", "Impresión 3D"]
-repo_url: ""
-demo_url: ""
+status: completado
+tech_stack:
+  - Arduino UNO
+  - VGA
+  - C++
+  - Impresión 3D
 ---
 
 # Recreación de PONG en Arduino UNO con VGA
@@ -30,14 +45,14 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 
 ### Hardware Principal
 
-* Pantalla: Monitor LCD con entrada VGA 
+* Pantalla: Monitor LCD con entrada VGA
 * Marco metálico con asa para transporte
 * Soporte estable con pies de apoyo
 * Panel de control integrado en la base
 
 ### Controles
 
-* Mandos personalizados: 
+* Mandos personalizados:
 * Diseñados e impresos en 3D en color blanco
 * Potenciómetro rotatorio (knob negro) para movimiento preciso
 * Botón rojo auxiliar para funciones adicionales
@@ -47,7 +62,7 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 ### Sistema Electrónico
 
 * Cerebro: Arduino UNO
-* Circuitería: 
+* Circuitería:
 * Placa de adaptación VGA
 * Sistema de conversión de señales analógicas
 * Integración con controladores externos
@@ -57,12 +72,12 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 
 ### Fase de Diseño
 
-1. Diseño de Hardware 
+1. Diseño de Hardware
 2. Selección de componentes compatibles
 3. Diseño de circuitos de adaptación
 4. Modelado 3D de los controles
 5. Planificación del sistema de montaje
-6. Desarrollo de Software 
+6. Desarrollo de Software
 7. Programación de la generación de señales VGA
 8. Implementación de la lógica del juego
 9. Desarrollo del sistema de control
@@ -72,7 +87,7 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 
 ### Interfaz Visual
 
-* Campo de juego: 
+* Campo de juego:
 * Marco dorado delimitador
 * Línea central punteada como división
 * Paletas en colores contrastantes (verde y rojo)
@@ -96,7 +111,7 @@ Un proyecto de José Gil "El Genio del Mal" - Hackerspace Valencia
 
 ### Valor Educativo
 
-* Ejemplo práctico de: 
+* Ejemplo práctico de:
 * Programación de microcontroladores
 * Diseño e impresión 3D
 * Electrónica básica y avanzada

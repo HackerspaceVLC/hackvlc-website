@@ -13,7 +13,7 @@ disableLanguages = []
 # default language
 defaultContentLanguage = "es"
 # Enable URL canonicalization
-canonifyURLs = true
+canonifyURLs = false
 
 ############################# Sitemap Configuration ######################
 [sitemap]
