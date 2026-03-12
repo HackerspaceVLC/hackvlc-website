@@ -1,5 +1,5 @@
 ---
-title: 1º Videojuego TEST
+title: 1º Videojuego
 date: 2024-03-09T00:00:00.000Z
 image: /images/portfolio/1-videojuego.webp
 summary: Recreación del primer videojuego de la historia con Arduino UNO vía VGA
