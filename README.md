@@ -1,112 +1,72 @@
-# HackVLC Hugo Theme
+# Hackerspace Valencia Website
 
-A custom Hugo theme for Hackerspace Valencia with light and dark mode support, inspired by maker/hacker aesthetics.
+This is the official website repository for [Hackerspace Valencia](https://hackvlc.es/), built with [Hugo](https://gohugo.io/) and featuring a custom maker-inspired theme.
 
-## Features
+## 🚀 Getting Started
 
-- 🌓 Light and Dark mode with toggle
-- 🎨 Vibrant teal and coral color scheme
-- 📱 Fully responsive design
-- 🌐 Multilingual support
-- 🖼️ Project showcase templates
-- 📝 Blog support
-- 📊 Custom components for community activities
+### Prerequisites
+- **Hugo** (Extended version recommended): `brew install hugo` (macOS) or download from [Hugo Releases](https://github.com/gohugoio/hugo/releases).
+- **Node.js & npm** (optional, for CMS integration and package management).
 
-## Installation
+### Installation & Running Locally
 
-### As a Hugo Module (recommended)
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/HackerspaceVLC/hackvlc-website.git
+   cd hackvlc-website
+   ```
 
-1. Initialize Hugo Module system if you haven't already:
-```bash
-hugo mod init github.com/username/my-site
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-2. Add the theme to your `config.toml`:
-```toml
-[module]
-  [[module.imports]]
-    path = "github.com/hackvlc/hackvlc-hugo-theme"
-```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # OR use hugo directly:
+   hugo serve
+   ```
+   The site will be available at `http://localhost:1313/`.
 
-3. Get the theme:
-```bash
-hugo mod get -u
-```
+4. **Build for production:**
+   ```bash
+   npm run build
+   # OR
+   hugo --minify
+   ```
 
-### Manual Installation
+## 📁 Project Structure
 
-1. Download the theme:
-```bash
-git clone https://github.com/hackvlc/hackvlc-hugo-theme.git themes/hackvlc
-```
+- `content/`: Contains the markdown files for the website content, separated by language (`english/` and `spanish/`).
+  - `pages/`: General pages like About or Signup.
+  - `proyectos/`: Individual project portfolios and galleries.
+  - `workshops/`: Information about past and upcoming workshops.
+  - `socios/`: Member profiles.
+- `data/`: YAML files containing structured data (e.g., portfolio lists, team members, features) for both `en/` and `es/`.
+- `static/`: Static assets like images, fonts, and documents that are served directly.
+  - `images/portfolio/`: Optimized project thumbnails.
+- `themes/hackvlc/`: The custom Hugo theme used for the website.
+- `tina/`: Configuration for TinaCMS (headless CMS for content editing).
 
-2. Add the theme to your `config.toml`:
-```toml
-theme = "hackvlc"
-```
+## 📝 Adding Content
 
-## Configuration
+### Projects
+To add a new project:
+1. Create a new directory and `index.md` inside `content/spanish/proyectos/<project-name>/` and `content/english/proyectos/<project-name>/`.
+2. Add your optimized thumbnail to `static/images/portfolio/<project-name>.webp`.
+3. Include the necessary frontmatter in your `index.md` (check existing projects like `1-videojuego` for examples).
 
-Here's an example configuration:
+### 🖼️ Image Guidelines (Important)
+To keep the repository small and the website fast, please adhere to these strict image guidelines:
+- **Format:** Always use **WebP** (`.webp`) format for images. Do NOT use `.jpg`, `.png`, or `.gif`.
+- **Thumbnails (`static/images/portfolio/`):** Max width **800px**.
+- **Gallery/Content/Background Images:** Max width **1920px**.
+- Always optimize and compress files before committing. You can use tools like `cwebp` to easily convert images.
 
-```toml
-baseURL = "https://hackerspacevalencia.com/"
-languageCode = "es"
-title = "Hackerspace Valencia"
-theme = "hackvlc"
+## 🌍 Multilingual Support
 
-[params]
-  description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
-  # darkMode = true  # Uncomment to enable dark mode by default
-  
-  # Hero section
-  heroImage = "/images/hero-image.png"
-  primaryButtonText = "Sobre Nosotros"
-  primaryButtonURL = "/sobre-nosotros"
-  secondaryButtonText = "Ver Proyectos"
-  secondaryButtonURL = "/proyectos"
-  
-  # Social media links
-  [params.social]
-    github = "https://github.com/hackerspacevalencia"
-    twitter = "https://twitter.com/hackerspaceVLC"
-    instagram = "https://instagram.com/hackerspaceVLC"
-```
+The website supports both Spanish (default) and English. When adding or editing content, ensure you update both the `content/spanish/` and `content/english/` directories, as well as the respective `data/es/` and `data/en/` files to keep translations in sync.
 
-## Project Structure
-
-To create a new project:
-
-1. Create a new markdown file in `content/projects/`:
-```markdown
----
-title: "Robot Destructor"
-date: 2023-05-12
-authors: ["José Gil (Genio del Mal)"]
-technologies: ["ESP32", "Servos", "Lanzallamas", "¡Camuflaje ninja!"]
-qr_info: "/images/qr-info.png"
-qr_code: "/images/qr-code.png"
----
-
-Proyecto con fines malvados de dominación mundial.
-Lanzallamas, camuflaje ninja, y más armas poderosas ocultas
-servirán para llegar a este fin.
-```
-
-## Customization
-
-### Colors
-
-To customize the theme colors, override these CSS variables in your `assets/css/custom.css`:
-
-```css
-:root {
-  --primary-color: #00BFB3; /* Teal */
-  --accent-color: #FF6347; /* Coral */
-  /* Add other variables to override */
-}
-```
-
-## License
-
-This theme is released under the MIT license.
+## 📄 License
+Everything we do is GPL-3.0 · Made with ❤️ in Valencia.
