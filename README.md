@@ -6,9 +6,9 @@ This is the official website repository for [Hackerspace Valencia](https://hackv
 
 ### Prerequisites
 - **Hugo** (Extended version recommended): `brew install hugo` (macOS) or download from [Hugo Releases](https://github.com/gohugoio/hugo/releases).
-- **Node.js & npm** (optional, for CMS integration and package management).
+- **Node.js & npm**: Required for running the CMS proxy and managing dependencies.
 
-### Installation & Running Locally
+### Installation and Running Locally
 
 1. **Clone the repository:**
    ```bash
@@ -24,12 +24,13 @@ This is the official website repository for [Hackerspace Valencia](https://hackv
 3. **Run the development server:**
    ```bash
    npm run dev
-   # OR use hugo directly:
-   hugo serve
    ```
-   The site will be available at `http://localhost:1313/`.
+   This will start both the Hugo server at `http://localhost:1313/` and the local CMS proxy.
 
-4. **Build for production:**
+4. **Access the CMS:**
+   Visit `http://localhost:1313/admin/` to manage content via Sveltia CMS.
+
+5. **Build for production:**
    ```bash
    npm run build
    # OR
@@ -42,11 +43,11 @@ This is the official website repository for [Hackerspace Valencia](https://hackv
   - `pages/`: General pages like About or Signup.
   - `proyectos/`: Individual project portfolios and galleries.
   - `workshops/`: Information about past and upcoming workshops.
-- `data/`: YAML files containing structured data (e.g., portfolio lists, team members, features) for both `en/` and `es/`.
-- `static/`: Static assets like images, fonts, and documents that are served directly.
+- `data/`: YAML files containing structured data (e.g., portfolio lists, features) for both `en/` and `es/`.
+- `static/`: Static assets like images, fonts, and documents.
+  - `admin/`: Configuration and entry point for Sveltia CMS.
   - `images/portfolio/`: Optimized project thumbnails.
 - `themes/hackvlc/`: The custom Hugo theme used for the website.
-- `tina/`: Configuration for TinaCMS (headless CMS for content editing).
 
 ## Adding Content
 
@@ -59,8 +60,8 @@ To add a new project:
 ### Image Guidelines (Important)
 To keep the repository small and the website fast, please adhere to these strict image guidelines:
 - **Format:** Always use **WebP** (`.webp`) format for images. Do NOT use `.jpg`, `.png`, or `.gif`.
-- **Thumbnails (`static/images/portfolio/`):** Max width **800px**.
-- **Gallery/Content/Background Images:** Max width **1920px**.
+- **Thumbnails (static/images/portfolio/):** Max width 800px.
+- **Gallery/Content/Background Images:** Max width 1920px.
 - Always optimize and compress files before committing. You can use tools like `cwebp` to easily convert images.
 
 ## Multilingual Support
