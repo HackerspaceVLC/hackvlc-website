@@ -1,7 +1,9 @@
 backend:
   name: github
   repo: HackerspaceVLC/hackvlc-website
-  branch: feat/sveltia-cms
+  branch: dev # We can change this back to dev once testing is done
+
+local_backend: true
 
 media_folder: "static/images"
 public_folder: "/images"

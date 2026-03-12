@@ -4,17 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tinacms dev -c \"hugo serve\"",
-    "build": "npx tinacms build && hugo"
+    "dev": "decap-server --port 8081 & hugo serve --port 1313",
+    "build": "hugo"
   },
   "keywords": [],
   "author": "",
   "license": "AGPL-3.0-or-later",
-  "dependencies": {
-    "tinacms": "^3.6.1"
-  },
   "devDependencies": {
-    "@tinacms/cli": "^2.1.9",
-    "@types/node": "^25.4.0"
+    "@types/node": "^25.4.0",
+    "decap-server": "^3.5.2"
   }
 }
