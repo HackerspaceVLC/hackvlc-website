@@ -22,10 +22,10 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [outputs]
-home = ["HTML", "RSS", "JSON", "SITEMAP"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
+home = ["HTML", "JSON", "SITEMAP"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 [outputFormats]
 [outputFormats.SITEMAP]
