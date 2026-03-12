@@ -2,7 +2,13 @@
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-lg-10">
-      <h1 class="text-center mb-5">{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+      <h1 class="text-center mb-2">{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+      
+      <div class="text-center mb-5">
+        <a href="{{ "workshops/index.xml" | absURL }}" class="rss-link" title="RSS Feed">
+          <i class="fa-solid fa-rss"></i> {{ if eq .Language.LanguageCode "es" }}Suscríbete al feed de talleres{{ else }}Subscribe to workshops feed{{ end }}
+        </a>
+      </div>
 
       {{ .Content }}
 

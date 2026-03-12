@@ -2,3 +2,23 @@
 /* This file can be used for site-specific overrides and custom styles */
 
 /* Add any custom styles here */
+
+.rss-link {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #FF6347; /* Fallback accent color */
+  color: white !important;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.rss-link:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.rss-link i {
+  margin-right: 5px;
+}
