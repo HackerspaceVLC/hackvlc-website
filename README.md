@@ -2,7 +2,7 @@
 
 This is the official website repository for [Hackerspace Valencia](https://hackvlc.es/), built with [Hugo](https://gohugo.io/) and featuring a custom maker-inspired theme.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Hugo** (Extended version recommended): `brew install hugo` (macOS) or download from [Hugo Releases](https://github.com/gohugoio/hugo/releases).
@@ -36,7 +36,7 @@ This is the official website repository for [Hackerspace Valencia](https://hackv
    hugo --minify
    ```
 
-## 📁 Project Structure
+## Project Structure
 
 - `content/`: Contains the markdown files for the website content, separated by language (`english/` and `spanish/`).
   - `pages/`: General pages like About or Signup.
@@ -49,7 +49,7 @@ This is the official website repository for [Hackerspace Valencia](https://hackv
 - `themes/hackvlc/`: The custom Hugo theme used for the website.
 - `tina/`: Configuration for TinaCMS (headless CMS for content editing).
 
-## 📝 Adding Content
+## Adding Content
 
 ### Projects
 To add a new project:
@@ -57,16 +57,16 @@ To add a new project:
 2. Add your optimized thumbnail to `static/images/portfolio/<project-name>.webp`.
 3. Include the necessary frontmatter in your `index.md` (check existing projects like `1-videojuego` for examples).
 
-### 🖼️ Image Guidelines (Important)
+### Image Guidelines (Important)
 To keep the repository small and the website fast, please adhere to these strict image guidelines:
 - **Format:** Always use **WebP** (`.webp`) format for images. Do NOT use `.jpg`, `.png`, or `.gif`.
 - **Thumbnails (`static/images/portfolio/`):** Max width **800px**.
 - **Gallery/Content/Background Images:** Max width **1920px**.
 - Always optimize and compress files before committing. You can use tools like `cwebp` to easily convert images.
 
-## 🌍 Multilingual Support
+## Multilingual Support
 
 The website supports both Spanish (default) and English. When adding or editing content, ensure you update both the `content/spanish/` and `content/english/` directories, as well as the respective `data/es/` and `data/en/` files to keep translations in sync.
 
-## 📄 License
-Everything we do is AGPL-3.0 · Made with ❤️ in Valencia.
+## License
+Everything we do is AGPL-3.0 · Made with love in Valencia.
