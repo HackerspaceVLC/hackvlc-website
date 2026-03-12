@@ -69,4 +69,4 @@ To keep the repository small and the website fast, please adhere to these strict
 The website supports both Spanish (default) and English. When adding or editing content, ensure you update both the `content/spanish/` and `content/english/` directories, as well as the respective `data/es/` and `data/en/` files to keep translations in sync.
 
 ## 📄 License
-Everything we do is GPL-3.0 · Made with ❤️ in Valencia.
+Everything we do is AGPL-3.0 · Made with ❤️ in Valencia.

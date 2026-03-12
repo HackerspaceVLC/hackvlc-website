@@ -132,7 +132,7 @@ description = "Web del Hackerspace de Valencia"
 google_analytics_id = "" # Your ID
 # post share
 post_share = true
-copyright = "© 2024 [Hackerspace VLC](https://hackvlc.es) · Everything we do is GPL-3.0 · Made with ❤️ in Valencia"
+copyright = "© 2024 [Hackerspace VLC](https://hackvlc.es) · Everything we do is AGPL-3.0 · Made with ❤️ in Valencia"
 
 # Theme-specific parameters
 primaryColor = "#00BFB3"  # Teal
