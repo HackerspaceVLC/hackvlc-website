@@ -34,8 +34,7 @@ contact:
 tarjetas-de-socio:
   other: "Socio(s)"
 aboutSocio:
-  other: "Sobre el Socio"
-  other: "Publicaciones del Socio"
+  other: "Sobre"
 
 # Hero buttons
 aboutButton:

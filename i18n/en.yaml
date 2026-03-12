@@ -34,8 +34,7 @@ contact:
 tarjetas-de-socio:
   other: "Member(s)"
 aboutSocio:
-  other: "About the Member"
-  other: "Member's Posts"
+  other: "About"
 
 # Hero buttons
 aboutButton:
