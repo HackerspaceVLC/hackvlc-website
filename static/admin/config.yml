@@ -1,7 +1,9 @@
 backend:
   name: github
   repo: HackerspaceVLC/hackvlc-website
-  branch: dev # We can change this back to dev once testing is done
+  branch: main
+  base_url: https://hackvlc-cms-proxy.hackerspacevlc.workers.dev
+  auth_endpoint: /auth
 
 local_backend: true
 
