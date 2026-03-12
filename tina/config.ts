@@ -1,7 +1,7 @@
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
-    branch: "main",
+    branch: "dev",
     clientId: process.env.TINA_CLIENT_ID || "",
     token: process.env.TINA_TOKEN || "",
     build: {
@@ -11,7 +11,7 @@ export default defineConfig({
     media: {
         tina: {
             publicFolder: "static",
-            mediaRoot: "images",
+            mediaRoot: "",
         },
     },
     schema: {
