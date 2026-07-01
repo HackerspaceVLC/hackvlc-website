@@ -1,0 +1,16 @@
+############################### About ###################################
+about:
+  enable : true
+  title : "Sobre nosotros"
+  about_item :
+    - icon : ti-rocket
+      title : Comunidad de aprendizaje
+      content : Somos un espacio autogestionado donde la curiosidad es el único requisito. No hay maestros ni alumnos, solo personas compartiendo conocimiento.
+
+    - icon : ti-github
+      title : Hardware y software libre
+      content : Software libre y de código abierto (FOSS) y hardware abierto. Compartir conocimiento y código es cómo innovamos y construimos comunidad.
+
+    - icon : ti-ruler-pencil
+      title : Makers creativos
+      content : Desmontamos, modificamos y mejoramos todo lo que pasa por nuestras manos. Si no se puede abrir, no es nuestro.

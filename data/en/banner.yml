@@ -1,0 +1,11 @@
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/bg-electronics.webp"
+  bg_image : "images/backgrounds/bg-electronics.webp"
+  image_webp : "images/banner.webp"
+  title: "Hackerspace Valencia"
+  content: "Valencia's makerspace. Where ideas get built and community grows. | Alt. Tuesdays · 6–8 PM | WiFi, coffee & open source"
+  button:
+    enable : true
+    label : "Join the community"
+    link : "#about"

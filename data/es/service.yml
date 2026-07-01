@@ -1,0 +1,27 @@
+service:
+  enable: true
+  title: "Qué hacemos"
+  service_item:
+    - name: Red global
+      icon: fa-solid fa-globe
+      content: Conectados con la comunidad maker y hackerspaces de todo el mundo desde Valencia.
+
+    - name: Espacio maker
+      icon: fa-solid fa-house
+      content: Local en Benimaclet con herramientas, impresoras 3D, electrónica y café de por medio.
+
+    - name: Talleres
+      icon: fa-solid fa-chalkboard-user
+      content: Arduino, impresión 3D, IoT, KiCad y mucho más. Aprende haciendo, mano a mano.
+
+    - name: Comunidad activa
+      icon: fa-solid fa-people-group
+      content: Gente con ganas de compartir. Sin maestros ni alumnos, solo personas que crean juntos.
+
+    - name: Tecnología con propósito
+      icon: fa-solid fa-code-branch
+      content: Proyectos de hardware y software libre con impacto real y abierto para todo el mundo.
+
+    - name: Repair Café
+      icon: fa-solid fa-recycle
+      content: Le damos una segunda vida a la tecnología. Reparamos y reutilizamos por un futuro más sostenible.

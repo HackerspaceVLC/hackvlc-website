@@ -1,0 +1,193 @@
+# General navigation
+language:
+  other: "Idioma"
+readMore:
+  other: "Leer más"
+seeMore:
+  other: "Ver más"
+viewAllProjects:
+  other: "Ver todos los proyectos"
+share:
+  other: "Compartir"
+
+# Main menu sections
+about:
+  other: "Nosotros"
+activities:
+  other: "Actividades"
+projects:
+  other: "Proyectos"
+pricing:
+  other: "Cuota"
+contact:
+  other: "Contacto"
+
+# Hero
+heroEyebrow:
+  other: "Makerspace · Valencia"
+heroLead:
+  other: "Un taller comunitario y abierto donde construir, aprender y compartir tecnología. Electrónica, robótica, impresión 3D y software libre, en pleno Benimaclet."
+aboutButton:
+  other: "Sobre nosotros"
+projectsButton:
+  other: "Ver proyectos"
+heroStat1Num:
+  other: "+20"
+heroStat1Label:
+  other: "proyectos maker"
+heroStat2Num:
+  other: "Mar. alternos"
+heroStat2Label:
+  other: "18:30–20:30h · puertas abiertas"
+heroStat3Num:
+  other: "100%"
+heroStat3Label:
+  other: "código abierto"
+
+# Sections
+aboutUs:
+  other: "Sobre nosotros"
+ourActivities:
+  other: "Qué hacemos"
+featuredProjects:
+  other: "Proyectos destacados"
+featuredProjectsDesc:
+  other: "Algunas de las cosas que construimos entre todos. Casi todo es abierto: míralo, cópialo, mejóralo."
+collaborate:
+  other: "Colabora"
+helpTitle:
+  other: "Proyectos que necesitan ayuda"
+helpDesc:
+  other: "¿Te pica la curiosidad? Estos proyectos buscan manos. Pasa por el local y te ponemos en marcha."
+helpTag:
+  other: "Busca ayuda"
+helpCta:
+  other: "Quiero colaborar"
+joinUs:
+  other: "Únete"
+
+# About items
+learningCommunity:
+  other: "Comunidad de aprendizaje"
+learningCommunityDesc:
+  other: "Compartimos conocimiento, experiencia y ganas de aprender. Aquí todos enseñamos y todos aprendemos."
+openSource:
+  other: "Hardware y software libre"
+openSourceDesc:
+  other: "Creemos en el código abierto y el hardware libre: compartir lo que sabemos es cómo innovamos y hacemos comunidad."
+creativeMakers:
+  other: "Makers creativos"
+creativeMakersDesc:
+  other: "Desmontamos, modificamos y construimos de todo. Si se puede abrir, se puede mejorar."
+
+# Pricing
+monthlyFee:
+  other: "Hazte socio"
+joinMakerCommunity:
+  other: "Forma parte de la comunidad maker con una cuota mensual."
+month:
+  other: "mes"
+reducedFee:
+  other: "Cuota reducida"
+reducedFeeExplanation:
+  other: "Estudiantes, personas desempleadas y jubiladas"
+generalFee:
+  other: "Cuota general"
+generalFeeExplanation:
+  other: "Para el resto de socios"
+accessToWorkshopTools:
+  other: "Acceso al taller y a las herramientas"
+activeMakerCommunity:
+  other: "Comunidad maker activa"
+communicationGroups:
+  other: "Grupos de comunicación"
+workshopsAndEvents:
+  other: "Talleres y eventos"
+joinNow:
+  other: "Únete ahora"
+popular:
+  other: "Más elegida"
+
+# Contact
+contactTitle:
+  other: "Ven a conocernos"
+contactLead:
+  other: "Las puertas están abiertas: pásate sin avisar o escríbenos y lo hablamos."
+location:
+  other: "Dónde estamos"
+email:
+  other: "Email"
+openDoors:
+  other: "Puertas abiertas"
+openDoorsDesc:
+  other: "Martes alternos, de 18:30 a 20:30h."
+getDirections:
+  other: "Cómo llegar"
+
+# Footer
+footerTagline:
+  other: "El makerspace de Valencia. Comunidad, tecnología y cultura maker en abierto."
+footerExplore:
+  other: "Explora"
+footerContact:
+  other: "Contacto"
+
+# Project filters
+filterStatus:
+  other: "Estado"
+filterTech:
+  other: "Tecnología"
+filterSearch:
+  other: "Buscar"
+filterSearchPlaceholder:
+  other: "Buscar proyectos..."
+allProjects:
+  other: "Todos los proyectos"
+allTech:
+  other: "Todas"
+completed:
+  other: "Completado"
+active:
+  other: "Activo"
+inProgress:
+  other: "En progreso"
+paused:
+  other: "Pausado"
+noProjectsFound:
+  other: "No se han encontrado proyectos con esos filtros."
+
+# Blog
+blog:
+  other: "Blog"
+latestFromBlog:
+  other: "Últimas del blog"
+blogSectionDesc:
+  other: "Tutoriales, despieces y cacharreo del taller. Lo que vamos aprendiendo, en abierto."
+viewAllBlog:
+  other: "Ver todo el blog"
+readingTime:
+  other: "{{ .Count }} min de lectura"
+backToBlog:
+  other: "Volver al blog"
+writtenBy:
+  other: "Escrito por"
+basedOn:
+  other: "Basado en un artículo de"
+noPosts:
+  other: "Todavía no hay artículos publicados."
+
+# Workshops calendar
+upcomingWorkshops:
+  other: "Próximos talleres"
+pastWorkshops:
+  other: "Talleres anteriores"
+noUpcomingWorkshops:
+  other: "De momento no hay talleres programados. Apúntate en Meetup para enterarte del próximo."
+viewOnMeetup:
+  other: "Ver eventos en Meetup"
+openDoorsCard:
+  other: "Puertas abiertas"
+openDoorsCardDesc:
+  other: "Martes alternos, de 18:30 a 20:30h. Puedes pasar sin avisar."
+allWorkshops:
+  other: "Todos los talleres"

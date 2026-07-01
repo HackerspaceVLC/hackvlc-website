@@ -1,0 +1,75 @@
+portfolio:
+  enable : true
+  title : "> ls projects/"
+  see_all_projects_link: proyectos
+  portfolio_item :
+    # portfolio item loop
+    - name : $ ./robot_quadruped.sh
+      image : images/portfolio/cuadrúpedo.jpg
+      image_webp : images/portfolio/cuadrupedo.webp
+      categories : ["robotics", "electronics"]
+      content : Robot cuadrúpedo con control infrarrojo y locomoción avanzada.
+      link : "proyectos/cuadrupedo"
+
+    # portfolio item loop
+    - name : $ ./member_cards.py
+      image : images/portfolio/tarjetas-de-socio.webp
+      image_webp : images/portfolio/tarjetas-de-socio.webp
+      categories : ["CS", "electronics"]
+      content : Sistema de membresía RFID para control de acceso del hackerspace.
+      link : "proyectos/tarjetas-de-socio"
+
+    - name: $ ./hackapet.js
+      image: images/portfolio/hackapet.jpg
+      image_webp: images/portfolio/hackapet.webp
+      categories: ["CS", "web"]
+      content: Plataforma open source para gestión de refugios de animales.
+      link: "https://hackapet.com"
+
+    # portfolio item loop
+    - name: $ ./retro_gameboy.c
+      image: images/portfolio/1-videojuego.webp
+      image_webp: images/portfolio/1-videojuego.webp
+      categories: ["electronics", "CS", "gaming"]
+      content: Recreación completa de PONG con Arduino UNO, salida VGA y controles 3D.
+      link: "proyectos/1-videojuego"
+
+    # portfolio item loop
+    - name : $ ./arcade_machine.py
+      image : images/portfolio/arcade.webp
+      image_webp : images/portfolio/arcade.webp
+      categories : ["electronics", "CS", "gaming"]
+      content : Máquina arcade completa con Raspberry Pi 3B+ y controles personalizados.
+      link : "proyectos/arcade"
+
+    # portfolio item loop
+    - name : $ ./photobooth_nfc
+      image : images/portfolio/retrobooth.webp
+      image_webp : images/portfolio/retrobooth.webp
+      categories : ["electronics", "photography"]
+      content : Fotomatón retro con selección de filtros NFC y diseño enfocado en privacidad.
+      link : "proyectos/retrobooth"
+
+    # portfolio item loop
+    - name : $ ./radio_restore.sh
+      image : images/portfolio/radios.jpg
+      image_webp : images/portfolio/radios.webp
+      categories : ["electronics", "vintage"]
+      content : Restauración y reparación de radios de válvulas antiguas.
+      link : "proyectos/radios"
+
+    # portfolio item loop
+    - name : $ ./crop_companion.py
+      image : images/portfolio/crop-companion.webp
+      image_webp : images/portfolio/crop-companion.webp
+      categories : ["CS", "iot"]
+      content : 2º Premio NASA Space Apps - Sistema de monitoreo agrícola.
+      link : "proyectos/crop-companion"
+
+    # portfolio item loop
+    - name : $ ./recycled_plotter.sh
+      image : images/portfolio/plotter.jpg
+      image_webp : images/portfolio/plotter.webp
+      categories : ["robotics", "electronics"]
+      content : Plotter CNC construido con unidades CD-ROM recuperadas.
+      link : "proyectos/plotter"

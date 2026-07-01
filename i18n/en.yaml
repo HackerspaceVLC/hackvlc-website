@@ -1,0 +1,193 @@
+# General navigation
+language:
+  other: "Language"
+readMore:
+  other: "Read more"
+seeMore:
+  other: "See more"
+viewAllProjects:
+  other: "View all projects"
+share:
+  other: "Share"
+
+# Main menu sections
+about:
+  other: "About"
+activities:
+  other: "Activities"
+projects:
+  other: "Projects"
+pricing:
+  other: "Membership"
+contact:
+  other: "Contact"
+
+# Hero
+heroEyebrow:
+  other: "Makerspace · Valencia"
+heroLead:
+  other: "A community-run, open workshop to build, learn and share technology. Electronics, robotics, 3D printing and free software, right in Benimaclet."
+aboutButton:
+  other: "About us"
+projectsButton:
+  other: "View projects"
+heroStat1Num:
+  other: "+20"
+heroStat1Label:
+  other: "maker projects"
+heroStat2Num:
+  other: "Alt. Tuesdays"
+heroStat2Label:
+  other: "6:30–8:30 PM · open doors"
+heroStat3Num:
+  other: "100%"
+heroStat3Label:
+  other: "open source"
+
+# Sections
+aboutUs:
+  other: "About us"
+ourActivities:
+  other: "What we do"
+featuredProjects:
+  other: "Featured projects"
+featuredProjectsDesc:
+  other: "Some of the things we build together. Almost everything is open: look at it, copy it, make it better."
+collaborate:
+  other: "Get involved"
+helpTitle:
+  other: "Projects that need a hand"
+helpDesc:
+  other: "Curious? These projects are looking for makers. Drop by the space and we'll get you started."
+helpTag:
+  other: "Needs help"
+helpCta:
+  other: "I want to help"
+joinUs:
+  other: "Join us"
+
+# About items
+learningCommunity:
+  other: "Learning community"
+learningCommunityDesc:
+  other: "We share knowledge, experience and a desire to learn. Here everyone teaches and everyone learns."
+openSource:
+  other: "Free hardware & software"
+openSourceDesc:
+  other: "We believe in free and open source software and open hardware: sharing what we know is how we innovate and build community."
+creativeMakers:
+  other: "Creative makers"
+creativeMakersDesc:
+  other: "We take things apart, modify and build. If it can be opened, it can be improved."
+
+# Pricing
+monthlyFee:
+  other: "Become a member"
+joinMakerCommunity:
+  other: "Join the maker community with a monthly fee."
+month:
+  other: "month"
+reducedFee:
+  other: "Reduced fee"
+reducedFeeExplanation:
+  other: "Students, unemployed and retirees"
+generalFee:
+  other: "General fee"
+generalFeeExplanation:
+  other: "For all other members"
+accessToWorkshopTools:
+  other: "Access to the workshop and tools"
+activeMakerCommunity:
+  other: "Active maker community"
+communicationGroups:
+  other: "Communication groups"
+workshopsAndEvents:
+  other: "Workshops and events"
+joinNow:
+  other: "Join now"
+popular:
+  other: "Most popular"
+
+# Contact
+contactTitle:
+  other: "Come meet us"
+contactLead:
+  other: "Our doors are open: drop by unannounced or write to us and we'll talk."
+location:
+  other: "Where to find us"
+email:
+  other: "Email"
+openDoors:
+  other: "Open doors"
+openDoorsDesc:
+  other: "Every other Tuesday, 6:30 to 8:30 PM."
+getDirections:
+  other: "Get directions"
+
+# Footer
+footerTagline:
+  other: "Valencia's makerspace. Community, technology and maker culture, out in the open."
+footerExplore:
+  other: "Explore"
+footerContact:
+  other: "Contact"
+
+# Project filters
+filterStatus:
+  other: "Status"
+filterTech:
+  other: "Technology"
+filterSearch:
+  other: "Search"
+filterSearchPlaceholder:
+  other: "Search projects..."
+allProjects:
+  other: "All projects"
+allTech:
+  other: "All"
+completed:
+  other: "Completed"
+active:
+  other: "Active"
+inProgress:
+  other: "In progress"
+paused:
+  other: "Paused"
+noProjectsFound:
+  other: "No projects found matching those filters."
+
+# Blog
+blog:
+  other: "Blog"
+latestFromBlog:
+  other: "Latest from the blog"
+blogSectionDesc:
+  other: "Tutorials, teardowns and workshop tinkering. What we learn, out in the open."
+viewAllBlog:
+  other: "Read the blog"
+readingTime:
+  other: "{{ .Count }} min read"
+backToBlog:
+  other: "Back to the blog"
+writtenBy:
+  other: "Written by"
+basedOn:
+  other: "Based on an article by"
+noPosts:
+  other: "No posts published yet."
+
+# Workshops calendar
+upcomingWorkshops:
+  other: "Upcoming workshops"
+pastWorkshops:
+  other: "Past workshops"
+noUpcomingWorkshops:
+  other: "No workshops scheduled right now. Sign up on Meetup to hear about the next one."
+viewOnMeetup:
+  other: "See events on Meetup"
+openDoorsCard:
+  other: "Open doors"
+openDoorsCardDesc:
+  other: "Every other Tuesday, 6:30 to 8:30 PM. Drop in unannounced."
+allWorkshops:
+  other: "All workshops"

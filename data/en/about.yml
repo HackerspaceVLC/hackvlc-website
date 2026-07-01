@@ -1,0 +1,15 @@
+about:
+  enable : true
+  title : "About us"
+  about_item :
+    - icon : ti-rocket
+      title : Learning community
+      content : We are a self-managed space where curiosity is the only requirement. No teachers or students, just people sharing knowledge.
+
+    - icon : ti-github
+      title : Free hardware & software
+      content : Free and open source software (FOSS) and open hardware. Sharing knowledge and code is how we innovate and build community.
+
+    - icon : ti-ruler-pencil
+      title : Creative makers
+      content : We take apart, modify and improve everything that comes through our hands. If it can't be opened, it's not ours.

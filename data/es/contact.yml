@@ -1,0 +1,29 @@
+############################## Contact #############################
+contact:
+  enable : true
+  title : ¿Hablamos?
+  subtitle : Ven a conocernos
+  content : 🚪 Puertas abiertas los martes alternos, de 18:00 a 20:00h. ¿No puedes ese día? Escríbenos y encontraremos el momento. Si te apasiona la tecnología, aquí hay una comunidad esperándote.
+
+  # Contact details
+  contact_list:
+    - icon : ti-map-alt # Icono más moderno para ubicación
+      info : "Hackerspace Valencia
+            📍 C/ Francisco Martínez, 19 Bajo
+            46020 Valencia (Benimaclet)"
+
+    - icon : ti-email
+      info : "hackerspacevlc@gmail.com"
+
+    - icon : ti-time # Añadido horario destacado
+      info : "Encuentros: Martes alternos 18:00–20:00h"
+
+  # Contact form
+  contact_form:
+    enable : false
+    form_action : "TO-DO"
+    name : "Tu nombre"
+    email : "Tu correo"
+    subject : "Asunto"
+    message : "Mensaje"
+    submit : "Enviar"

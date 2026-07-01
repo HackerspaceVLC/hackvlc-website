@@ -1,0 +1,13 @@
+############################### Banner ################################
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/bg-electronics.webp"
+  bg_image : "images/backgrounds/bg-electronics.webp"
+  image_webp : "images/banner.webp"
+  icon : ""
+  title: "Hackerspace Valencia"
+  content: "El makerspace de Valencia. Donde las ideas se construyen y la comunidad crece. | Martes alternos · 18–20h | WiFi, café y código abierto"
+  button:
+    enable : true
+    label : "Únete a la comunidad"
+    link : "#about"
