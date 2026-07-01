@@ -1,0 +1,290 @@
+# Sveltia CMS configuration — Hackerspace Valencia
+# Docs: https://sveltiacms.app/en/docs  ·  Repo: HackerspaceVLC/hackvlc-website
+
+backend:
+  name: github
+  repo: HackerspaceVLC/hackvlc-website
+  branch: main
+  base_url: https://hackvlc-cms-proxy.hackerspacevlc.workers.dev
+  auth_methods: [oauth]
+
+site_url: https://hackvlc.es/
+
+# Editorial workflow: edits open as draft PRs and never commit to main directly,
+# so nothing goes live until a maintainer reviews and merges.
+publish_mode: editorial_workflow
+
+# General uploads (used outside page bundles)
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+# UI language
+locale: "es"
+
+collections:
+  # ---------------- Blog (Español) ----------------
+  - name: "blog_es"
+    label: "Blog (Español)"
+    label_singular: "Artículo (ES)"
+    folder: "content/spanish/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: ""
+    public_folder: ""
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Autor", name: "author", widget: "string", default: "Un miembro del Hackerspace Valencia" }
+      - { label: "Imagen de portada", name: "cover", widget: "image", required: false }
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
+        required: false
+      - { label: "Basado en (HTML opcional)", name: "based_on", widget: "string", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ---------------- Blog (English) ----------------
+  - name: "blog_en"
+    label: "Blog (English)"
+    label_singular: "Article (EN)"
+    folder: "content/english/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: ""
+    public_folder: ""
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "A member of Hackerspace Valencia" }
+      - { label: "Cover image", name: "cover", widget: "image", required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - { label: "Based on (optional HTML)", name: "based_on", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ---------------- Talleres (Español) ----------------
+  - name: "workshops_es"
+    label: "Talleres (Español)"
+    label_singular: "Taller (ES)"
+    folder: "content/spanish/workshops"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: "static/images/workshop"
+    public_folder: "/images/workshop"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Descripción", name: "description", widget: "text", required: false }
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
+        required: false
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ---------------- Talleres (English) ----------------
+  - name: "workshops_en"
+    label: "Workshops (English)"
+    label_singular: "Workshop (EN)"
+    folder: "content/english/workshops"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: "static/images/workshop"
+    public_folder: "/images/workshop"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ---------------- Proyectos (Español) ----------------
+  - name: "proyectos_es"
+    label: "Proyectos (Español)"
+    label_singular: "Proyecto (ES)"
+    folder: "content/spanish/proyectos"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: "static/images/portfolio"
+    public_folder: "/images/portfolio"
+    summary: "{{title}} — {{status}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+      - { label: "Resumen", name: "summary", widget: "text", required: false }
+      - { label: "Descripción", name: "description", widget: "text", required: false }
+      - { label: "Destacado", name: "featured", widget: "boolean", default: false }
+      - { label: "Estado", name: "status", widget: "select", options: ["completado", "activo", "en progreso", "pausado"], default: "activo", required: false }
+      - { label: "Dificultad", name: "difficulty", widget: "select", options: ["principiante", "intermedio", "avanzado"], required: false }
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
+        required: false
+      - label: "Categorías"
+        name: "categories"
+        widget: "list"
+        required: false
+      - label: "Tecnologías"
+        name: "tech_stack"
+        widget: "list"
+        required: false
+      - { label: "URL del repositorio", name: "repo_url", widget: "string", required: false }
+      - { label: "URL demo", name: "demo_url", widget: "string", required: false }
+      - { label: "Contenido / galería", name: "body", widget: "markdown" }
+
+  # ---------------- Proyectos (English) ----------------
+  - name: "proyectos_en"
+    label: "Projects (English)"
+    label_singular: "Project (EN)"
+    folder: "content/english/proyectos"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: "static/images/portfolio"
+    public_folder: "/images/portfolio"
+    summary: "{{title}} — {{status}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Cover image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Status", name: "status", widget: "select", options: ["completed", "active", "in progress", "paused"], default: "active", required: false }
+      - { label: "Difficulty", name: "difficulty", widget: "select", options: ["beginner", "intermediate", "advanced"], required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+      - label: "Tech stack"
+        name: "tech_stack"
+        widget: "list"
+        required: false
+      - { label: "Repository URL", name: "repo_url", widget: "string", required: false }
+      - { label: "Demo URL", name: "demo_url", widget: "string", required: false }
+      - { label: "Body / gallery", name: "body", widget: "markdown" }
+
+  # ---------------- Páginas (Español) ----------------
+  - name: "pages_es"
+    label: "Páginas (Español)"
+    label_singular: "Página (ES)"
+    folder: "content/spanish/pages"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", required: false }
+      - { label: "Autor", name: "author", widget: "string", required: false }
+      - { label: "Descripción", name: "description", widget: "text", required: false }
+      - { label: "Imagen (ruta, ej. /images/workshop/local-3.jpg)", name: "image", widget: "string", required: false }
+      - { label: "Imagen WebP (ruta, ej. images/workshop/local-3.webp)", name: "image_webp", widget: "string", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ---------------- Páginas (English) ----------------
+  - name: "pages_en"
+    label: "Pages (English)"
+    label_singular: "Page (EN)"
+    folder: "content/english/pages"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Image (path, e.g. /images/workshop/local-3.jpg)", name: "image", widget: "string", required: false }
+      - { label: "Image WebP (path, e.g. images/workshop/local-3.webp)", name: "image_webp", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ---------------- Actividades (landing "Qué hacemos") ----------------
+  - name: "activities_es"
+    label: "Actividades (Qué hacemos)"
+    delete: false
+    files:
+      - label: "Actividades"
+        file: "data/es/service.yml"
+        name: "service_es"
+        fields:
+          - label: "Bloque de actividades"
+            name: "service"
+            widget: "object"
+            fields:
+              - { label: "Habilitado", name: "enable", widget: "boolean", default: true }
+              - { label: "Título (interno)", name: "title", widget: "string" }
+              - label: "Tarjetas"
+                name: "service_item"
+                widget: "list"
+                min: 1
+                fields:
+                  - { label: "Nombre", name: "name", widget: "string" }
+                  - { label: "Icono (clase FontAwesome, ej. fa-solid fa-globe)", name: "icon", widget: "string" }
+                  - { label: "Texto", name: "content", widget: "text" }
+
+  - name: "activities_en"
+    label: "Activities (What we do)"
+    delete: false
+    files:
+      - label: "Activities"
+        file: "data/en/service.yml"
+        name: "service_en"
+        fields:
+          - label: "Activities block"
+            name: "service"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enable", widget: "boolean", default: true }
+              - { label: "Title (internal)", name: "title", widget: "string" }
+              - label: "Cards"
+                name: "service_item"
+                widget: "list"
+                min: 1
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Icon (FontAwesome class, e.g. fa-solid fa-globe)", name: "icon", widget: "string" }
+                  - { label: "Text", name: "content", widget: "text" }
