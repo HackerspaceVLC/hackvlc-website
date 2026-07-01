@@ -112,7 +112,7 @@ popular:
 contactTitle:
   other: "Ven a conocernos"
 contactLead:
-  other: "Las puertas están abiertas: pásate sin avisar o escríbenos y lo hablamos."
+  other: "Abrimos al público los martes alternos, de 18:30 a 20:30h. Escríbenos para avisar que vienes o cuéntanos qué necesitas."
 location:
   other: "Dónde estamos"
 email:
@@ -188,6 +188,6 @@ viewOnMeetup:
 openDoorsCard:
   other: "Puertas abiertas"
 openDoorsCardDesc:
-  other: "Martes alternos, de 18:30 a 20:30h. Puedes pasar sin avisar."
+  other: "Martes alternos, de 18:30 a 20:30h. Escríbenos para pasar a visitarnos."
 allWorkshops:
   other: "Todos los talleres"

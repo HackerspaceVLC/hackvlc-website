@@ -72,16 +72,16 @@
     var dict = {
       es: {
         nextPrefix: 'Próxima sesión:',
-        openToday: 'Hoy abierto',
-        openThisTue: function () { return 'Abrimos este martes ' + fmtShort(next); },
-        closedThisTue: function () { return 'Este martes cerramos · próxima sesión ' + fmtShort(next); },
+        openToday: 'Hoy abierto al público',
+        openThisTue: function () { return 'Abierto al público este martes ' + fmtShort(next); },
+        closedThisTue: function () { return 'Este martes no abrimos al público · próxima ' + fmtShort(next); },
         every: 'Martes alternos · 18:30 a 20:30'
       },
       en: {
         nextPrefix: 'Next session:',
-        openToday: 'Open today',
-        openThisTue: function () { return 'Open this Tuesday ' + fmtShort(next); },
-        closedThisTue: function () { return 'Closed this Tuesday · next session ' + fmtShort(next); },
+        openToday: 'Open today to the public',
+        openThisTue: function () { return 'Open to the public this Tuesday ' + fmtShort(next); },
+        closedThisTue: function () { return 'No open doors this Tuesday · next ' + fmtShort(next); },
         every: 'Every other Tuesday · 6:30 to 8:30 PM'
       }
     };

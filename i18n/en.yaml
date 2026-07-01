@@ -112,7 +112,7 @@ popular:
 contactTitle:
   other: "Come meet us"
 contactLead:
-  other: "Our doors are open: drop by unannounced or write to us and we'll talk."
+  other: "We open to the public every other Tuesday, 6:30 to 8:30 PM. Write to let us know you're coming, or tell us what you need."
 location:
   other: "Where to find us"
 email:
@@ -188,6 +188,6 @@ viewOnMeetup:
 openDoorsCard:
   other: "Open doors"
 openDoorsCardDesc:
-  other: "Every other Tuesday, 6:30 to 8:30 PM. Drop in unannounced."
+  other: "Every other Tuesday, 6:30 to 8:30 PM. Write to us to drop by."
 allWorkshops:
   other: "All workshops"
