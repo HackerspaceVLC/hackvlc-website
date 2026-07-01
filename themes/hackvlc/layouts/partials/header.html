@@ -1,0 +1,70 @@
+<header class="header-modern shadow-sm" role="banner">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg py-3" role="navigation" aria-label="Main Navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}" aria-label="Home">
+          {{ if .Site.Params.logo }}
+          <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" class="me-2 img-fluid">
+          {{ else }}
+          <span class="brand-text">Hackerspace Valencia</span>
+          {{ end }}
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-center">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <li class="nav-item dropdown ms-lg-1">
+              <a class="nav-link dropdown-toggle" href="#" id="navDropdown-{{ .Identifier }}"
+                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ .Name }}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navDropdown-{{ .Identifier }}">
+                {{ range .Children }}
+                <li><a class="dropdown-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ else }}
+            <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+              <a class="nav-link" href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
+            {{ end }}
+            {{ end }}
+
+            <!-- Theme toggle -->
+            {{ if templates.Exists "partials/theme-toggle.html" }}
+            <li class="nav-item ms-lg-2 d-flex align-items-center">
+              {{ partial "theme-toggle.html" . }}
+            </li>
+            {{ end }}
+
+            {{ if .IsTranslated }}
+            <li class="nav-item dropdown ms-lg-1 d-flex align-items-center">
+              <a class="nav-link lang-switch" href="#" id="navbarDropdownLanguage" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ i18n "language" }}">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLanguage">
+                {{ range .Translations }}
+                <li><a class="dropdown-item d-flex align-items-center gap-2" href="{{ .Permalink }}">
+                  <i class="fa-solid fa-language small"></i>{{ .Language.LanguageName }}
+                </a></li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

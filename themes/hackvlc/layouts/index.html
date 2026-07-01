@@ -1,0 +1,323 @@
+{{ define "main" }}
+
+{{/* ============ HERO ============ */}}
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text has-animation">
+        <span class="eyebrow-pill">{{ i18n "heroEyebrow" }}</span>
+        <h1>{{ .Site.Title }}</h1>
+        <p class="lead">{{ i18n "heroLead" }}</p>
+        <div class="hero-buttons">
+          <a href="{{ .Site.Params.primaryButtonURL | default "/#about" | relLangURL }}" class="btn btn-primary">
+            {{ i18n "aboutButton" }}
+          </a>
+          <a href="{{ .Site.Params.secondaryButtonURL | default "/proyectos/" | relLangURL }}" class="btn btn-outline">
+            {{ i18n "projectsButton" }}
+          </a>
+        </div>
+        <p class="hero-next-session has-animation">
+          <span class="od-badge d-none" data-opendoors="badge"></span>
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">{{ i18n "heroStat1Num" }}</div>
+            <div class="label">{{ i18n "heroStat1Label" }}</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">{{ i18n "heroStat2Num" }}</div>
+            <div class="label">{{ i18n "heroStat2Label" }}</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">{{ i18n "heroStat3Num" }}</div>
+            <div class="label">{{ i18n "heroStat3Label" }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-media has-animation">
+        {{ if .Site.Params.heroImage }}
+        <img src="{{ .Site.Params.heroImage | relURL }}" alt="{{ .Site.Title }}">
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ============ ABOUT ============ */}}
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-people-group"></i></div>
+      <span class="eyebrow">{{ i18n "heroEyebrow" }}</span>
+      <h2>{{ i18n "aboutUs" }}</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card has-animation">
+          <div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>{{ i18n "learningCommunity" }}</h3>
+          <p>{{ i18n "learningCommunityDesc" }}</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card has-animation">
+          <div class="feature-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <h3>{{ i18n "openSource" }}</h3>
+          <p>{{ i18n "openSourceDesc" }}</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card has-animation">
+          <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>{{ i18n "creativeMakers" }}</h3>
+          <p>{{ i18n "creativeMakersDesc" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ============ ACTIVITIES ============ */}}
+{{ $serviceData := index .Site.Data .Site.Language.Lang "service" }}
+{{ if $serviceData }}
+<section id="activities" class="section section-soft">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-gears"></i></div>
+      <span class="eyebrow">{{ i18n "activities" }}</span>
+      <h2>{{ i18n "ourActivities" }}</h2>
+    </div>
+    <div class="row g-4">
+      {{ range $serviceData.service.service_item }}
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card has-animation">
+          <div class="service-icon"><i class="{{ .icon }}"></i></div>
+          <h3>{{ .name }}</h3>
+          <p>{{ .content }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ============ FEATURED PROJECTS ============ */}}
+{{ $featuredProjects := where site.RegularPages "Section" "proyectos" }}
+{{ if $featuredProjects }}
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-microchip"></i></div>
+      <span class="eyebrow">{{ i18n "projects" }}</span>
+      <h2>{{ i18n "featuredProjects" }}</h2>
+      <p>{{ i18n "featuredProjectsDesc" }}</p>
+    </div>
+    <div class="row g-4">
+      {{ range first 6 $featuredProjects }}
+      <div class="col-lg-4 col-md-6">
+        <a href="{{ .Permalink }}" class="project-card has-animation">
+          {{ if .Params.image }}
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+          {{ else if .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          {{ $image := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+          <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+          {{ end }}
+          <div class="project-card-body">
+            <h3>{{ .Title }}</h3>
+            <p class="project-summary">{{ .Summary | truncate 90 }}</p>
+            <span class="btn btn-sm btn-outline">{{ i18n "seeMore" }}</span>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <div class="text-center mt-5">
+      <a href="{{ "proyectos/" | relLangURL }}" class="btn btn-primary">{{ i18n "viewAllProjects" }}</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ============ PROJECTS THAT NEED HELP ============ */}}
+{{ $helpProjects := where (where site.RegularPages "Section" "proyectos") "Params.needs_help" true }}
+{{ if $helpProjects }}
+<section id="help-projects" class="section section-soft">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+      <span class="eyebrow">{{ i18n "collaborate" }}</span>
+      <h2>{{ i18n "helpTitle" }}</h2>
+      <p>{{ i18n "helpDesc" }}</p>
+    </div>
+    <div class="row g-4">
+      {{ range first 3 $helpProjects }}
+      <div class="col-lg-4 col-md-6">
+        <a href="{{ .Permalink }}" class="project-card has-animation border-warning">
+          <span class="help-tag">{{ i18n "helpTag" }}</span>
+          {{ if .Params.image }}
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+          {{ end }}
+          <div class="project-card-body">
+            <h3>{{ .Title }}</h3>
+            <p class="project-summary">{{ .Params.help_description | default .Summary | truncate 90 }}</p>
+            <span class="btn btn-sm btn-warning">{{ i18n "helpCta" }}</span>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ============ LATEST BLOG POSTS ============ */}}
+{{ $blogPosts := where site.RegularPages "Section" "blog" }}
+{{ if $blogPosts }}
+<section id="blog" class="section">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+      <span class="eyebrow">{{ i18n "blog" }}</span>
+      <h2>{{ i18n "latestFromBlog" }}</h2>
+      <p>{{ i18n "blogSectionDesc" }}</p>
+    </div>
+    <div class="blog-grid">
+      {{ range first 3 $blogPosts.ByDate.Reverse }}
+      <a href="{{ .Permalink }}" class="blog-card has-animation">
+        {{ $img := .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp,svg}" }}
+        {{ if .Params.image }}
+        <div class="blog-card-media" style="background-image:url('{{ .Params.image | relURL }}')"></div>
+        {{ else if $img }}
+        <div class="blog-card-media" style="background-image:url('{{ $img.RelPermalink }}')"></div>
+        {{ else }}
+        <div class="blog-card-media blog-card-media--ph">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        {{ end }}
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+            <span>·</span>
+            <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
+          </div>
+          <h3 class="blog-card-title">{{ .Title }}</h3>
+          <p class="blog-card-excerpt">{{ .Description | default (.Summary | truncate 130) }}</p>
+          <span class="blog-card-cta">{{ i18n "readMore" }} →</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    <div class="text-center mt-5">
+      <a href="{{ "blog/" | relLangURL }}" class="btn btn-primary">{{ i18n "viewAllBlog" }}</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ============ PRICING ============ */}}
+<section id="pricing" class="section section-soft">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-heart"></i></div>
+      <span class="eyebrow">{{ i18n "joinUs" }}</span>
+      <h2>{{ i18n "monthlyFee" }}</h2>
+      <p>{{ i18n "joinMakerCommunity" }}</p>
+    </div>
+    <div class="row justify-content-center g-4">
+      <div class="col-lg-5 col-md-6">
+        <div class="pricing-card has-animation">
+          <h3>{{ i18n "reducedFee" }}</h3>
+          <p class="text-muted">{{ i18n "reducedFeeExplanation" }}</p>
+          <div class="pricing-value">
+            <span>10€</span>
+            <span>/ {{ i18n "month" }}</span>
+          </div>
+          <ul>
+            <li>{{ i18n "accessToWorkshopTools" }}</li>
+            <li>{{ i18n "activeMakerCommunity" }}</li>
+            <li>{{ i18n "communicationGroups" }}</li>
+            <li>{{ i18n "workshopsAndEvents" }}</li>
+          </ul>
+          <a href="{{ "pages/alta" | relLangURL }}" class="btn btn-outline">{{ i18n "joinNow" }}</a>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6">
+        <div class="pricing-card featured has-animation">
+          <h3>{{ i18n "generalFee" }}</h3>
+          <p class="text-muted">{{ i18n "generalFeeExplanation" }}</p>
+          <div class="pricing-value">
+            <span>25€</span>
+            <span>/ {{ i18n "month" }}</span>
+          </div>
+          <ul>
+            <li>{{ i18n "accessToWorkshopTools" }}</li>
+            <li>{{ i18n "activeMakerCommunity" }}</li>
+            <li>{{ i18n "communicationGroups" }}</li>
+            <li>{{ i18n "workshopsAndEvents" }}</li>
+          </ul>
+          <a href="{{ "pages/alta" | relLangURL }}" class="btn btn-primary">{{ i18n "joinNow" }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ============ CONTACT ============ */}}
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header has-animation">
+      <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <span class="eyebrow">{{ i18n "contact" }}</span>
+      <h2>{{ i18n "contactTitle" }}</h2>
+      <p>{{ i18n "contactLead" }}</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card has-animation">
+          <div class="card-body p-4 p-md-5">
+            <div class="row text-center">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <div class="contact-info">
+                  <i class="fa-solid fa-location-dot mb-3 fs-3 text-primary"></i>
+                  <h5>{{ i18n "location" }}</h5>
+                  <p>{{ $.Site.Params.location | safeHTML }}</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <i class="fa-solid fa-clock mb-3 fs-3 text-primary"></i>
+                  <h5>{{ i18n "openDoors" }}</h5>
+                  <p class="mb-2"><span class="od-badge d-none" data-opendoors="badge"></span></p>
+                  <p data-opendoors="every">{{ i18n "openDoorsDesc" }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-2 mb-4">
+              <a href="mailto:{{ $.Site.Params.email }}" class="btn btn-primary">
+                <i class="fa-solid fa-envelope me-1"></i> {{ $.Site.Params.email }}
+              </a>
+            </div>
+            <div class="ratio ratio-21x9 rounded-3 overflow-hidden border">
+              <iframe
+                title="Mapa Hackerspace Valencia"
+                src="https://www.google.com/maps?q={{ $.Site.Params.mapPlaceName | urlquery }}&amp;z=16&amp;output=embed"
+                style="border:0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+            <div class="text-center mt-3">
+              <a class="btn btn-outline" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/dir/?api=1&amp;destination={{ $.Site.Params.mapPlaceName | urlquery }}">
+                <i class="fa-solid fa-diamond-turn-right me-1"></i> {{ i18n "getDirections" }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

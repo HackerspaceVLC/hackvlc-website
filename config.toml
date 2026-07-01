@@ -1,0 +1,237 @@
+################################# Default configuration ###################
+baseURL = "https://hackvlc.es/"
+title = "Hackerspace Valencia"
+theme = "hackvlc"  # Changed from meghna-hugo to our new hackvlc theme
+# post pagination
+pagination.pagerSize = "6"
+# post excerpt
+summaryLength = "15"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = []
+# default language
+defaultContentLanguage = "es"
+# Enable URL canonicalization
+canonifyURLs = false
+
+############################# Sitemap Configuration ######################
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[outputs]
+home = ["HTML", "JSON", "SITEMAP"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
+
+[outputFormats]
+[outputFormats.SITEMAP]
+mediaType = "application/xml"
+baseName = "sitemap"
+isPlainText = true
+rel = "sitemap"
+
+############################# Plugins ##########################
+ # css plugins
+ [[params.plugins.css]]
+ link = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+ [[params.plugins.css]]
+ link = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+
+ # js plugins
+ [[params.plugins.js]]
+ link = "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+ [[params.plugins.js]]
+ link = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+ [[params.plugins.js]]
+ link = "https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"
+
+# Favicon
+
+[params.favicon]
+icon = "favicon.ico"        # Favicon básico
+
+################### Spanish Navigation ########################
+[[Languages.es.menu.main]]
+name = "explora"
+url = "/#about"
+weight = 1
+identifier = "explora"
+
+  [[Languages.es.menu.main]]
+  name = "nosotros"
+  url = "/#about"
+  weight = 1
+  parent = "explora"
+
+  [[Languages.es.menu.main]]
+  name = "actividades"
+  url = "/#activities"
+  weight = 2
+  parent = "explora"
+
+  [[Languages.es.menu.main]]
+  name = "cuota"
+  url = "/#pricing"
+  weight = 3
+  parent = "explora"
+
+  [[Languages.es.menu.main]]
+  name = "contacto"
+  url = "/#contact"
+  weight = 4
+  parent = "explora"
+
+[[Languages.es.menu.main]]
+name = "proyectos"
+url = "/proyectos/"
+weight = 2
+
+[[Languages.es.menu.main]]
+name = "talleres"
+url = "/workshops/"
+weight = 3
+
+[[Languages.es.menu.main]]
+name = "blog"
+url = "/blog/"
+weight = 4
+
+################### English Navigation ########################
+[[Languages.en.menu.main]]
+name = "explore"
+url = "/#about"
+weight = 1
+identifier = "explore"
+
+  [[Languages.en.menu.main]]
+  name = "about"
+  url = "/#about"
+  weight = 1
+  parent = "explore"
+
+  [[Languages.en.menu.main]]
+  name = "activities"
+  url = "/#activities"
+  weight = 2
+  parent = "explore"
+
+  [[Languages.en.menu.main]]
+  name = "fee"
+  url = "/#pricing"
+  weight = 3
+  parent = "explore"
+
+  [[Languages.en.menu.main]]
+  name = "contact"
+  url = "/#contact"
+  weight = 4
+  parent = "explore"
+
+[[Languages.en.menu.main]]
+name = "projects"
+url = "/proyectos/"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "workshops"
+url = "/workshops/"
+weight = 3
+
+[[Languages.en.menu.main]]
+name = "blog"
+url = "/blog/"
+weight = 4
+
+############################# Default Parameters ##########################
+[params]
+logo = "images/logo.svg"
+ogImage = "images/og-image.png"
+# Meta data
+description = "Makerspace en Valencia: comunidad, tecnología y cultura maker en abierto. Electrónica, robótica, impresión 3D y software libre."
+# Google Analytics
+google_analytics_id = "" # Your ID
+# post share
+post_share = true
+copyright = "© {year} [Hackerspace Valencia](https://hackvlc.es) · Todo lo que hacemos es AGPL-3.0 · Hecho con ❤️ en Valencia"
+
+# Theme-specific parameters
+primaryColor = "#9BC53D"  # Verde del logo
+accentColor = "#FFA630"   # Naranja del logo
+# darkMode = true  # Uncomment to enable dark mode by default
+
+# Hero section
+heroImage = "/images/local-4.webp"
+primaryButtonText = "Sobre Nosotros"
+primaryButtonURL = "#about"
+secondaryButtonText = "Ver Proyectos"
+secondaryButtonURL = "#portfolio"
+
+# Map coordinates
+mapLatitude = "39.488339464485364"
+mapLongitude = "-0.35849245006843755"
+mapPlaceName = "Asociación Hackerspace Valencia"
+
+# Custom CSS files
+customCSS = ["css/custom.css"]
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+# preloader
+[params.preloader]
+enable = false
+preloader = "images/logo.svg"
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
+
+# Social media links
+[params.social]
+github = "https://github.com/HackerspaceVLC/"
+mastodon = "https://mastodon.social/@Hackerspace_VLC"
+instagram = "https://instagram.com/hackvlc"
+youtube = "https://www.youtube.com/@asociacionhackerspacevalen2049"
+meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
+
+################################ Spanish Language ########################
+[Languages.es]
+languageName = "Español"
+languageCode = "es-es"
+contentDir = "content/spanish"
+see_all_projects_link = "proyectos/"
+weight = 1
+[Languages.es.params]
+description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
+email = "hackerspacevlc@gmail.com"
+location = "C/ Francisco Martínez, 19 Bajo 46020 Valencia"
+primaryButtonText = "Sobre Nosotros"
+primaryButtonURL = "/#about"
+secondaryButtonText = "Ver Proyectos"
+secondaryButtonURL = "/proyectos/"
+[Languages.es.sitemap]
+priority = 0.9
+
+################################ English Language ########################
+[Languages.en]
+languageName = "English"
+languageCode = "en-us"
+contentDir = "content/english"
+see_all_projects_link = "proyectos/"
+weight = 2
+[Languages.en.params]
+description = "Maker community and tech learning space in Valencia"
+email = "hackerspacevlc@gmail.com"
+location = "C/ Francisco Martínez, 19 Bajo 46020 Valencia"
+primaryButtonText = "About Us"
+primaryButtonURL = "/#about"
+secondaryButtonText = "View Projects"
+secondaryButtonURL = "/proyectos/"
+[Languages.en.sitemap]
+priority = 0.8

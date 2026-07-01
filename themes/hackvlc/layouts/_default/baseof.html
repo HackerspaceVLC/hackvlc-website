@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "es" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+  {{ $ogTitle := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) }}
+  {{ $ogDesc := or .Description .Site.Params.description }}
+  {{ $ogImage := .Site.Params.ogImage | absURL }}
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ $ogTitle }}">
+  <meta property="og:description" content="{{ $ogDesc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $ogImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $ogTitle }}">
+  <meta name="twitter:description" content="{{ $ogDesc }}">
+  <meta name="twitter:image" content="{{ $ogImage }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}">
+
+  <!-- Apply theme before paint (avoid flash). Light is the default. -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+   <!-- Plugin CSS from config -->
+   {{ range .Site.Params.plugins.css }}
+   <link rel="stylesheet" href="{{ .link }}">
+   {{ end }}
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+   <!-- GLightbox for image galleries -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+   <!-- Maker Theme CSS -->
+   {{ with resources.Get "css/maker-theme.css" }}
+   {{ $makerTheme := . | resources.Minify | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $makerTheme.RelPermalink }}" integrity="{{ $makerTheme.Data.Integrity }}">
+   {{ end }}
+
+   <!-- Project Card CSS -->
+   {{ with resources.Get "css/project-card.css" }}
+   {{ $projectCard := . | resources.Minify | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $projectCard.RelPermalink }}" integrity="{{ $projectCard.Data.Integrity }}">
+   {{ end }}
+
+   <!-- Custom CSS for specific pages -->
+   {{ range .Site.Params.customCSS -}}
+   {{ with resources.Get . }}
+   {{ $customCSS := . | resources.Minify | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}">
+   {{ end }}
+   {{- end }}
+
+   <!-- Custom header scripts -->
+   {{ block "head" . }}{{ end }}
+</head>
+<body>
+<div class="site-container">
+  <!-- Navigation -->
+  {{ partial "header.html" . }}
+  
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  
+  <!-- Footer -->
+  {{ partial "footer.html" . }}
+</div>
+
+ <!-- GLightbox JS -->
+ <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+ 
+ <!-- Plugin JS from config -->
+ {{ range .Site.Params.plugins.js }}
+ <script src="{{ .link }}"></script>
+ {{ end }}
+
+ <!-- Theme JS -->
+ {{ with resources.Get "js/theme.js" }}
+ {{ $themeJS := . | resources.Fingerprint "sha512" }}
+ <script src="{{ $themeJS.RelPermalink }}" integrity="{{ $themeJS.Data.Integrity }}"></script>
+ {{ end }}
+
+ <!-- Open-doors schedule (biweekly Tuesday) -->
+ {{ with resources.Get "js/opendoors.js" }}
+ {{ $odJS := . | resources.Fingerprint "sha512" }}
+ <script src="{{ $odJS.RelPermalink }}" integrity="{{ $odJS.Data.Integrity }}"></script>
+ {{ end }}
+
+<!-- Custom footer scripts -->
+{{ block "scripts" . }}{{ end }}
+</body>
+</html>

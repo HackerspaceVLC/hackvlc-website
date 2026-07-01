@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="container section">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="page-title has-animation">
+        <h1>{{ .Title }} <span>{{ .Params.subtitle }}</span></h1>
+      </div>
+
+      {{ .Content }}
+
+      <div class="blog-grid mt-5">
+        {{ $posts := where .Pages "Draft" false }}
+        {{ range $posts.ByDate.Reverse }}
+        <a href="{{ .Permalink }}" class="blog-card has-animation">
+          {{ $cardImg := "" }}
+          {{ with .Params.cover }}{{ $cardImg = $.Resources.GetMatch . }}{{ else }}{{ $cardImg = .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp,svg}" }}{{ end }}
+          {{ if .Params.image }}
+          <div class="blog-card-media" style="background-image:url('{{ .Params.image | relURL }}')"></div>
+          {{ else if $cardImg }}
+          <div class="blog-card-media" style="background-image:url('{{ $cardImg.RelPermalink }}')"></div>
+          {{ else }}
+          <div class="blog-card-media blog-card-media--ph">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          {{ end }}
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+              <span>·</span>
+              <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
+            </div>
+            <h2 class="blog-card-title">{{ .Title }}</h2>
+            <p class="blog-card-excerpt">{{ .Description | default (.Summary | truncate 130) }}</p>
+            <span class="blog-card-cta">{{ i18n "readMore" }} →</span>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+
+      {{ if not $posts }}
+      <p class="text-center text-muted mt-5">{{ i18n "noPosts" | default "Todavía no hay artículos." }}</p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

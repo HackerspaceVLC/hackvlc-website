@@ -1,0 +1,68 @@
+{{ define "main" }}
+<article class="blog-article">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <a href="{{ .Section | printf "/%s/" | relLangURL }}" class="back-link has-animation">
+          ← {{ i18n "backToBlog" | default "Volver al blog" }}
+        </a>
+
+        <header class="blog-header has-animation">
+          {{ with .Params.tags }}
+          <div class="blog-tags">
+            {{ range first 3 . }}<span class="blog-tag-pill">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <h1>{{ .Title }}</h1>
+          {{ with .Description }}
+          <p class="blog-deck">{{ . }}</p>
+          {{ end }}
+          <div class="blog-byline">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+            <span>·</span>
+            <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
+            {{ with .Params.author }}
+            <span>·</span>
+            <span>{{ i18n "writtenBy" }} {{ . }}</span>
+            {{ end }}
+          </div>
+        </header>
+
+        {{ $cover := "" }}
+        {{ with .Params.cover }}
+          {{ $cover = $.Resources.GetMatch . }}
+        {{ else }}
+          {{ $cover = .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp}" }}
+        {{ end }}
+        {{ if $cover }}
+        <figure class="blog-cover has-animation">
+          <img src="{{ $cover.RelPermalink }}" alt="{{ .Title }}">
+        </figure>
+        {{ else if .Params.image }}
+        <figure class="blog-cover has-animation">
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+        </figure>
+        {{ end }}
+
+        <div class="prose has-animation">
+          {{ .Content }}
+        </div>
+
+        {{ with .Params.based_on }}
+        <p class="blog-attribution"><em>{{ i18n "basedOn" | default "Basado en" }} {{ . | safeHTML }}.</em></p>
+        {{ end }}
+
+        {{ if .Params.tags }}
+        <div class="blog-tags blog-tags--bottom">
+          {{ range .Params.tags }}
+          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="blog-tag-pill">#{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }}

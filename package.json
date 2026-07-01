@@ -1,0 +1,10 @@
+{
+  "name": "hackvlc-website",
+  "version": "1.0.0",
+  "description": "Hackerspace Valencia — the makerspace of Valencia. Built with Hugo.",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify"
+  }
+}

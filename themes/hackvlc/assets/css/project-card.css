@@ -1,0 +1,164 @@
+/* Project sheet (detail page) · maker theme */
+
+.project-sheet {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.project-header {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: .75rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  padding: .4rem 1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+}
+[data-theme="dark"] .project-header { color: var(--primary); }
+
+.project-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 1.3rem + 2.5vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--heading);
+  line-height: 1.15;
+}
+
+/* QR containers */
+.qr-container {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-soft);
+  text-align: center;
+  transition: border-color .25s ease;
+}
+.qr-container:hover { border-color: var(--primary); }
+.qr-code {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .6rem;
+  background: #fff;
+}
+.qr-placeholder {
+  width: 140px;
+  height: 140px;
+  background: var(--card-bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  color: var(--text-muted);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.qr-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Info cards */
+.project-sheet .card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  height: 100%;
+  overflow: hidden;
+}
+.project-sheet .card-header {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: .8rem;
+  border: none;
+}
+[data-theme="dark"] .project-sheet .card-header { color: var(--primary); }
+.project-sheet .card-body { padding: 1.4rem; }
+
+.author-item { padding: .4rem 0; color: var(--text); }
+.author-item i { color: var(--primary); }
+
+.tech-list { list-style: none; padding: 0; margin: 0; }
+.tech-list li {
+  padding: .5rem 0 .5rem 1.6rem;
+  position: relative;
+  color: var(--text-muted);
+  border-bottom: 1px dashed var(--border);
+  transition: transform .2s ease;
+}
+.tech-list li:last-child { border-bottom: none; }
+.tech-list li:hover { transform: translateX(4px); }
+.tech-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Gallery */
+.project-gallery { margin-top: 2rem; }
+.gallery-image {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.gallery-image img { width: 150px; height: 100px; object-fit: cover; }
+.gallery-image:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+
+/* Footer ribbon */
+.project-sheet .footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 1.4rem;
+}
+
+/* Animations */
+.project-sheet {
+  opacity: 0;
+  animation: fadeInUp .7s ease forwards;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767.98px) {
+  .project-sheet { padding: 1.6rem; }
+}

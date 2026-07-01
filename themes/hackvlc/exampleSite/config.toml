@@ -1,0 +1,82 @@
+baseURL = "https://hackerspacevalencia.com/"
+languageCode = "es"
+title = "Hackerspace Valencia"
+theme = "hackvlc"
+
+# Enable dark mode by default
+[params]
+  description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
+  # darkMode = true  # Uncomment to enable dark mode by default
+
+  # Hero section
+  heroImage = "/images/hero-image.png"
+  primaryButtonText = "Sobre Nosotros"
+  primaryButtonURL = "/sobre-nosotros"
+  secondaryButtonText = "Ver Proyectos"
+  secondaryButtonURL = "/proyectos"
+
+  # Social media links
+  [params.social]
+    github = "https://github.com/hackerspacevalencia"
+    twitter = "https://twitter.com/hackerspaceVLC"
+    instagram = "https://instagram.com/hackerspaceVLC"
+
+  # Custom CSS files (relative to /static/css/)
+  customCSS = []
+
+# Main menu
+[menu]
+  [[menu.main]]
+    name = "Sobre Nosotros"
+    url = "/sobre-nosotros/"
+    weight = 1
+  [[menu.main]]
+    name = "Actividades"
+    url = "/actividades/"
+    weight = 2
+  [[menu.main]]
+    name = "Proyectos"
+    url = "/proyectos/"
+    weight = 3
+  [[menu.main]]
+    name = "Cuota"
+    url = "/cuota/"
+    weight = 4
+  [[menu.main]]
+    name = "Talleres"
+    url = "/talleres/"
+    weight = 5
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contacto/"
+    weight = 6
+
+# Footer menu
+  [[menu.footer]]
+    name = "Política de Privacidad"
+    url = "/privacidad/"
+    weight = 1
+  [[menu.footer]]
+    name = "Términos y Condiciones"
+    url = "/terminos/"
+    weight = 2
+  [[menu.footer]]
+    name = "Contacto"
+    url = "/contacto/"
+    weight = 3
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Language settings
+[languages]
+  [languages.es]
+    languageName = "Español"
+    weight = 1
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    [languages.en.params]
+      description = "Maker community and tech learning space in Valencia"
