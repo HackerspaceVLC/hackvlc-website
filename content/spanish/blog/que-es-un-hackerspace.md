@@ -11,7 +11,7 @@ Has oído hablar de los hackerspaces, los makerspaces y los hacklabs, pero quiz�
 
 ## Qué es un hackerspace
 
-Un hackerspace es un taller compartido y autogestionado por una comunidad. La gente se reúne allí para construir, reparar, aprender y compartir tecnología. Imagina una mezcla entre taller de electrónica, laboratorio de fabricación digital y club de aficionados a la tecnología, gestionado por quienes lo usan.
+Un [hackerspace](https://wiki.hackerspaces.org/) es un taller compartido y autogestionado por una comunidad. La gente se reúne allí para construir, reparar, aprender y compartir tecnología. Imagina una mezcla entre taller de electrónica, laboratorio de fabricación digital y club de aficionados a la tecnología, gestionado por quienes lo usan.
 
 La palabra "hacker" no significa lo que sale en las noticias. En su origen, hackear es investigar, entender cómo funciona algo y modificarlo para mejorarlo. El hackerspace es el lugar físico donde ocurre eso.
 
